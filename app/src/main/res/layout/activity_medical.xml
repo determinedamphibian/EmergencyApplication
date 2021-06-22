@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#FF29985F"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Hospital Hotlines"
+            android:textColor="@color/white"
+            android:paddingTop="20dp"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/laspinasdoctorshospital" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Las Pinas Doctors Hospital"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="J.I. Aguilar Avenue, Pulang Lupa 2. P.C. 8009, Las Pinas City"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288255236"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/laspinasmedicalcenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Las Pinas City Medical Center"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marcos Alvarez Avenue. P.C. 1314, Las Pinas City"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+6328005524"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/perpetualhelp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perpetual Medical Center"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alabang–Zapote Road, Las Pinas"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288748515"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/zaratehospital" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zarate General Hospital"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13-765 Atlas compond, Naga Rd, Las Pinas"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288746903"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/alabangmedicalcenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alabang Medical Center Talon"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alabang - Zapote Road, Talon Uno, Las Pinas"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288736464"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+
+        </LinearLayout>
+
+
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/alabangmedicalclinicalmanza" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alabang Medical Clinic - Almanza"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="480 Real Street, Almanza. P.C. 1740, Las Pinas City"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288014535"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/goldenacres" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. E. Zarate"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CRYSTAL ST Golden Acres Subd. Talon V. Las Pinas City"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="8730935"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rmalyingclinic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RMA LYING IN CLINIC CORPORATION"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Block 24 Lot 11 Topland Avenue Golden Gate Subdivision, Las Pinas"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288065174"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/redcross" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Philippine's Red Cross Las Pinas"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bernabe Compound, Pulang Lupa, Las Piñas City"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63285567659"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/generalhospital" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Las Pinas General Hospital"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bernabe Compound, Pulanglupa I, Las Pinas City"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288730557"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/pamplona" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pamplona Hospital and Medical Center"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="46 Alabang–Zapote Road, Pamplona 1, Las Pinas"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288730054"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/christheking" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Christ the King Hospital"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="029 Aldana, Pamplona, Las Pinas"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288731119"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:background="@drawable/pope" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pope John Paul 2 Hospital and Medical Center"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="545 Alabang–Zapote Road, Las Pinas"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_hosCon13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63288760285"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_hosCon13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

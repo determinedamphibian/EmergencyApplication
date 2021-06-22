@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".DashboardActivity">
+
+    <ImageButton
+        android:id="@+id/fire.imageButton"
+        android:layout_width="129dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="150dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_drawable"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/heating" />
+
+    <ImageButton
+        android:id="@+id/medical.imageButton"
+        android:layout_width="129dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="150dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_drawable"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fire.imageButton"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cross" />
+
+    <ImageButton
+        android:id="@+id/crime.imageButton"
+        android:layout_width="129dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_drawable"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_header"
+        app:srcCompat="@drawable/police" />
+
+    <ImageButton
+        android:id="@+id/trustedContacts.imageButton"
+        android:layout_width="129dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="160dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_drawable"
+        android:clickable="false"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toStartOf="@+id/crime.imageButton"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_header"
+        app:srcCompat="@drawable/iconwhitepeople" />
+
+    <TextView
+        android:id="@+id/lbl.Fire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/assistant_light"
+        android:gravity="center"
+        android:text="Fire"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fire.imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crime.imageButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/lbl.Medical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/assistant_light"
+        android:gravity="center"
+        android:text="Medical"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/medical.imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trustedContacts.imageButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/lbl.trustedContacts"
+        android:layout_width="136dp"
+        android:layout_height="76dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/assistant_light"
+        android:gravity="center"
+        android:text="Trusted Contacts"
+        android:textColor="@color/teal_700"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/trustedContacts.imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
+
+    <TextView
+        android:id="@+id/lbl.Crime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/assistant_light"
+        android:gravity="center"
+        android:text="Crime"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/crime.imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txthello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Hello"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="15dp"
+            android:text="Welcome"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txthello"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="45dp"
+
+    android:background="@color/primaryDark"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Police Hotlines"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:paddingTop="20dp"
+        android:layout_margin="16dp" />
+
+    <ImageView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:background="@drawable/pcppulanglupa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/layout_border2">
+
+
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Police Community Precinct"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Naga Rd, Pulang Lupa 1, Las Pinas"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/pcp_contact_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+63288712701"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_pcp_pulanglupa"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_drawable"
+            android:src="@android:drawable/ic_menu_call"
+            android:text="Call" />
+    </LinearLayout>
+    <ImageView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:background="@drawable/manuyodos" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/layout_border2">
+
+
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Police Community Precinct"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S. Marquez Street, Manuyo Dos, Las Pinas"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/pcp_contact_number_dos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+63288269975"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_pcp_manuyo_dos"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_drawable"
+            android:src="@android:drawable/ic_menu_call"
+            android:text="Call" />
+    </LinearLayout>
+    <ImageView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/layout_border2">
+
+
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Police Community Precinct(Brgy. BF)"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Las Pinas, 1740 Metro Manila"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/pcp_contact_number_bf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+63288473174"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_pcp_bf"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_drawable"
+            android:src="@android:drawable/ic_menu_call"
+            android:text="Call" />
+    </LinearLayout>
+    <ImageView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:background="@drawable/pcppulanglupa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/layout_border2">
+
+
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Police Community Precinct"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brgy. Talon Singko, Las Pinas"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+             />
+
+            <TextView
+                android:id="@+id/pcp_contact_number_singko"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+63288005265"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_pcp_singko"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_drawable"
+            android:src="@android:drawable/ic_menu_call"
+            android:text="Call" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/pulis" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/layout_border2">
+
+
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pulis Precinct"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paraiso Dr, Talon Kuatro, Las Pinas"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/pcp_contact_pulis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+63288019122"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_pcp_pulis"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_drawable"
+            android:src="@android:drawable/ic_menu_call"
+            android:text="Call" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
