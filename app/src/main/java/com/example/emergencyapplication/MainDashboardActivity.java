@@ -2,6 +2,10 @@ package com.example.emergencyapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.media.Image;
@@ -11,25 +15,62 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
-public class DashboardActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class MainDashboardActivity extends AppCompatActivity {
 
     private ImageButton imageButton_trustedContacts, imageButton_crime, imageButton_medical, imageButton_fire;
-    private Animation topAnim;
-    private ConstraintLayout constraintLayout_header;
+    DrawerLayout drawerLayout;
+    ImageView btMenu;
+    RecyclerView recyclerView;
+    public static ArrayList<String> arrayList = new ArrayList<>();
+    MainAdapter adapter;
+    //private Animation topAnim;
+    //private ConstraintLayout constraintLayout_header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        constraintLayout_header = (ConstraintLayout) findViewById(R.id.constraintLayout_header);
 
-        topAnim = AnimationUtils.loadAnimation(this, R.anim.header_animation);
+        //Assign variable
+        drawerLayout = findViewById(R.id.drawer_layout);
+        btMenu = findViewById(R.id.bt_menu);
+        recyclerView = findViewById(R.id.recycler_view);
 
-        constraintLayout_header.setAnimation(topAnim);
+        //Clear arrayList
+        arrayList.clear();
+
+        //Add menu item to arrayList
+        arrayList.add("Home");
+        arrayList.add("Trusted Contacts");
+        arrayList.add("Government Agencies");
+        arrayList.add("Siren & Flicker Light");
+        arrayList.add("About Us");
+
+        adapter = new MainAdapter( this, arrayList);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        recyclerView.setAdapter(adapter);
+
+        btMenu.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        //constraintLayout_header = (ConstraintLayout) findViewById(R.id.constraintLayout_header);
+
+        //topAnim = AnimationUtils.loadAnimation(this, R.anim.header_animation);
+
+        //constraintLayout_header.setAnimation(topAnim);
 
 
         //trusted contact button
@@ -87,5 +128,20 @@ public class DashboardActivity extends AppCompatActivity {
     public void openFireForms(){
         Intent intent = new Intent(this, FireActivity.class);
         startActivity(intent);
+    }
+
+    public static void closeDrawer(DrawerLayout drawerLayout) {
+
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        closeDrawer(drawerLayout);
     }
 }

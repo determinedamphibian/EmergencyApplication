@@ -2,6 +2,7 @@
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,7 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-    public class MainActivity extends AppCompatActivity {
+    public class AnimationMainActivity extends AppCompatActivity {
         private static int  SPLASH_SCREEN = 2000;
 
         ImageView iv_archer;
@@ -40,7 +41,7 @@ import android.widget.TextView;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                Intent intent = new Intent(AnimationMainActivity.this, MainDashboardActivity.class);
                 startActivity(intent);
                 finish();
             }
