@@ -1,19 +1,14 @@
 package com.example.emergencyapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -122,7 +117,7 @@ public class MainDashboardActivity extends AppCompatActivity {
     }
 
     public void openMedicalForms(){
-        Intent intent = new Intent(this, MedicalActivity.class);
+        Intent intent = new Intent(this, EmergencyHotlineButtonActivity.class);
         startActivity(intent);
     }
     public void openFireForms(){

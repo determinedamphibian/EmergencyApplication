@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.emergencyapplication">
 
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,18 +17,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmergencyApplication">
+        <activity android:name=".HelplineActivity"></activity>
+        <activity android:name=".EmergencyHotlineButtonActivity" />
         <activity android:name=".FireActivity" />
         <activity android:name=".MedicalActivity" />
-        <activity android:name=".MainDashboardActivity"
-            android:launchMode="singleTask"/>
-        <activity android:name=".SideDockContents.AboutUsSideDock"
-            android:launchMode="singleTask"/>
-        <activity android:name=".SideDockContents.SirenAndFlickerLightSideDock"
-            android:launchMode="singleTask"/>
-        <activity android:name=".SideDockContents.GovernmentAgenciesSideDock"
-            android:launchMode="singleTask"/>
-        <activity android:name=".SideDockContents.TrustedContactsSideDock"
-            android:launchMode="singleTask"/>
+        <activity
+            android:name=".MainDashboardActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".SideDockContents.AboutUsSideDock"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".SideDockContents.SirenAndFlickerLightSideDock"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".SideDockContents.GovernmentAgenciesSideDock"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".SideDockContents.TrustedContactsSideDock"
+            android:launchMode="singleTask" />
         <activity android:name=".TrustedContactsActivites.TrustedContactDetailActivity" />
         <activity android:name=".TrustedContactsActivites.ViewActivity" />
         <activity android:name=".TrustedContactsActivites.InsertActivity" />
@@ -38,13 +53,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-    <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 </manifest>
