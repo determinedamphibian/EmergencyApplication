@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class MainDashboardActivity extends AppCompatActivity {
 
-    private ImageButton imageButton_trustedContacts, imageButton_crime, imageButton_medical, imageButton_fire;
+    private ImageButton imageButton_trustedContacts, imageButton_guidelines, imageButton_medical, imageButton_watcher;
     DrawerLayout drawerLayout;
     ImageView btMenu;
     RecyclerView recyclerView;
@@ -78,11 +78,11 @@ public class MainDashboardActivity extends AppCompatActivity {
         });
 
 //crime button
-        imageButton_crime = (ImageButton) findViewById(R.id.crime_imageButton);
-        imageButton_crime.setOnClickListener(new View.OnClickListener() {
+        imageButton_guidelines = (ImageButton) findViewById(R.id.guidelines_imageButton);
+        imageButton_guidelines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openCrimeForms();
+                openGuidelineForm();
             }
         });
 
@@ -94,14 +94,19 @@ public class MainDashboardActivity extends AppCompatActivity {
             }
         });
 
-        imageButton_fire = (ImageButton) findViewById(R.id.fire_imageButton);
-        imageButton_fire.setOnClickListener(new View.OnClickListener() {
+        imageButton_watcher = (ImageButton) findViewById(R.id.watcher_imageButton);
+        imageButton_watcher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFireForms();
+
             }
         });
 
+    }
+
+    private void openGuidelineForm() {
+        Intent intent = new Intent(this, GuidelineButtonActivity.class);
+        startActivity(intent);
     }
 
     //trusted contacts button method
@@ -110,20 +115,11 @@ public class MainDashboardActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //crime button method
-    public void openCrimeForms() {
-        Intent intent = new Intent(this, CrimeActivity.class);
-        startActivity(intent);
-    }
-
     public void openMedicalForms(){
         Intent intent = new Intent(this, EmergencyHotlineButtonActivity.class);
         startActivity(intent);
     }
-    public void openFireForms(){
-        Intent intent = new Intent(this, FireActivity.class);
-        startActivity(intent);
-    }
+
 
     public static void closeDrawer(DrawerLayout drawerLayout) {
 

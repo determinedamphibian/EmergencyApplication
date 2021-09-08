@@ -43,6 +43,15 @@ Button btn_medical, btn_fire, btn_police, btn_helpline;
                 Intent intent = new Intent(EmergencyHotlineButtonActivity.this, CrimeActivity.class);
                 startActivity(intent);
             }
+
+        });
+
+        btn_helpline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EmergencyHotlineButtonActivity.this, HelplineActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }

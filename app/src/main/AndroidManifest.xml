@@ -17,7 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmergencyApplication">
-        <activity android:name=".HelplineActivity"></activity>
+        <activity android:name=".FirstAidActivity"></activity>
+        <activity android:name=".DisasterGuidelineButtonActivity" />
+        <activity android:name=".GuidelineButtonActivity" />
+        <activity android:name=".HelplineActivity" />
         <activity android:name=".EmergencyHotlineButtonActivity" />
         <activity android:name=".FireActivity" />
         <activity android:name=".MedicalActivity" />
