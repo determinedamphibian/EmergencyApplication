@@ -13,8 +13,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           >
+            android:layout_height="wrap_content">
 
             <ImageView
             android:layout_width="wrap_content"
@@ -26,27 +25,17 @@
 
         </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Green Archers Emergency App"
-                android:layout_marginLeft="50dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="2dp"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_centerInParent="true" />
-
-        </LinearLayout>
-
+        
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

@@ -19,6 +19,7 @@ public class TrustedContacts {
     @ColumnInfo(name = "gender")
     public String gender;
 
+
     public TrustedContacts(int idNum, String contactName, String contactNum, String gender) {
         this.idNum = idNum;
         this.contactName = contactName;
@@ -26,5 +27,37 @@ public class TrustedContacts {
         this.gender = gender;
     }
 
+
+    public int getIdNum() {
+        return idNum;
+    }
+
+    public void setIdNum(int idNum) {
+        this.idNum = idNum;
+    }
+
+    public String getContactName() {
+        return contactName;
+    }
+
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
+    }
+
+    public String getContactNum() {
+        return contactNum;
+    }
+
+    public void setContactNum(String contactNum) {
+        this.contactNum = contactNum;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }
 

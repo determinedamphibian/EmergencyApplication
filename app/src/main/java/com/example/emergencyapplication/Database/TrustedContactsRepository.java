@@ -61,12 +61,12 @@ public class TrustedContactsRepository {
 
 
     //=============== get all contact numbers only from database starts============================================
-    public List<TrustedContactNumberEntity> getTrustedContactsNumbers(){
+    public List<String> getTrustedContactNumbers(){
 
-        List<TrustedContactNumberEntity> trustedContactNumberList = trustedContactDatabase.trustedContactDAO().getContacts();
+        List<String> trustedContactNumberList = trustedContactDatabase.trustedContactDAO().getContacts();
+
         return  trustedContactNumberList;
     }
-
     //=============== get all contact numbers only from database ends==============================================
 
 

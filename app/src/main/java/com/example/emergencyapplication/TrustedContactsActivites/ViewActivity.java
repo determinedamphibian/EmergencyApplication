@@ -19,12 +19,10 @@ import java.util.List;
 
 public class ViewActivity extends AppCompatActivity {
 
-
-    private static RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private static RecyclerView recyclerView;
     ArrayList<TrustedContacts> trustedContactsArrayList;
-    ArrayList<TrustedContactNumberEntity> trustedContactNumberEntityArrayList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

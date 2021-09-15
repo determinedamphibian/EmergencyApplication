@@ -153,8 +153,8 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //============delete code=======================
-                TrustedContactsRepository studentRepository = new TrustedContactsRepository(getApplicationContext());
-                studentRepository.DeleteTask(student_about_to_delete);
+                TrustedContactsRepository trustedContactRepository = new TrustedContactsRepository(getApplicationContext());
+                trustedContactRepository.DeleteTask(student_about_to_delete);
                 Toast.makeText(TrustedContactDetailActivity.this,"Contact deleted", Toast.LENGTH_LONG).show();
             }
         });

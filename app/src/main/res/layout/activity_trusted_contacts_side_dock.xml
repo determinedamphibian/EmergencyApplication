@@ -9,23 +9,44 @@
     android:id="@+id/drawer_layout"
     tools:context=".SideDockContents.TrustedContactsSideDock">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <include
-            layout="@layout/main_toolbar"/>
+            android:id="@+id/include"
+            layout="@layout/main_toolbar" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <Button
+            android:id="@+id/btn_addTrustedContacts"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="384dp"
             android:gravity="center"
-            android:text="Trusted Contacts"
-            android:textSize="50sp"
-            android:textStyle="bold" />
+            android:text="Add Trusted Contacts"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            app:layout_constraintVertical_bias="1.0" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btn_viewTrustedContacts"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="384dp"
+            android:gravity="center"
+            android:text="View Trusted Contacts"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:layout_width="300dp"

@@ -73,7 +73,7 @@ public class MainDashboardActivity extends AppCompatActivity {
         imageButton_trustedContacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openTrustedContactsForms();
+               openTrustedContactsForms();
             }
         });
 

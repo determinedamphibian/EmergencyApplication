@@ -3,9 +3,7 @@ package com.example.emergencyapplication.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.location.Location;
 import android.net.Uri;
-import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +16,6 @@ import android.widget.Toast;
 import com.example.emergencyapplication.EntityClass.TrustedContacts;
 import com.example.emergencyapplication.R;
 import com.example.emergencyapplication.TrustedContactsActivites.TrustedContactDetailActivity;
-import com.example.emergencyapplication.TrustedContactsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +28,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private ArrayList<TrustedContacts> dataset;
     Context context;
-    ArrayList<String> listContactNumber;
+    List<String> contactNumbersList = new ArrayList<>();
+
+    public CustomAdapter() {
+
+    }
 
     //=====================my Class view holder starts===========================
     public static class MyViewHolder extends RecyclerView.ViewHolder{
@@ -39,7 +40,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         TextView tv_idNum, tv_trustedContacts_name, tv_trustedContact_no;
         ImageView img_gender, img_call;
         Button btn_title;
-        LinearLayout ll_card_trusted_cotacts;
+        LinearLayout ll_card_trusted_contacts;
 
 
         public MyViewHolder(View itemView){
@@ -51,7 +52,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             this.img_gender = (ImageView) itemView.findViewById(R.id.img_gender);
             this.btn_title = (Button) itemView.findViewById(R.id.btn_title);
             this.img_call = (ImageView) itemView.findViewById(R.id.img_call);
-            this.ll_card_trusted_cotacts = (LinearLayout) itemView.findViewById(R.id.ll_card_trusted_contacts);
+            this.ll_card_trusted_contacts = (LinearLayout) itemView.findViewById(R.id.ll_card_trusted_contacts);
 
         }
 
@@ -87,7 +88,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         ImageView img_call = holder.img_call;
 
         Button btn_title = holder.btn_title;
-        LinearLayout ll_card_trusted_cotacts = holder.ll_card_trusted_cotacts;
+        LinearLayout ll_card_trusted_contacts = holder.ll_card_trusted_contacts;
 
         tv_idNum.setText(dataset.get(position).idNum+"");
         tv_trustedContact_name.setText(dataset.get(position).contactName+"");
@@ -112,7 +113,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         //===========logic to getting the list of contact number============================
 
-                getContactNumberList(position);
+        getContactNumberList(position);
 
 
 
@@ -138,7 +139,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         });
 
         //============== clickable Column of data Starts ==================
-        ll_card_trusted_cotacts.setOnClickListener(new View.OnClickListener() {
+        ll_card_trusted_contacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int idNum = dataset.get(position).idNum;
@@ -170,28 +171,20 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     }
 
-    public CustomAdapter() {
-
-    }
-
-    public void getContactNumberList()
-    {
-        for(int i = 0; i< dataset.size(); i++){
+    public void getContactNumberList() {
+        for(int i = 0; i< getItemCount(); i++){
             getContactNumberList(i);
         }
 
     }
 
 
-    public void getContactNumberList(int position)
-    {
-        List<String> ContactNumbersList = new ArrayList<>();
-        ContactNumbersList.add(dataset.get(position).contactNum);
+    public void getContactNumberList(int position) {
+        contactNumbersList.add(dataset.get(position).contactNum);
+    }
 
-        TrustedContactsActivity tcaClass = new TrustedContactsActivity(ContactNumbersList);
-        String message = "Help I'm At KM 18 Service Rd, Parañaque, 1709 Metro Manila, Philippines";
-        tcaClass.sendSMS(message);
-       // return ContactNumbersList;
+    public List<String> getTrustedContactNumberList(){
+    return contactNumbersList;
     }
 
 }

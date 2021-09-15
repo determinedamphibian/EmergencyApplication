@@ -27,18 +27,19 @@ public class CrimeActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_crime_contacts);
 
+        //call contact1
         tv_contact_number = (TextView) findViewById(R.id.pcp_contact_number);
         call_button= (ImageButton) findViewById(R.id.btn_pcp_pulanglupa);
-
-            call_button.setOnClickListener(new View.OnClickListener() {
+        call_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 makePhoneCall(tv_contact_number);
             }
         });
+
+        //call contact2
         tv_contact_number2 = (TextView) findViewById(R.id.pcp_contact_number_dos);
         call_button2= (ImageButton) findViewById(R.id.btn_pcp_manuyo_dos);
-
         call_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,35 +47,37 @@ public class CrimeActivity extends AppCompatActivity {
             }
         });
 
+        //call contact3
         tv_contact_number3 = (TextView) findViewById(R.id.pcp_contact_number_bf);
         call_button3= (ImageButton) findViewById(R.id.btn_pcp_bf);
-
         call_button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 makePhoneCall(tv_contact_number3);
             }
         });
+
+        //call contact4
         tv_contact_number4 = (TextView) findViewById(R.id.pcp_contact_number_singko);
         call_button4= (ImageButton) findViewById(R.id.btn_pcp_singko);
-
         call_button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 makePhoneCall(tv_contact_number4);
             }
         });
+
+        //call contact5
         tv_contact_number5 = (TextView) findViewById(R.id.pcp_contact_pulis);
         call_button5= (ImageButton) findViewById(R.id.btn_pcp_pulis);
-
         call_button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 makePhoneCall(tv_contact_number5);
             }
         });
-
     }
+
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode,permissions,grantResults);
         if(requestCode == REQUEST_CALL){
@@ -95,7 +98,8 @@ public class CrimeActivity extends AppCompatActivity {
 
         if(ActivityCompat.checkSelfPermission(CrimeActivity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED)
         {
-            ActivityCompat.requestPermissions(CrimeActivity.this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+            ActivityCompat.requestPermissions(CrimeActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
         }
         else{
             Intent intent = new Intent(Intent.ACTION_CALL);
