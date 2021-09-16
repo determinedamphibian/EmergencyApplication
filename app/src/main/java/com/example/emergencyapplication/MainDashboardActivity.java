@@ -1,22 +1,41 @@
 package com.example.emergencyapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.example.emergencyapplication.Database.TrustedContactsRepository;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
-public class MainDashboardActivity extends AppCompatActivity {
+public class MainDashboardActivity extends AppCompatActivity implements LocationListener {
 
-    private ImageButton imageButton_trustedContacts, imageButton_guidelines, imageButton_medical, imageButton_watcher;
+    private ImageButton imageButton_sos, imageButton_guidelines, imageButton_medical, imageButton_watcher;
+    private LocationManager locationManager;
     DrawerLayout drawerLayout;
     ImageView btMenu;
     RecyclerView recyclerView;
@@ -46,12 +65,13 @@ public class MainDashboardActivity extends AppCompatActivity {
         arrayList.add("Siren & Flicker Light");
         arrayList.add("About Us");
 
-        adapter = new MainAdapter( this, arrayList);
+        adapter = new MainAdapter(this, arrayList);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView.setAdapter(adapter);
 
+        //menu
         btMenu.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -61,6 +81,7 @@ public class MainDashboardActivity extends AppCompatActivity {
             }
         });
 
+
         //constraintLayout_header = (ConstraintLayout) findViewById(R.id.constraintLayout_header);
 
         //topAnim = AnimationUtils.loadAnimation(this, R.anim.header_animation);
@@ -69,24 +90,42 @@ public class MainDashboardActivity extends AppCompatActivity {
 
 
         //trusted contact button
-        imageButton_trustedContacts = (ImageButton) findViewById(R.id.trustedContacts_imageButton);
-        imageButton_trustedContacts.setOnClickListener(new View.OnClickListener() {
+        imageButton_sos = findViewById(R.id.imgbtn_SOS);
+        imageButton_sos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               openTrustedContactsForms();
+
+                //=====================checks GPS permission===================================
+                if (ContextCompat.checkSelfPermission(
+                        MainDashboardActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(MainDashboardActivity.this, new String[]{
+                            Manifest.permission.ACCESS_FINE_LOCATION
+                    }, 100);
+                }
+                //=====================checks GPS permission ends===================================
+
+                //=====================checks SMS permission ends===================================
+                if (ContextCompat.checkSelfPermission(MainDashboardActivity.this, Manifest.permission.SEND_SMS)
+                        != PackageManager.PERMISSION_GRANTED) {
+
+                    ActivityCompat.requestPermissions(MainDashboardActivity.this, new String[]
+                            {Manifest.permission.SEND_SMS, Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
+                }
+                //=====================checks SMS permission ends==================================
+
+                getLocation();
             }
         });
 
-//crime button
-        imageButton_guidelines = (ImageButton) findViewById(R.id.guidelines_imageButton);
-        imageButton_guidelines.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGuidelineForm();
-            }
+        //crime button
+        imageButton_guidelines = findViewById(R.id.guidelines_imageButton);
+        imageButton_guidelines.setOnClickListener((View v) -> {
+            openGuidelineForm();
         });
 
-        imageButton_medical = (ImageButton) findViewById(R.id.medical_imageButton);
+        imageButton_medical = findViewById(R.id.medical_imageButton);
         imageButton_medical.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,7 +133,7 @@ public class MainDashboardActivity extends AppCompatActivity {
             }
         });
 
-        imageButton_watcher = (ImageButton) findViewById(R.id.watcher_imageButton);
+        imageButton_watcher = findViewById(R.id.watcher_imageButton);
         imageButton_watcher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,21 +148,15 @@ public class MainDashboardActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //trusted contacts button method
-    public void openTrustedContactsForms() {
-        Intent intent = new Intent(this, TrustedContactsActivity.class);
-        startActivity(intent);
-    }
 
-    public void openMedicalForms(){
+    public void openMedicalForms() {
         Intent intent = new Intent(this, EmergencyHotlineButtonActivity.class);
         startActivity(intent);
     }
 
-
     public static void closeDrawer(DrawerLayout drawerLayout) {
 
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
 
             drawerLayout.closeDrawer(GravityCompat.START);
         }
@@ -134,5 +167,101 @@ public class MainDashboardActivity extends AppCompatActivity {
         super.onPause();
 
         closeDrawer(drawerLayout);
+    }
+
+    private void getLocation() {
+
+        locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, MainDashboardActivity.this);
+
+
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        try {
+            Geocoder geocoder = new Geocoder(MainDashboardActivity.this, Locale.getDefault());
+            List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
+
+            String message =( "HELP!!!! I'M AT "+addresses.get(0).getAddressLine(0));
+            String message_sent = "Message Sent";
+            Toast.makeText(MainDashboardActivity.this, message_sent,Toast.LENGTH_LONG).show();
+            Log.d("TrustedContactMessage: ", message);
+
+            new MainDashboardActivity.LoadDataTasks(message).execute();
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    //predefined methods of LocationListener
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
+    }
+
+
+    @SuppressLint("StaticFieldLeak")
+    private class LoadDataTasks extends AsyncTask<Void, Void, Void> {
+
+        TrustedContactsRepository trustedContactsRepository;
+        List <String> trustedContactsNumberArrayList;
+        List<String> trustedContactNumberList;
+        String message;
+
+        public LoadDataTasks(String message) {
+            this.message = message;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            trustedContactsRepository = new TrustedContactsRepository(getApplicationContext());
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            trustedContactNumberList = trustedContactsRepository.getTrustedContactNumbers();
+            trustedContactsNumberArrayList = new ArrayList<>();
+
+
+            for(int i = 0; i<trustedContactNumberList.size(); i++){
+
+                String contactNumber = trustedContactNumberList.get(i);
+
+                SmsManager smsmanager = SmsManager.getDefault();
+                smsmanager.sendTextMessage(contactNumber,null,message,null,null);
+
+                Log.d("Trusted Contacts", contactNumber+" received "+message);
+
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+        }
     }
 }

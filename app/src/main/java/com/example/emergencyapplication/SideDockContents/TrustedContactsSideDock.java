@@ -32,11 +32,12 @@ public class TrustedContactsSideDock extends AppCompatActivity {
 
         //Assign values to initialized variables
         drawerLayout = findViewById(R.id.drawer_layout);
-        btMenu = findViewById(R.id.bt_menu);
         recyclerView = findViewById(R.id.recycler_view);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MainAdapter( this, MainDashboardActivity.arrayList));
+
+        //Menu button
+        btMenu = findViewById(R.id.bt_menu);
         btMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,10 +45,8 @@ public class TrustedContactsSideDock extends AppCompatActivity {
             }
         });
 
-        //Assign values
-        btn_insert = findViewById(R.id.btn_addTrustedContacts);
-        btn_view = findViewById(R.id.btn_viewTrustedContacts);
 
+        btn_insert = findViewById(R.id.btn_addTrustedContacts);
         btn_insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +55,7 @@ public class TrustedContactsSideDock extends AppCompatActivity {
             }
         });
 
+        btn_view = findViewById(R.id.btn_viewTrustedContacts);
         btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
