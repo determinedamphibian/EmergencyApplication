@@ -14,37 +14,55 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/include"
-            layout="@layout/main_toolbar" />
-
-        <Button
-            android:id="@+id/btn_addTrustedContacts"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginBottom="384dp"
-            android:gravity="center"
-            android:text="Add Trusted Contacts"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
-            android:id="@+id/btn_viewTrustedContacts"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="384dp"
-            android:gravity="center"
-            android:text="View Trusted Contacts"
-            app:layout_constraintBottom_toBottomOf="parent"
+            <include
+                android:id="@+id/include"
+                layout="@layout/main_toolbar" />
+
+        </FrameLayout>
+
+
+        <ImageButton
+            android:id="@+id/imgBtn_message"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/ic_menu_send"
+            android:foregroundGravity="top" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbtn_addTrustedContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="40dp"
+            android:src="@drawable/addtrustedcontact"
+            app:backgroundTint="#E65100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_trustedContacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,7 +74,8 @@
 
 
         <include
-            layout="@layout/main_nav_drawer"/>
+            layout="@layout/main_nav_drawer"
+            />
 
     </RelativeLayout>
 

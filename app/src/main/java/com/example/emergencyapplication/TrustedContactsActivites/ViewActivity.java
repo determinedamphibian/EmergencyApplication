@@ -9,7 +9,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.example.emergencyapplication.Adapter.CustomAdapter;
-import com.example.emergencyapplication.EntityClass.TrustedContactNumberEntity;
 import com.example.emergencyapplication.EntityClass.TrustedContacts;
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
 import com.example.emergencyapplication.R;
@@ -29,7 +28,7 @@ public class ViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
 
-        recyclerView = (RecyclerView)findViewById(R.id.my_recycler_view);
+        recyclerView = (RecyclerView)findViewById(R.id.rv_trustedContacts);
         recyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
