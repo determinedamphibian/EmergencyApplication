@@ -2,6 +2,8 @@ package com.example.emergencyapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -10,6 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.IntentService;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -18,8 +27,10 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.DebugUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -27,6 +38,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
+import com.example.emergencyapplication.TrustedContactsActivites.InstantSOS;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,13 +46,14 @@ import java.util.Locale;
 
 public class MainDashboardActivity extends AppCompatActivity implements LocationListener {
 
-    private ImageButton imageButton_sos, imageButton_guidelines, imageButton_medical, imageButton_watcher;
+    private ImageButton imageButton_sos, imageButton_guidelines, imageButton_emergencyHotlines, imageButton_watcher;
     private LocationManager locationManager;
     DrawerLayout drawerLayout;
     ImageView btMenu;
     RecyclerView recyclerView;
     public static ArrayList<String> arrayList = new ArrayList<>();
     MainAdapter adapter;
+
     //private Animation topAnim;
     //private ConstraintLayout constraintLayout_header;
 
@@ -49,10 +62,9 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
-        btMenu = findViewById(R.id.bt_menu);
+
         recyclerView = findViewById(R.id.recycler_view);
 
         //Clear arrayList
@@ -72,6 +84,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         recyclerView.setAdapter(adapter);
 
         //menu
+        btMenu = findViewById(R.id.bt_menu);
         btMenu.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -119,17 +132,19 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             }
         });
 
-        //crime button
+        //guideline button
         imageButton_guidelines = findViewById(R.id.guidelines_imageButton);
         imageButton_guidelines.setOnClickListener((View v) -> {
             openGuidelineForm();
+
         });
 
-        imageButton_medical = findViewById(R.id.medical_imageButton);
-        imageButton_medical.setOnClickListener(new View.OnClickListener() {
+        imageButton_emergencyHotlines = findViewById(R.id.emergencyHotline_imageButton);
+        imageButton_emergencyHotlines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMedicalForms();
+                openEmergencyHotlineForms();
+
             }
         });
 
@@ -141,6 +156,60 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             }
         });
 
+        //start notification status bar
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("Green Archer Notification",
+                    "Green Archer Notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+        startNotification();
+
+    }
+
+    private void startNotification() {
+
+
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(MainDashboardActivity.this, "Green Archer Notification");
+        notification.setContentTitle("Green Archers Emergency Application");
+        notification.setContentText("Send S.O.S message");
+        notification.setSmallIcon(R.drawable.ic_launcher_background);
+        notification.setAutoCancel(true);
+
+        Intent intent = new Intent(MainDashboardActivity.this, InstantSOS.class);
+        TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(MainDashboardActivity.this);
+        taskStackBuilder.addParentStack(InstantSOS.class)
+                .addNextIntent(intent);
+        PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+        notification.setContentIntent(pendingIntent);
+
+        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainDashboardActivity.this);
+        managerCompat.notify(1, notification.build());
+
+//        taskStackBuilder = TaskStackBuilder.create(MainDashboardActivity.this);
+//        taskStackBuilder.addParentStack(InstantSOS.class);
+//        Intent intent = new Intent(MainDashboardActivity.this, InstantSOS.class);
+//        taskStackBuilder.addNextIntent(intent);
+//        pendingIntent = taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+//        notification.setContentIntent(pendingIntent);
+//        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+//        notificationManager.notify(0, notification.build());
+
+        //        notification.setAutoCancel(true)
+//                .setDefaults(Notification.DEFAULT_ALL)
+//                .setWhen(System.currentTimeMillis())
+//                .setSmallIcon(R.drawable.emergency)
+//                .setTicker("Hearty365")
+//                .setPriority(Notification.PRIORITY_MAX) // this is deprecated in API 26 but you can still use for below 26. check below update for 26 API
+//                .setContentTitle("Default notification")
+//                .setContentText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+//                .setContentInfo("Info");
+//
+//
+//        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+//        notificationManager.notify(1, notification.build());
+
+
     }
 
     private void openGuidelineForm() {
@@ -149,7 +218,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
     }
 
 
-    public void openMedicalForms() {
+    public void openEmergencyHotlineForms() {
         Intent intent = new Intent(this, EmergencyHotlineButtonActivity.class);
         startActivity(intent);
     }
@@ -169,7 +238,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         closeDrawer(drawerLayout);
     }
 
-    private void getLocation() {
+    public void getLocation() {
 
         locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -264,4 +333,5 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             super.onPostExecute(aVoid);
         }
     }
+
 }

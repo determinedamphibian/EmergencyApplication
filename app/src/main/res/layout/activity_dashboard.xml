@@ -35,7 +35,7 @@
         app:srcCompat="@drawable/heating" />
 
     <ImageButton
-        android:id="@+id/medical.imageButton"
+        android:id="@+id/emergencyHotline.imageButton"
         android:layout_width="132dp"
         android:layout_height="149dp"
         android:layout_marginTop="20dp"
@@ -80,7 +80,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medical.imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/emergencyHotline.imageButton" />
 
     <TextView
         android:id="@+id/lbl.Medical"
