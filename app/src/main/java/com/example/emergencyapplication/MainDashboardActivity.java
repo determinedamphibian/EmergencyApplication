@@ -20,6 +20,7 @@ import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -38,7 +39,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
+import com.example.emergencyapplication.EntityClass.TrustedContacts;
 import com.example.emergencyapplication.TrustedContactsActivites.InstantSOS;
+import com.example.emergencyapplication.TrustedContactsActivites.TrustedContactsMessageActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,13 +49,16 @@ import java.util.Locale;
 
 public class MainDashboardActivity extends AppCompatActivity implements LocationListener {
 
-    private ImageButton imageButton_sos, imageButton_guidelines, imageButton_emergencyHotlines, imageButton_watcher;
+    private ImageButton imageButton_emergencyHotlines;
+    private ImageButton imageButton_watcher;
     private LocationManager locationManager;
     DrawerLayout drawerLayout;
     ImageView btMenu;
     RecyclerView recyclerView;
     public static ArrayList<String> arrayList = new ArrayList<>();
     MainAdapter adapter;
+    static String userEmergencyMessage;
+
 
     //private Animation topAnim;
     //private ConstraintLayout constraintLayout_header;
@@ -103,7 +109,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
 
         //trusted contact button
-        imageButton_sos = findViewById(R.id.imgbtn_SOS);
+        ImageButton imageButton_sos = findViewById(R.id.imgbtn_SOS);
         imageButton_sos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,7 +139,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         });
 
         //guideline button
-        imageButton_guidelines = findViewById(R.id.guidelines_imageButton);
+        ImageButton imageButton_guidelines = findViewById(R.id.guidelines_imageButton);
         imageButton_guidelines.setOnClickListener((View v) -> {
             openGuidelineForm();
 
@@ -167,6 +173,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
     }
 
+
     private void startNotification() {
 
 
@@ -185,30 +192,6 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainDashboardActivity.this);
         managerCompat.notify(1, notification.build());
-
-//        taskStackBuilder = TaskStackBuilder.create(MainDashboardActivity.this);
-//        taskStackBuilder.addParentStack(InstantSOS.class);
-//        Intent intent = new Intent(MainDashboardActivity.this, InstantSOS.class);
-//        taskStackBuilder.addNextIntent(intent);
-//        pendingIntent = taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-//        notification.setContentIntent(pendingIntent);
-//        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-//        notificationManager.notify(0, notification.build());
-
-        //        notification.setAutoCancel(true)
-//                .setDefaults(Notification.DEFAULT_ALL)
-//                .setWhen(System.currentTimeMillis())
-//                .setSmallIcon(R.drawable.emergency)
-//                .setTicker("Hearty365")
-//                .setPriority(Notification.PRIORITY_MAX) // this is deprecated in API 26 but you can still use for below 26. check below update for 26 API
-//                .setContentTitle("Default notification")
-//                .setContentText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-//                .setContentInfo("Info");
-//
-//
-//        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-//        notificationManager.notify(1, notification.build());
-
 
     }
 
@@ -241,7 +224,9 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
     public void getLocation() {
 
         locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -261,8 +246,9 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         try {
             Geocoder geocoder = new Geocoder(MainDashboardActivity.this, Locale.getDefault());
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
-
-            String message =( "HELP!!!! I'M AT "+addresses.get(0).getAddressLine(0));
+            SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
+            userEmergencyMessage = sharedPreferences.getString("text", "");
+            String message =( userEmergencyMessage+" "+addresses.get(0).getAddressLine(0));
             String message_sent = "Message Sent";
             Toast.makeText(MainDashboardActivity.this, message_sent,Toast.LENGTH_LONG).show();
             Log.d("TrustedContactMessage: ", message);
