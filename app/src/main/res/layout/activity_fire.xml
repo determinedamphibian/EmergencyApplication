@@ -27,6 +27,72 @@
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:layout_gravity="center"
+            android:background="@drawable/gacthfire" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/layout_border">
+
+
+            <LinearLayout
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gatchalian Fire Station"
+                    android:textColor="#FFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marquez St, gatchalian subd, Las Pinas"
+                    android:textColor="#4a4a4a"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_fireCon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="+63282451978"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_fireCon3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
             android:background="@drawable/bamboofire" />
 
         <LinearLayout
@@ -155,142 +221,6 @@
                 android:text="Call" />
         </LinearLayout>
 
-
-        <ImageView
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:layout_gravity="center"
-            android:background="@drawable/gacthfire" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/layout_border">
-
-
-            <LinearLayout
-                android:layout_width="196dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gatchalian Fire Station"
-                    android:textColor="#FFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Marquez St, gatchalian subd, Las Pinas"
-                    android:textColor="#4a4a4a"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_fireCon3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="+63282451978"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="23dp"
-                android:layout_gravity="center"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/btn_fireCon3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/shape_drawable"
-                android:src="@android:drawable/ic_menu_call"
-                android:text="Call" />
-        </LinearLayout>
-
-
-        <ImageView
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:layout_gravity="center"
-            android:background="@drawable/donamanuelafire" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/layout_border">
-
-
-            <LinearLayout
-                android:layout_width="196dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Doña Manuela Fire Station"
-                    android:textColor="#FFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1750, 7 Rosal, Las Pinas, Manila"
-                    android:textColor="#4a4a4a"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_fireCon4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="+63288746177"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="23dp"
-                android:layout_gravity="center"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/btn_fireCon4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/shape_drawable"
-                android:src="@android:drawable/ic_menu_call"
-                android:text="Call" />
-        </LinearLayout>
-
-
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="57dp"
@@ -358,16 +288,13 @@
 
         </LinearLayout>
 
-
-
-
         <ImageView
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:layout_gravity="center"
-            android:background="@drawable/firemarshall" />
+            android:background="@drawable/donamanuelafire" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -388,7 +315,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fire Marshall's Office"
+                    android:text="Doña Manuela Fire Station"
                     android:textColor="#FFFF"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -396,17 +323,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Las Pinas City Hall, Alabang-Zapote Road, Las Pinas City"
+                    android:text="1750, 7 Rosal, Las Pinas, Manila"
                     android:textColor="#4a4a4a"
                     android:textSize="11sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_fireCon6"
+                    android:id="@+id/tv_fireCon4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="+63288730611"
+                    android:text="+63288746177"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -417,7 +344,7 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/btn_fireCon6"
+                android:id="@+id/btn_fireCon4"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -426,8 +353,6 @@
                 android:src="@android:drawable/ic_menu_call"
                 android:text="Call" />
         </LinearLayout>
-
-
 
         <ImageView
             android:layout_marginLeft="16dp"
@@ -456,7 +381,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="City Government of Las Piñas"
+                    android:text="Beureu of Fire and Protection"
                     android:textColor="#FFFF"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -493,74 +418,6 @@
                 android:background="@drawable/shape_drawable"
                 android:src="@android:drawable/ic_menu_call"
                 android:text="Call" />
-        </LinearLayout>
-
-
-        <ImageView
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:layout_gravity="center"
-            android:background="@drawable/pilarfire" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/layout_border">
-
-
-            <LinearLayout
-                android:layout_width="196dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pilar Village Fire Station"
-                    android:textColor="#FFFF"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" Dona Pilar Aguirre Road, Las Pinas City"
-                    android:textColor="#4a4a4a"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_fireCon8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="+63284782242"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="30dp"
-                android:layout_height="23dp"
-                android:layout_gravity="center"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/btn_fireCon8"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/shape_drawable"
-                android:src="@android:drawable/ic_menu_call"
-                android:text="Call" />
-
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

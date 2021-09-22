@@ -17,11 +17,11 @@ import android.widget.TextView;
 
 public class MedicalActivity extends AppCompatActivity {
 
-    TextView tv_hosCon1, tv_hosCon2,tv_hosCon3, tv_hosCon4, tv_hosCon5, tv_hosCon6, tv_hosCon7,
-            tv_hosCon8, tv_hosCon9, tv_hosCon10, tv_hosCon11, tv_hosCon12, tv_hosCon13;
+    TextView tv_hosCon1, tv_hosCon2,tv_hosCon3, tv_hosCon4, tv_hosCon5, tv_hosCon6,
+            tv_hosCon10, tv_hosCon12, tv_hosCon13;
 
-    ImageButton btn_hosCon1, btn_hosCon2, btn_hosCon3, btn_hosCon4, btn_hosCon5, btn_hosCon6, btn_hosCon7,
-            btn_hosCon8, btn_hosCon9, btn_hosCon10, btn_hosCon11, btn_hosCon12, btn_hosCon13;
+    ImageButton btn_hosCon1, btn_hosCon2, btn_hosCon3, btn_hosCon4, btn_hosCon5, btn_hosCon6,
+           btn_hosCon10, btn_hosCon12, btn_hosCon13;
 
     private static final int REQUEST_CALL = 1;
 
@@ -32,21 +32,21 @@ public class MedicalActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_medical);
 
-        tv_hosCon1 = findViewById(R.id.tv_hosCon1); tv_hosCon8 = findViewById(R.id.tv_hosCon8);
-        tv_hosCon2 = findViewById(R.id.tv_hosCon2); tv_hosCon9 = findViewById(R.id.tv_hosCon9);
-        tv_hosCon3 = findViewById(R.id.tv_hosCon3); tv_hosCon10 = findViewById(R.id.tv_hosCon10);
-        tv_hosCon4 = findViewById(R.id.tv_hosCon4); tv_hosCon11 = findViewById(R.id.tv_hosCon11);
+        tv_hosCon1 = findViewById(R.id.tv_hosCon1);
+        tv_hosCon2 = findViewById(R.id.tv_hosCon2);
+        tv_hosCon3 = findViewById(R.id.tv_hosCon3);
+        tv_hosCon4 = findViewById(R.id.tv_hosCon4); tv_hosCon10 = findViewById(R.id.tv_hosCon10);
         tv_hosCon5 = findViewById(R.id.tv_hosCon5); tv_hosCon12 = findViewById(R.id.tv_hosCon12);
         tv_hosCon6 = findViewById(R.id.tv_hosCon6); tv_hosCon13 = findViewById(R.id.tv_hosCon13);
-        tv_hosCon7 = findViewById(R.id.tv_hosCon7);
 
-        btn_hosCon1 = findViewById(R.id.btn_hosCon1); btn_hosCon8 = findViewById(R.id.btn_hosCon8);
-        btn_hosCon2 = findViewById(R.id.btn_hosCon2); btn_hosCon9 = findViewById(R.id.btn_hosCon9);
-        btn_hosCon3 = findViewById(R.id.btn_hosCon3); btn_hosCon10 = findViewById(R.id.btn_hosCon10);
-        btn_hosCon4 = findViewById(R.id.btn_hosCon4); btn_hosCon11 = findViewById(R.id.btn_hosCon11);
+
+        btn_hosCon1 = findViewById(R.id.btn_hosCon1);
+        btn_hosCon2 = findViewById(R.id.btn_hosCon2);
+        btn_hosCon3 = findViewById(R.id.btn_hosCon3);
+        btn_hosCon4 = findViewById(R.id.btn_hosCon4); btn_hosCon10 = findViewById(R.id.btn_hosCon10);
         btn_hosCon5 = findViewById(R.id.btn_hosCon5); btn_hosCon12 = findViewById(R.id.btn_hosCon12);
         btn_hosCon6 = findViewById(R.id.btn_hosCon6); btn_hosCon13 = findViewById(R.id.btn_hosCon13);
-        btn_hosCon7 = findViewById(R.id.btn_hosCon7);
+
 
 
 
@@ -76,15 +76,12 @@ public class MedicalActivity extends AppCompatActivity {
             }
         });
 
-
         btn_hosCon4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 makePhoneCall(tv_hosCon4);
             }
         });
-
 
         btn_hosCon5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,34 +100,6 @@ public class MedicalActivity extends AppCompatActivity {
             }
         });
 
-
-        btn_hosCon7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                makePhoneCall(tv_hosCon7);
-            }
-        });
-
-
-        btn_hosCon8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                makePhoneCall(tv_hosCon8);
-            }
-        });
-
-
-        btn_hosCon9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                makePhoneCall(tv_hosCon9);
-            }
-        });
-
-
         btn_hosCon10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,16 +107,6 @@ public class MedicalActivity extends AppCompatActivity {
                 makePhoneCall(tv_hosCon10);
             }
         });
-
-
-        btn_hosCon11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                makePhoneCall(tv_hosCon11);
-            }
-        });
-
 
         btn_hosCon12.setOnClickListener(new View.OnClickListener() {
             @Override

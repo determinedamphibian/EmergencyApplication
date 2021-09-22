@@ -1,57 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50"
+    android:background="@color/white"
+    android:padding="30dp"
     tools:context=".EmergencyHotlineButtonActivity">
 
-    <Button
-        android:id="@+id/btn_medical"
-        android:layout_width="135dp"
-        android:layout_height="70dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="489dp"
-        android:text="Medical" />
 
-    <Button
-        android:id="@+id/btn_fire"
-        android:layout_width="134dp"
-        android:layout_height="73dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="396dp"
-        android:text="fire" />
+    <TextView
+        android:id="@+id/tv_fireStations"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
 
-    <Button
-        android:id="@+id/btn_police"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/assistant_light"
+        android:gravity="center"
+        android:text="Fire Stations"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgBtn_fireStations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtn_hospitals"
+        app:layout_constraintVertical_bias="0.869" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_hospitals"
+        android:layout_width="115dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_drawable"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hospitals"
+        app:srcCompat="@drawable/cross" />
+
+    <TextView
+        android:id="@+id/tv_hospitals"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/assistant_light"
+        android:gravity="center"
+        android:text="Hospitals"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_fireStations"
         android:layout_width="133dp"
-        android:layout_height="82dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="149dp"
-        android:layout_marginRight="149dp"
-        android:layout_marginBottom="289dp"
-        android:text="police" />
+        android:layout_height="125dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="120dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_drawable"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/heating" />
 
-    <Button
-        android:id="@+id/btn_helpline"
-        android:layout_width="134dp"
-        android:layout_height="80dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="152dp"
-        android:layout_marginRight="152dp"
-        android:layout_marginBottom="185dp"
-        android:text="helpline" />
-</RelativeLayout>
+    <TextView
+        android:id="@+id/tv_emotionalSupport"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/assistant_light"
+        android:gravity="center"
+        android:text="Emotional Support"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_fireStations"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtn_policeStations" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_emotionalSup"
+        android:layout_width="128dp"
+        android:layout_height="131dp"
+        android:layout_marginBottom="60dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_drawable"
+        android:clickable="false"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtn_fireStations"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_emotionalSupport"
+        app:layout_constraintVertical_bias="0.256"
+        app:srcCompat="@drawable/iconwhitepeople" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_policeStations"
+        android:layout_width="118dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="27dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_drawable"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBtn_hospitals"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtn_hospitals"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_policeStations"
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/police" />
+
+    <TextView
+        android:id="@+id/tv_policeStations"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/assistant_light"
+        android:gravity="center"
+        android:text="Police Stations"
+        android:textColor="@color/teal_700"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,6 +34,7 @@ import android.telephony.SmsManager;
 import android.util.DebugUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;

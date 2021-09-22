@@ -9,23 +9,41 @@
     android:id="@+id/drawer_layout"
     tools:context=".SideDockContents.SirenAndFlickerLightSideDock">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <include
-            layout="@layout/main_toolbar"/>
+            android:id="@+id/include2"
+            layout="@layout/main_toolbar" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Siren and Flicker Light"
-            android:textSize="50sp"
-            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btn_siren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginLeft="84dp"
+            android:layout_marginTop="196dp"
+            android:text="Siren"
+            app:layout_constraintBottom_toBottomOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2"
+            app:layout_constraintVertical_bias="1.0" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btn_flickerLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="84dp"
+            android:layout_marginRight="84dp"
+            android:text="Turn On"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_siren"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_siren"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
         android:layout_width="300dp"

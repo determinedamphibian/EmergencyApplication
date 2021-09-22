@@ -1,132 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelplineActivity">
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".HelplineActivity"
+    android:background="@color/secondaryLight">
 
-
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HELP LINE CONTACTS"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HelpLine Hotlines"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="36dp"
-        android:text="HOPE LINE"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/tv_num_hopeline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="36dp"
-        android:text="09175584673"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <ImageButton
-        android:id="@+id/btn_hopeline"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/shape_drawable"
-        android:src="@android:drawable/ic_menu_call"
-        android:text="Call"
-        app:layout_constraintStart_toEndOf="@+id/tv_num_hopeline"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:background="@drawable/layout_border2">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HELP LINE CONTACTS"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.059"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.022" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOPE LINE" />
+
+            <TextView
+                android:id="@+id/tv_num_hopeline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09175584673"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_hopeline"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/shape_drawable"
+            android:src="@android:drawable/ic_menu_call" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="44dp"
-        android:text="IN TOUCH COMMUNITY SERVICES"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num_hopeline" />
-
-
-    <TextView
-        android:id="@+id/tv_num_intouch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="36dp"
-        android:text="09178001123"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <ImageButton
-        android:id="@+id/btn_intouch"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/shape_drawable"
-        android:src="@android:drawable/ic_menu_call"
-        android:text="Call"
-        app:layout_constraintStart_toEndOf="@+id/tv_num_intouch"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:background="@drawable/layout_border2">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IN TOUCH COMMUNITY SERVICES" />
+
+
+            <TextView
+                android:id="@+id/tv_num_intouch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09178001123" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_intouch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_drawable"
+            android:src="@android:drawable/ic_menu_call"
+            android:text="Call" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="40dp"
-        android:text="THE NATIONAL FOR MENTAL HEALTH CRISIS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_num_intouch" />
-
-    <TextView
-        android:id="@+id/tv_num_mentalhealth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="44dp"
-        android:text=" 09178998727"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <ImageButton
-        android:id="@+id/btn_mentalhealth"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/shape_drawable"
-        android:src="@android:drawable/ic_menu_call"
-        android:text="Call"
-        app:layout_constraintStart_toEndOf="@+id/tv_num_mentalhealth"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        android:background="@drawable/layout_border2">
 
+        <LinearLayout
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THE NATIONAL FOR MENTAL HEALTH CRISIS" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_num_mentalhealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 09178998727" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_mentalhealth"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:background="@drawable/shape_drawable"
+            android:src="@android:drawable/ic_menu_call"
+            android:text="Call" />
+
+    </LinearLayout>
+</LinearLayout>

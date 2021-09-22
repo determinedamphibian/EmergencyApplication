@@ -17,10 +17,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class HelplineActivity extends AppCompatActivity {
-ImageButton btn_hopeline, btn_intouch, btn_mentalhealth;
-TextView tv_num_hopeline, tv_num_intouch, tv_num_mentalhealth;
+    ImageButton btn_hopeline, btn_intouch, btn_mentalhealth;
+    TextView tv_num_hopeline, tv_num_intouch, tv_num_mentalhealth;
 
-private static final int REQUEST_CALL = 1;
+    private static final int REQUEST_CALL = 1;
 
 
     @Override
