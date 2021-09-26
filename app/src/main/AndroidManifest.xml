@@ -9,11 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmergencyApplication">
-        <activity android:name=".TrustedContactsActivites.InstantSOS"></activity>
+        <activity android:name=".Disasters.FireDisasterActivity"></activity>
+        <activity android:name=".Disasters.GoBagActivity" />
+        <activity android:name=".Disasters.VolcanicActivity" />
+        <activity android:name=".Disasters.TsunamiActivity" />
+        <activity android:name=".Disasters.FloodActivity" />
+        <activity android:name=".Disasters.EarthquakeActivity" />
+        <activity android:name=".Disasters.StormSurgeActivity" />
+        <activity android:name=".Disasters.StormActivity" />
+        <activity android:name=".TrustedContactsActivites.InstantSOS" />
         <activity android:name=".TrustedContactsActivites.TrustedContactsMessageActivity" />
         <activity android:name=".FirstAidActivity" />
-        <activity android:name=".DisasterGuidelineButtonActivity" />
-        <activity android:name=".GuidelineButtonActivity" />
+        <activity android:name=".DisastersActivity" />
+        <activity android:name=".DisasterAndEmergencyGuidelineButtonActivity" />
         <activity android:name=".HelplineActivity" />
         <activity android:name=".EmergencyHotlineButtonActivity" />
         <activity android:name=".FireActivity" />
@@ -49,8 +57,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-  
     </application>
+
+    <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -58,7 +67,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

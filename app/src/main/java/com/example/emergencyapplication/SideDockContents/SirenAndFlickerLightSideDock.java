@@ -45,7 +45,7 @@ public class SirenAndFlickerLightSideDock extends AppCompatActivity {
         //Assign values to initialized variables
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        btMenu = findViewById(R.id.bt_menu);
+        btMenu = findViewById(R.id.bt_back);
         recyclerView = findViewById(R.id.recycler_view);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -17,8 +16,6 @@ import com.example.emergencyapplication.MainDashboardActivity;
 import com.example.emergencyapplication.R;
 import com.example.emergencyapplication.TrustedContactsActivites.InsertActivity;
 import com.example.emergencyapplication.TrustedContactsActivites.TrustedContactsMessageActivity;
-import com.example.emergencyapplication.TrustedContactsActivites.ViewActivity;
-import com.example.emergencyapplication.TrustedContactsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -59,7 +56,7 @@ public class TrustedContactsSideDock extends AppCompatActivity {
         new LoadData().execute();
 
         //Menu button
-        btMenu = findViewById(R.id.bt_menu);
+        btMenu = findViewById(R.id.bt_back);
         btMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

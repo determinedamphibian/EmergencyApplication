@@ -13,4 +13,14 @@
     <string name="menu_government_hotlines">Government Hotlines</string>
     <string name="menu_siren_flicker">Siren And Flicker Light</string>
     <string name="menu_about">About</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Intro_storm">Ang bagyo ay isang uri ng lagay ng panahon na nagdudulot ng malakas at mabilis na hangin at pag-ulan na maaring maging sanhi ng matinding pagbaha, daluyong ng dagat at pagguho ng mga lupa.</string>
+    <string name="Intro_storm_surge">Ang storm surge o daluyong ng dagat ay ang pagtaas ng tubig-dagat sanhi ng bagyo.</string>
+    <string name="Intro_earthquake">Ang lindol ay ang pagyanig ng lupa dahil sa biglaang paggalaw ng mga bato sa ilalim nito.</string>
+    <string name="Intro_flood">Ang baha ay pag-apaw ng sobra-sobrang tubig sa natural nitong daluyan tulad ng sapa, ilog, at dagat dahilan upang malubog ang nakapalibot ditong lupa.</string>
+    <string name="Intro_landslide">Ang landslide o pagguho ay ang pagbaba ng lupa, bato, putik, at iba pang bagay mula sa mataas na lugar. Ito ay maaring mangyari kapag may malakas at tuloy-tuloy na pag-ulan o pagyanig mula sa lindol.</string>
+    <string name="Intro_volcanic">Ang pagputok ng bulkan ay nangyayari kapag nagbuga ang bulkan ng mga bato, lava, abot, at mga usok.</string>
+    <string name="Intro_fire_disaster">Ang mga sunog ay banta ng panganib sa kaligtasan ng tao at ng kaniyang mga ari-arian at kabuhayan. Mahalaga na may kaalaman ukol sa pag-iwas sa sunog at mga dapat gawin sakaling magkasunog.</string>
+    <string name="Intro_goBag">Kapag may banta ng panganib, kailangan lumikas papunta sa higit na ligtas na lugar.  Bilang paghahanda sa mga ganitong pagkakataon, mahalaga na may GO BAG na dadalhin ang pamilya.</string>
 </resources>
