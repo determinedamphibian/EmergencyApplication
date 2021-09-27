@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/radio" />
+                android:src="@drawable/frequency" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/checklist" />
+                android:src="@drawable/volcano_erruption" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/repair" />
+                android:src="@drawable/well" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/pet_house" />
+                android:src="@drawable/smoke" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/evacuation" />
+                android:src="@drawable/radio" />
 
             <TextView
                 android:layout_width="wrap_content"

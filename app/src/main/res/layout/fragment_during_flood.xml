@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_margin="10dp"
             android:layout_width="wrap_content"
@@ -19,12 +20,11 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/radio" />
+                android:src="@drawable/house" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
@@ -42,12 +42,11 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/checklist" />
+                android:src="@drawable/danger_wet" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
@@ -65,14 +64,13 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/repair" />
+                android:src="@drawable/no_swimming" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
                 android:text="Huwag lumangoy o mamangka sa umaapaw na ilog."
                 android:textSize="14sp" />
 
@@ -88,7 +86,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/gobag" />
+                android:src="@drawable/above_knee_flood" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -111,7 +109,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/pet_house" />
+                android:src="@drawable/car_flood" />
 
             <TextView
                 android:layout_width="wrap_content"

@@ -20,16 +20,15 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/radio" />
+                android:src="@drawable/fireman" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="Makipagkaibigan sa bumbero"/>
+                android:text="Makipagkaibigan sa bumbero."/>
 
         </LinearLayout>
 
@@ -43,12 +42,11 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/checklist" />
+                android:src="@drawable/alarm_fir" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
@@ -66,12 +64,11 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/repair" />
+                android:src="@drawable/evacuation" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
@@ -89,14 +86,13 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/pet_house" />
+                android:src="@drawable/gas_tank" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
                 android:text="Isara ang LPG kapag hindi ginagamit."
                 android:textSize="14sp" />
 
@@ -112,14 +108,13 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/evacuation" />
+                android:src="@drawable/electric_tool" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
                 android:text="Ipasuri sa electrician ang koneksyon ng mga kuryente taon-taon."
                 android:textSize="14sp" />
 
@@ -135,14 +130,13 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/evacuation" />
+                android:src="@drawable/unplug" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
                 android:text="Tanggalin sa pagkakasaksak ang mga gamit maatapos itong gamitin."
                 android:textSize="14sp" />
 
@@ -158,14 +152,13 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/evacuation" />
+                android:src="@drawable/candle" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
                 android:text="Huwag pabayaan ang mga nakasinding kandila o sigarilyo."
                 android:textSize="14sp" />
 
@@ -181,7 +174,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/evacuation" />
+                android:src="@drawable/teaching_child" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -204,14 +197,13 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/evacuation" />
+                android:src="@drawable/fire_extinguisher" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
                 android:text="Alamin ang paggamit ng fire extinguisher: hilahin ang 'pin', itapat ang hose sa pinagmumulan ng apoy, diinan ang pindutan, at galawin ang hose na parang winawalis ang apoy."
                 android:textSize="14sp"
                 />

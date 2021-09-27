@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_margin="10dp"
             android:layout_width="wrap_content"
@@ -20,16 +21,16 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/radio" />
+                android:layout_gravity="center"
+                android:src="@drawable/checklist" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
-                android:textSize="14sp"
-                android:text="Alamin ang balita ukol sa panahon at mga anunsyong pangkaligtasan."/>
+                android:layout_marginLeft="10dp"
+                android:text=" Alamin ang mga sumusunod:\n  -Mga pampaapula ng apoy tulad ng Fire extinguishers.\n  -Mga gamit pang-medikal\n   -Ligtas na daanan palabas ng gusali\n   -Plano sa paglikas ng tao."
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -43,16 +44,15 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/checklist" />
+                android:src="@drawable/toxic_barrel" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="Alamin ang plano ng komunidad sa pagbibigay-babala at paglikas."/>
+                android:text="Ayusin ang pag-iimbak ng mga nakakalasong kemikal at mga bagay na maaring maging sanhi ng sunog."/>
 
         </LinearLayout>
 
@@ -71,11 +71,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="Suriin ang baha at kumpunihin ang mga mahina o sirang bahagi nito."/>
+                android:text="Siguraduhing matibay ang bahay at ipakumpuni ang mga nasirang bahagi nito."/>
 
         </LinearLayout>
 
@@ -94,13 +94,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
                 android:text="Ihanda ang GO BAG na naglalaman ng mga pangangailangan ng pamilya."/>
 
         </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,8 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Ilikas ang mga alagang hayop sa ligtas na lugar."
+                android:text="Siguraduhing ligtas ang pagkakalagay ng mga mabibigat at mga nakabiting bagay."
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -135,15 +135,14 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/evacuation" />
+                android:src="@drawable/secure_furnitures" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Kapag inabisuhan ng kinauukulan, mabilis na lumikas sa itinakdang evacuation center."
+                android:text="Makilahok sa mga pagsasanay ukol sa lindol."
                 android:textSize="14sp" />
 
         </LinearLayout>

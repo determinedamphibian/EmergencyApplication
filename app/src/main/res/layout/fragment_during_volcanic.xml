@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/radio" />
+                android:src="@drawable/evacuation" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/checklist" />
+                android:src="@drawable/pwd" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/repair" />
+                android:src="@drawable/facemask" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/gobag" />
+                android:src="@drawable/river" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -119,7 +119,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Ilikas ang mga alagang hayop sa ligtas na lugar."
+                android:text="Ilikas ang mga alagang hayop sa ligtas na lugar para maiwasan ang paglanghap ng abo."
                 android:textSize="14sp" />
 
         </LinearLayout>

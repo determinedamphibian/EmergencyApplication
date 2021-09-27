@@ -19,16 +19,15 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/radio" />
+                android:src="@drawable/search_self" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="Alamin ang balita ukol sa panahon at mga anunsyong pangkaligtasan."/>
+                android:text="Suriin ang iyong sarili at mga kasama kung may tinamong pinsala. Magbigay ng paunang lunas kung kailangan."/>
 
         </LinearLayout>
 
@@ -42,16 +41,16 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/checklist" />
+                android:src="@drawable/pwd" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="Alamin ang plano ng komunidad sa pagbibigay-babala at paglikas."/>
+                android:text="Unahin ang mga pangangailangan ng mga matatanda, buntis, may kapansanan at mga bata."/>
 
         </LinearLayout>
 
@@ -70,11 +69,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="Suriin ang baha at kumpunihin ang mga mahina o sirang bahagi nito."/>
+                android:text="Kapag na sa tabing dagat at may banta ng tsunami, agad na lumikas papunta sa ligtas at mataas na lugar."/>
 
         </LinearLayout>
 
@@ -93,11 +91,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
-                android:text="Ihanda ang GO BAG na naglalaman ng mga pangangailangan ng pamilya."/>
+                android:text="Suriin kung may natapong nakalalasong kemikal at mga bagay na maaring pagmulan ng sunog."/>
 
         </LinearLayout>
 
@@ -118,8 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Ilikas ang mga alagang hayop sa ligtas na lugar."
+                android:text="Huwag bumalik sa loob ng gusali hanggang walang abiso na ligtas na ito."
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -141,8 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Kapag inabisuhan ng kinauukulan, mabilis na lumikas sa itinakdang evacuation center."
+                android:text="Suriin ang mga linya ng tubig at kuryente para sa maaring pinsala. Suriin rin ang tangke ng gas o LPG."
                 android:textSize="14sp" />
 
         </LinearLayout>
