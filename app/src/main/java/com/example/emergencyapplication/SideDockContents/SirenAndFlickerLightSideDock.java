@@ -29,9 +29,9 @@ import androidx.recyclerview.widget.RecyclerView;
 public class SirenAndFlickerLightSideDock extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
-    ImageView btMenu;
-    Button btn_siren, btn_flickerLight;
+    ImageView btn_siren, btMenu, btn_flickerLight;
     RecyclerView recyclerView;
+    Boolean state = false;
     private static final int CAMERA_REQUEST = 123;
     boolean hasCamerFlash = false;
 
@@ -63,15 +63,27 @@ public class SirenAndFlickerLightSideDock extends AppCompatActivity {
             }
         });
 
-
+        //creating an object of AudioManager that gets the System Service which is audio
         final AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+
+        // creating variable that holds the volume of the streamed audio
         final int originalVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+
+        //object audioManager calls the setStreamVolume method to force the output of audio to be at maximum volume
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
+
+        //creating an object for MediaPlayer which needs the current class context and the audio located at resources -> raw folder
         final MediaPlayer mediaPlayer = MediaPlayer.create(SirenAndFlickerLightSideDock.this, R.raw.emergency_alarm);
+
+        //mediaPlayer calling the method of setAudioStreamType to get the value from STREAM_MUSIC
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+
+        //method for successful creation of mediaPlayer
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
+
+                //audioManager object calls setStreamVolume to stream the audio and get the value of originalVolume which was transformed into max volume
                 audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, originalVolume, 0);
 
             }
@@ -95,44 +107,71 @@ public class SirenAndFlickerLightSideDock extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
+
+                // android version is checked if it the following operation will be compatible on the device
+                //lowest android can use this is Android L or Lollipop
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+
+                    //creating an object of CameraManager and getting the camera service
                     CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
 
-                    try {
-                            String cameraString = "10101010101010";
-                            long blinkDelay = 150;
+                    //for selector xml that animates the flashlight display when pressed
+                    v.setActivated(!v.isActivated());
 
-                            for (int i = 0; i<cameraString.length(); i++){
-                                if(cameraString.charAt(i)== '0'){
-                                    String cameraId = cameraManager.getCameraIdList()[0];
-                                    cameraManager.setTorchMode(cameraId, true);
-                                }
-                                else{
-                                    try{
+                    if(state == false){
+
+                            try {
+                                //number of flickers
+                                String cameraString = "1010101010101010";
+                                //number of delay (ms)
+                                long blinkDelay = 150;
+
+                                for (int i = 0; i<cameraString.length(); i++){
+                                    if(cameraString.charAt(i)== '0'){
+                                        //turn on the torchlight
                                         String cameraId = cameraManager.getCameraIdList()[0];
-                                        cameraManager.setTorchMode(cameraId, false);
+                                        cameraManager.setTorchMode(cameraId, true);
+                                        state = true;
                                     }
-                                    catch (CameraAccessException e){
-                                        e.printStackTrace();
-                                    }
-                                    try {
-                                        Thread.sleep(blinkDelay);
-                                    }
-                                    catch (InterruptedException e){
-                                        e.printStackTrace();
+                                    else{
+                                        try{
+                                            //turn off the torchlight
+                                            String cameraId = cameraManager.getCameraIdList()[0];
+                                            cameraManager.setTorchMode(cameraId, false);
+                                        }
+                                        catch (CameraAccessException e){
+                                                e.printStackTrace();
+                                        }
+                                        try {
+                                                // duration between flickering
+                                                Thread.sleep(blinkDelay);
+                                        }
+                                        catch (InterruptedException e){
+                                                e.printStackTrace();
+                                        }
                                     }
                                 }
                             }
-                    }
-                    catch (CameraAccessException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else{
-                    Toast.makeText(SirenAndFlickerLightSideDock.this, "Android version not supported", Toast.LENGTH_SHORT);
-                }
+                            catch (CameraAccessException e) {
+                                e.printStackTrace();
+                            }
 
+                        }
+                         else if(state == true){
 
+                             try{
+                                 String cameraId = cameraManager.getCameraIdList()[0];
+                                 cameraManager.setTorchMode(cameraId, false);
+                                 state = false;
+                             }
+                             catch (CameraAccessException e) {
+                                 e.printStackTrace();
+                             }
+                         }
+                         else{
+                            Toast.makeText(SirenAndFlickerLightSideDock.this, "Android version not supported", Toast.LENGTH_SHORT);
+                         }
+                    }
             }
         });
     }

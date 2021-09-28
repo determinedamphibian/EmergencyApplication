@@ -10,8 +10,8 @@ import android.widget.ImageView;
 
 public class DisasterAndEmergencyGuidelineButtonActivity extends AppCompatActivity {
 
-    Button btn_disaster, btn_firstAid;
-    ImageView btn_back;
+
+    ImageView btn_back, btn_disaster, btn_firstAid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class DisasterAndEmergencyGuidelineButtonActivity extends AppCompatActivi
             }
         });
 
-        btn_disaster = findViewById(R.id.btn_disater);
+        btn_disaster = findViewById(R.id.bt_disaster);
         btn_disaster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +37,7 @@ public class DisasterAndEmergencyGuidelineButtonActivity extends AppCompatActivi
             }
         });
 
-        btn_firstAid = findViewById(R.id.btn_firstaid);
+        btn_firstAid = findViewById(R.id.bt_first_aid_kit);
         btn_firstAid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

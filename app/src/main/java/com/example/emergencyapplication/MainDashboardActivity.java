@@ -43,8 +43,7 @@ import java.util.Locale;
 
 public class MainDashboardActivity extends AppCompatActivity implements LocationListener {
 
-    private ImageButton imageButton_emergencyHotlines;
-    private ImageButton imageButton_watcher;
+    private ImageView imageButton_emergencyHotlines, imageButton_watcher,imageButton_sos, imageButton_guidelines;
     private LocationManager locationManager;
     DrawerLayout drawerLayout;
     ImageView btMenu;
@@ -102,8 +101,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         //constraintLayout_header.setAnimation(topAnim);
 
 
-
-        ImageButton imageButton_sos = findViewById(R.id.imgbtn_SOS);
+        imageButton_sos = findViewById(R.id.imgbtn_SOS);
         imageButton_sos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,13 +131,13 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         });
 
         //guideline button
-        ImageButton imageButton_guidelines = findViewById(R.id.guidelines_imageButton);
+       imageButton_guidelines = findViewById(R.id.bt_guidelines);
         imageButton_guidelines.setOnClickListener((View v) -> {
             openGuidelineForm();
 
         });
 
-        imageButton_emergencyHotlines = findViewById(R.id.emergencyHotline_imageButton);
+        imageButton_emergencyHotlines = findViewById(R.id.bt_emergencyHotline);
         imageButton_emergencyHotlines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

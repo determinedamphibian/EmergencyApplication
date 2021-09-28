@@ -11,11 +11,20 @@ import android.widget.ImageView;
 
 public class EmergencyHotlineButtonActivity extends AppCompatActivity {
 
-    ImageButton imgBtn_policeStations, imgBtn_hospitals, imgBtn_fireStations, imgBtn_emotionSupp;
+    ImageView imgBtn_policeStations, imgBtn_hospitals, imgBtn_fireStations, imgBtn_emotionSupp, bt_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_hotline_button);
+
+        bt_back = findViewById(R.id.bt_back);
+        bt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EmergencyHotlineButtonActivity.this, MainDashboardActivity.class);
+                startActivity(intent);
+            }
+        });
 
         imgBtn_hospitals = findViewById(R.id.imgBtn_hospitals);
         imgBtn_hospitals.setOnClickListener(new View.OnClickListener() {
