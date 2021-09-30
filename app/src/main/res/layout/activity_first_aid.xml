@@ -10,7 +10,7 @@
         android:id="@+id/card_view_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/tertiaryLight"
+        app:cardBackgroundColor="#E6141C"
         app:cardCornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,6 +82,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/bt_cpr"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/cpr"
@@ -116,6 +117,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/bt_bleeding"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="centerCrop"
@@ -150,6 +152,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/bt_fractures"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/fracture"/>
@@ -183,6 +186,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/bt_sprains"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/sprains"/>
@@ -216,6 +220,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/bt_burns"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/burn"/>
@@ -249,6 +254,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/bt_animal_bites"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="centerCrop"
@@ -283,6 +289,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/bt_choking"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/choking"/>

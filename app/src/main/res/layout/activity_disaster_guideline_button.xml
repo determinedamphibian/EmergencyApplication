@@ -10,7 +10,7 @@
         android:id="@+id/card_view_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/tertiaryLight"
+        app:cardBackgroundColor="#1C3AA8"
         app:cardCornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MedicalActivity extends AppCompatActivity {
@@ -23,6 +24,8 @@ public class MedicalActivity extends AppCompatActivity {
     ImageButton btn_hosCon1, btn_hosCon2, btn_hosCon3, btn_hosCon4, btn_hosCon5, btn_hosCon6,
            btn_hosCon10, btn_hosCon12, btn_hosCon13;
 
+    ImageView btn_back;
+
     private static final int REQUEST_CALL = 1;
 
     @Override
@@ -31,6 +34,15 @@ public class MedicalActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_medical);
+
+        btn_back = findViewById(R.id.bt_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MedicalActivity.this, EmergencyHotlineButtonActivity.class);
+                startActivity(intent);
+            }
+        });
 
         tv_hosCon1 = findViewById(R.id.tv_hosCon1);
         tv_hosCon2 = findViewById(R.id.tv_hosCon2);

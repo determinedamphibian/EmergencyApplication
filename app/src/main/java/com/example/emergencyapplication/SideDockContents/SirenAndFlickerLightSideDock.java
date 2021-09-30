@@ -10,7 +10,6 @@ import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -31,9 +30,11 @@ public class SirenAndFlickerLightSideDock extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView btn_siren, btMenu, btn_flickerLight;
     RecyclerView recyclerView;
+
+    //will be used for on and off condition on torchlight
     Boolean state = false;
     private static final int CAMERA_REQUEST = 123;
-    boolean hasCamerFlash = false;
+    boolean hasCameraFlash = false;
 
 
 
@@ -54,7 +55,7 @@ public class SirenAndFlickerLightSideDock extends AppCompatActivity {
 
         ActivityCompat.requestPermissions(SirenAndFlickerLightSideDock.this,
                 new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST);
-        hasCamerFlash = getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
+        hasCameraFlash = getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
 
         btMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,10 +90,12 @@ public class SirenAndFlickerLightSideDock extends AppCompatActivity {
             }
         });
 
+        //condition to turn on and off siren sound using one button
         btn_siren = findViewById(R.id.btn_siren);
         btn_siren.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(mediaPlayer.isPlaying()){
                     mediaPlayer.pause();
                 }
@@ -157,6 +160,7 @@ public class SirenAndFlickerLightSideDock extends AppCompatActivity {
                             }
 
                         }
+                    //turn-off torch light when pressed again
                          else if(state == true){
 
                              try{

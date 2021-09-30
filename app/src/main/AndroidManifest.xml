@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmergencyApplication">
-        <activity android:name=".Disasters.FireDisasterActivity"></activity>
+        <activity android:name=".FirstAids.BleedingActivity"></activity>
+        <activity android:name=".FirstAids.ChokingActivity" />
+        <activity android:name=".FirstAids.SprainsActivity" />
+        <activity android:name=".FirstAids.FractureActivity" />
+        <activity android:name=".FirstAids.CPRActivity" />
+        <activity android:name=".FirstAids.BurnsActivity" />
+        <activity android:name=".FirstAids.AnimalBitesActivity" />
+        <activity android:name=".Disasters.FireDisasterActivity" />
         <activity android:name=".Disasters.GoBagActivity" />
         <activity android:name=".Disasters.VolcanicActivity" />
         <activity android:name=".Disasters.TsunamiActivity" />
@@ -45,7 +52,6 @@
         <activity android:name=".TrustedContactsActivites.ViewActivity" />
         <activity android:name=".TrustedContactsActivites.InsertActivity" />
         <activity android:name=".CrimeActivity" />
-        <activity android:name=".TrustedContactsActivity" />
         <activity android:name=".AnimationMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

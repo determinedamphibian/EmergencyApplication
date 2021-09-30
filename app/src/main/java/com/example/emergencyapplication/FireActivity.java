@@ -13,12 +13,14 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FireActivity extends AppCompatActivity {
 
     TextView tv_fireCon1, tv_fireCon2, tv_fireCon3, tv_fireCon4, tv_fireCon5, tv_fireCon7;
     ImageButton btn_fireCon1, btn_fireCon2,btn_fireCon3, btn_fireCon4, btn_fireCon5, btn_fireCon7;
+    ImageView btn_back;
     private static final int REQUEST_CALL = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,14 @@ public class FireActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_fire);
 
+        btn_back = findViewById(R.id.bt_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FireActivity.this, EmergencyHotlineButtonActivity.class);
+                startActivity(intent);
+            }
+        });
         tv_fireCon1 = findViewById(R.id.tv_fireCon1); tv_fireCon5 = findViewById(R.id.tv_fireCon5);
         tv_fireCon2 = findViewById(R.id.tv_fireCon2);
         tv_fireCon3 = findViewById(R.id.tv_fireCon3); tv_fireCon7 = findViewById(R.id.tv_fireCon7);

@@ -14,11 +14,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HelplineActivity extends AppCompatActivity {
     ImageButton btn_hopeline, btn_intouch, btn_mentalhealth;
     TextView tv_num_hopeline, tv_num_intouch, tv_num_mentalhealth;
+    ImageView btn_back;
 
     private static final int REQUEST_CALL = 1;
 
@@ -27,8 +29,16 @@ public class HelplineActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_helpline);
+
+        btn_back = findViewById(R.id.bt_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HelplineActivity.this, EmergencyHotlineButtonActivity.class);
+                startActivity(intent);
+            }
+        });
 
         tv_num_hopeline = findViewById(R.id.tv_num_hopeline);
         btn_hopeline = findViewById(R.id.btn_hopeline);

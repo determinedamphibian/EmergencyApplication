@@ -30,8 +30,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="The Green Archer Emergency App is an all in one application that offers a wide variety of functionalites that can be useful during Emergency or Disaster."
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:textSize="14sp"
             android:paddingBottom="20dp"/>
 
 
@@ -42,14 +41,13 @@
             android:gravity="center"
             android:paddingBottom="20dp"
             android:text="Made from the culmination effort from\n Billy O. Reyes, Jelo Patrick L. Bautista, Clifford C. Trijo, and Jan Ryan Cristopher R. Iban."
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="14sp" />
 
         <ImageView
+            android:layout_marginTop="50dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/greenarcher3"
-            android:layout_marginBottom="80dp"/>
+            android:src="@drawable/greenarcher3" />
 
         <TextView
             android:id="@+id/textView5"
@@ -57,7 +55,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="All rights reserved 2021."
-            android:textColor="@color/black"
             android:textSize="14sp" />
 
     </LinearLayout>

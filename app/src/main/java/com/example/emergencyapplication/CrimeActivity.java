@@ -12,12 +12,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CrimeActivity extends AppCompatActivity {
     private TextView tv_contact_number,
             tv_contact_number2, tv_contact_number3, tv_contact_number4, tv_contact_number5;
     private ImageButton call_button, call_button2, call_button3, call_button4, call_button5;
+    ImageView btn_back;
     private static final int REQUEST_CALL = 1;
 
 
@@ -26,6 +28,15 @@ public class CrimeActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_crime_contacts);
+
+        btn_back = findViewById(R.id.bt_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CrimeActivity.this, EmergencyHotlineButtonActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //call contact1
         tv_contact_number = (TextView) findViewById(R.id.pcp_contact_number);

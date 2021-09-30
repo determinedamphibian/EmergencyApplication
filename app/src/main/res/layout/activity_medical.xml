@@ -10,14 +10,33 @@
         android:background="#FF29985F"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Hospital Hotlines"
-            android:textColor="@color/white"
-            android:paddingTop="20dp"
-            android:textSize="18sp" />
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/bt_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/abc_vector_test"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospital Hotlines"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
 
         <ImageView
             android:layout_marginLeft="16dp"
@@ -48,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:text="Zarate General Hospital"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -56,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:text="13-765 Atlas compond, Naga Rd, Las Pinas"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -65,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+63288746903"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -116,7 +135,7 @@
                     android:layout_height="wrap_content"
                     android:text="Las Pinas General Hospital"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -124,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:text="Bernabe Compound, Pulanglupa I, Las Pinas City"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -133,7 +152,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+63288730557"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -181,7 +200,7 @@
                     android:layout_height="wrap_content"
                     android:text="Christ the King Hospital"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -189,7 +208,7 @@
                     android:layout_height="wrap_content"
                     android:text="029 Aldana, Pamplona, Las Pinas"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -198,7 +217,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+63288731119"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -249,7 +268,7 @@
                     android:layout_height="wrap_content"
                     android:text="Las Pinas Doctors Hospital"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -257,7 +276,7 @@
                     android:layout_height="wrap_content"
                     android:text="J.I. Aguilar Avenue, Pulang Lupa 2. P.C. 8009, Las Pinas City"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -266,7 +285,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+63288255236"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -314,7 +333,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pope John Paul 2 Hospital and Medical Center"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -322,7 +341,7 @@
                     android:layout_height="wrap_content"
                     android:text="545 Alabang–Zapote Road, Las Pinas"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -331,7 +350,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+63288760285"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -380,7 +399,7 @@
                     android:layout_height="wrap_content"
                     android:text="Perpetual Medical Center"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -388,7 +407,7 @@
                     android:layout_height="wrap_content"
                     android:text="Alabang–Zapote Road, Las Pinas"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -397,7 +416,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+63288748515"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -447,7 +466,7 @@
                     android:layout_height="wrap_content"
                     android:text="Alabang Medical Clinic - Almanza"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -455,7 +474,7 @@
                     android:layout_height="wrap_content"
                     android:text="480 Real Street, Almanza. P.C. 1740, Las Pinas City"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -464,7 +483,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+63288014535"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -514,7 +533,7 @@
                     android:layout_height="wrap_content"
                     android:text="Las Pinas City Medical Center"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -522,7 +541,7 @@
                     android:layout_height="wrap_content"
                     android:text="Marcos Alvarez Avenue. P.C. 1314, Las Pinas City"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -531,7 +550,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+6328005524"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -562,7 +581,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="18dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/layout_border">
@@ -580,7 +599,7 @@
                     android:layout_height="wrap_content"
                     android:text="Alabang Medical Center Talon"
                     android:textColor="#FFFF"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -588,7 +607,7 @@
                     android:layout_height="wrap_content"
                     android:text="Alabang - Zapote Road, Talon Uno, Las Pinas"
                     android:textColor="#4a4a4a"
-                    android:textSize="11sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -597,7 +616,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="+63288736464"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View

@@ -12,4 +12,8 @@
     <color name= "priamaryLight">#00cec9</color>
     <color name = "secondaryLight">#004D40</color>
     <color name = "primaryDark">#2C3A47</color>
+    <color name="orangeFirstAid">#F16316</color>
+    <color name="greeneFirstAid">#207A71</color>
+    <color name="yellowFirstAid">#958A18</color>
+
 </resources>

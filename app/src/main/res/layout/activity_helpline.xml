@@ -5,151 +5,221 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:gravity="center"
+    android:padding="20dp"
     tools:context=".HelplineActivity"
-    android:background="@color/secondaryLight">
+    android:background="#1B1B22">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/bt_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/abc_vector_test"
+            android:layout_marginRight="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HelpLine Hotlines"
+            android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="@color/white"
-            android:paddingTop="15dp"
-            android:paddingLeft="15dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:background="@drawable/layout_border2">
-
-        <LinearLayout
-            android:layout_width="196dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HELP LINE CONTACTS"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.059"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.022" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HOPE LINE" />
-
-            <TextView
-                android:id="@+id/tv_num_hopeline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="09175584673"/>
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/btn_hopeline"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-
-            android:background="@drawable/shape_drawable"
-            android:src="@android:drawable/ic_menu_call" />
-
+            android:textColor="@color/white" />
     </LinearLayout>
 
 
-
-    <LinearLayout
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/sad_people_icon" />
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:background="@drawable/layout_border2">
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="left"
+        android:layout_marginBottom="10dp"
+        android:justificationMode="inter_word"
+        android:text="      At this time of despair and loneliness, it is important that we check our mental health. Talk to someone, get some help, you are not fighting this alone."/>
 
-        <LinearLayout
-            android:layout_width="196dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="IN TOUCH COMMUNITY SERVICES" />
-
-
-            <TextView
-                android:id="@+id/tv_num_intouch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="09178001123" />
-
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/btn_intouch"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@drawable/shape_drawable"
-            android:src="@android:drawable/ic_menu_call"
-            android:text="Call" />
+            android:background="@drawable/layout_border2"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_hopeline"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOPE LINE"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_num_hopeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09175584673"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:layout_width="248dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#193463"
+                    android:text="Is a 24/7 suicide prevention and crisis support helpline in the Philippines." />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@drawable/layout_border2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IN TOUCH COMMUNITY SERVICES"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_num_intouch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="09178001123" />
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:layout_width="248dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#193463"
+                    android:text= "It offers 24/7 free and confidential support to people in the Philippines."/>
+
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_intouch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:background="@drawable/layout_border2">
+        android:layout_marginBottom="10dp">
 
-        <LinearLayout
-            android:layout_width="196dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="THE NATIONAL FOR MENTAL HEALTH CRISIS" />
-
-            <TextView
-                android:id="@+id/tv_num_mentalhealth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 09178998727" />
-
-        </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/btn_mentalhealth"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:background="@drawable/shape_drawable"
-            android:src="@android:drawable/ic_menu_call"
-            android:text="Call" />
+            android:background="@drawable/layout_border2">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="THE NATIONAL FOR MENTAL HEALTH CRISIS"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tv_num_mentalhealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 09178998727"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:layout_width="248dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#193463"
+                    android:text= "24-hour service to people in the Philippines who are depressed or at risk of suicide."/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_mentalhealth"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_drawable"
+                android:src="@android:drawable/ic_menu_call"
+                android:text="Call"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

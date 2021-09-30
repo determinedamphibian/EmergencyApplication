@@ -19,10 +19,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.MainDashboardActivity;
 import com.example.emergencyapplication.R;
+import com.example.emergencyapplication.SideDockContents.TrustedContactsSideDock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,7 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
 
     EditText et_message;
     Button btn_saveMessage, btn_sendMessage;
+    ImageView btn_back;
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "text";
     String text;
@@ -40,6 +43,15 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trusted_contacts_message);
+
+        btn_back =findViewById(R.id.bt_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TrustedContactsMessageActivity.this, TrustedContactsSideDock.class);
+                startActivity(intent);
+            }
+        });
 
         et_message = findViewById(R.id.et_message);
         if( updateData() == false){
