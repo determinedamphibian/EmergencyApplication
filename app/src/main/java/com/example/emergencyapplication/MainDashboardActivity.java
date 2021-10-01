@@ -12,10 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -27,10 +30,11 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -48,9 +52,12 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
     DrawerLayout drawerLayout;
     ImageView btMenu;
     RecyclerView recyclerView;
+    Button btn_later, btn_ok;
     public static ArrayList<String> arrayList = new ArrayList<>();
     MainAdapter adapter;
     static String userEmergencyMessage;
+
+    private static final int PERMISSION_REQUEST_ENABLE_GPS = 9002;
 
 
     //private Animation topAnim;
@@ -94,19 +101,13 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         });
 
 
-        //constraintLayout_header = (ConstraintLayout) findViewById(R.id.constraintLayout_header);
-
-        //topAnim = AnimationUtils.loadAnimation(this, R.anim.header_animation);
-
-        //constraintLayout_header.setAnimation(topAnim);
-
-
+        //sos button when clicked!
         imageButton_sos = findViewById(R.id.imgbtn_SOS);
         imageButton_sos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //=====================checks GPS permission===================================
+                //checks GPS permission
                 if (ContextCompat.checkSelfPermission(
                         MainDashboardActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                         != PackageManager.PERMISSION_GRANTED) {
@@ -115,17 +116,17 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
                             Manifest.permission.ACCESS_FINE_LOCATION
                     }, 100);
                 }
-                //=====================checks GPS permission ends===================================
 
-                //=====================checks SMS permission ends===================================
+
+                //checks SMS permission
                 if (ContextCompat.checkSelfPermission(MainDashboardActivity.this, Manifest.permission.SEND_SMS)
                         != PackageManager.PERMISSION_GRANTED) {
 
                     ActivityCompat.requestPermissions(MainDashboardActivity.this, new String[]
                             {Manifest.permission.SEND_SMS, Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
                 }
-                //=====================checks SMS permission ends==================================
 
+                enableGPS();
                 getLocation();
             }
         });
@@ -154,34 +155,80 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             }
         });
 
-        //start notification status bar
+        //checks the phone version to know if it is with the required android versions
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel channel = new NotificationChannel("Green Archer Notification",
                     "Green Archer Notification", NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
+        else{
+            Toast.makeText(MainDashboardActivity.this, "Your phone is not compatible with this feature", Toast.LENGTH_SHORT);
+        }
+        //calls notification bar for SOS message every startup
         startNotification();
 
     }
 
+    //asks the user to turn on their gps
+    private void enableGPS() {
+        final LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+        if(!locationManager.isProviderEnabled(locationManager.GPS_PROVIDER)){
+            userAlerGPSToEnable();
+
+        }
+    }
+
+    //prompt alertDialog that let the user turn on their gps
+    private void userAlerGPSToEnable() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = MainDashboardActivity.this.getLayoutInflater().inflate(R.layout.activity_alert_dialog_customed, null);
+        builder.setView(view);
+        final AlertDialog alert = builder.create();
+
+        btn_later = (Button) view.findViewById(R.id.btn_cancel_action);
+        btn_later.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alert.dismiss();
+            }
+        });
+
+        btn_ok = (Button) view.findViewById(R.id.btn_ok_action);
+        btn_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivityForResult(intent, PERMISSION_REQUEST_ENABLE_GPS);
+
+            }
+        });
+        alert.show();
+    }
+    //notification bar method
     private void startNotification() {
 
-
+        //Instantiation of NotificationCompat.Builder that will help to create live notification for SOS Message when the app is clicked
         NotificationCompat.Builder notification = new NotificationCompat.Builder(MainDashboardActivity.this, "Green Archer Notification");
-        notification.setContentTitle("Green Archers Emergency Application");
+
+        //setting notification attributes
+        notification.setContentTitle("Green Archers Emergency Application").setOngoing(true);
         notification.setContentText("Send S.O.S message");
         notification.setSmallIcon(R.drawable.ic_launcher_background);
         notification.setAutoCancel(true);
 
+        //whenever the starts it asks the user to open their gps
+        enableGPS();
+
+        //calling the InstantSOS activity that will flash for a second whenever the notification was pressed
         Intent intent = new Intent(MainDashboardActivity.this, InstantSOS.class);
+
+        //this will perform the previous activity will be called when notification was pressed
         TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(MainDashboardActivity.this);
-        taskStackBuilder.addParentStack(InstantSOS.class)
-                .addNextIntent(intent);
+        taskStackBuilder.addParentStack(InstantSOS.class).addNextIntent(intent);
         PendingIntent pendingIntent = taskStackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
         notification.setContentIntent(pendingIntent);
-
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainDashboardActivity.this);
         managerCompat.notify(1, notification.build());
 
@@ -215,6 +262,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
     public void getLocation() {
 
+        //it checks the availability of using google location
         locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
@@ -230,8 +278,8 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, MainDashboardActivity.this);
 
-
     }
+
 
     @Override
     public void onLocationChanged(Location location) {

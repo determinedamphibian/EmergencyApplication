@@ -25,6 +25,7 @@ public class TrustedContacts {
         this.contactName = contactName;
         this.contactNum = contactNum;
         this.gender = gender;
+
     }
 
 

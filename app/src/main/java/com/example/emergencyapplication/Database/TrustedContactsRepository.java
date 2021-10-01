@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import com.example.emergencyapplication.EntityClass.TrustedContactNumberEntity;
 import com.example.emergencyapplication.EntityClass.TrustedContacts;
 
 import java.util.List;
