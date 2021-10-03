@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity
 public class TrustedContacts {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int idNum;
 
     @ColumnInfo(name = "contactName")
@@ -28,37 +28,5 @@ public class TrustedContacts {
 
     }
 
-
-    public int getIdNum() {
-        return idNum;
-    }
-
-    public void setIdNum(int idNum) {
-        this.idNum = idNum;
-    }
-
-    public String getContactName() {
-        return contactName;
-    }
-
-    public void setContactName(String contactName) {
-        this.contactName = contactName;
-    }
-
-    public String getContactNum() {
-        return contactNum;
-    }
-
-    public void setContactNum(String contactNum) {
-        this.contactNum = contactNum;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 }
 

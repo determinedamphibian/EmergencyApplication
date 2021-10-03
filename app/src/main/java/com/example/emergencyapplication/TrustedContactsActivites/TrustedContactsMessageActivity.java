@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +16,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +40,7 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "text";
     String text;
+    private static final int PERMISSION_REQUEST_ENABLE_GPS = 9002;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +78,9 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
 
+                userAlerGPSToEnable();
                 getLocation();
+
             }
         });
     }
@@ -137,6 +142,32 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    private void userAlerGPSToEnable() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = TrustedContactsMessageActivity.this.getLayoutInflater().inflate(R.layout.activity_alert_dialog_customed, null);
+        builder.setView(view);
+        final AlertDialog alert = builder.create();
+
+        Button btn_later = (Button) view.findViewById(R.id.btn_cancel_action);
+        btn_later.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alert.dismiss();
+            }
+        });
+
+        Button btn_ok = (Button) view.findViewById(R.id.btn_ok_action);
+        btn_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivityForResult(intent, PERMISSION_REQUEST_ENABLE_GPS);
+
+            }
+        });
+        alert.show();
     }
 
     @Override

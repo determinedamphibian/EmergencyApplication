@@ -17,8 +17,8 @@ import android.widget.TextView;
 
 public class CrimeActivity extends AppCompatActivity {
     private TextView tv_contact_number,
-            tv_contact_number2, tv_contact_number3, tv_contact_number4, tv_contact_number5;
-    private ImageButton call_button, call_button2, call_button3, call_button4, call_button5;
+            tv_contact_number2, tv_contact_number3, tv_contact_number4;
+    private ImageButton call_button, call_button2, call_button3, call_button4;
     ImageView btn_back;
     private static final int REQUEST_CALL = 1;
 
@@ -31,6 +31,7 @@ public class CrimeActivity extends AppCompatActivity {
 
         btn_back = findViewById(R.id.bt_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CrimeActivity.this, EmergencyHotlineButtonActivity.class);
@@ -78,15 +79,7 @@ public class CrimeActivity extends AppCompatActivity {
             }
         });
 
-        //call contact5
-        tv_contact_number5 = (TextView) findViewById(R.id.pcp_contact_pulis);
-        call_button5= (ImageButton) findViewById(R.id.btn_pcp_pulis);
-        call_button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makePhoneCall(tv_contact_number5);
-            }
-        });
+
     }
 
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

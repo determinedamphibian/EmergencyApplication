@@ -16,13 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         >
-        <EditText
-            android:id="@+id/edit_idNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:hint="ID Number"
-            android:inputType="number"/>
+
         <EditText
             android:id="@+id/edit_trustedContact_name"
             android:layout_width="match_parent"

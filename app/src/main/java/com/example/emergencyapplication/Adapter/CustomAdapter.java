@@ -30,9 +30,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     Context context;
     List<String> contactNumbersList = new ArrayList<>();
 
-    public CustomAdapter() {
 
-    }
 
     //=====================my Class view holder starts===========================
     public static class MyViewHolder extends RecyclerView.ViewHolder{
@@ -80,17 +78,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        TextView tv_idNum = holder.tv_idNum;
+
         TextView tv_trustedContact_name = holder.tv_trustedContacts_name;
         TextView tv_trustedContact_no = holder.tv_trustedContact_no;
-
         ImageView img_gender = holder.img_gender;
         ImageView img_call = holder.img_call;
-
         Button btn_title = holder.btn_title;
         LinearLayout ll_card_trusted_contacts = holder.ll_card_trusted_contacts;
 
-        tv_idNum.setText(dataset.get(position).idNum+"");
+
         tv_trustedContact_name.setText(dataset.get(position).contactName+"");
         tv_trustedContact_no.setText(dataset.get(position).contactNum+"");
 
@@ -108,15 +104,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         //============= logic to set title =============
         btn_title.setText(dataset.get(position).contactName.toUpperCase().charAt(0)+"");
 
-
-
-
         //===========logic to getting the list of contact number============================
-
         getContactNumberList(position);
-
-
-
         //========== logic to getting the list of contact number ends ====================
 
 
@@ -171,20 +160,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     }
 
-    public void getContactNumberList() {
-        for(int i = 0; i< getItemCount(); i++){
-            getContactNumberList(i);
-        }
-
-    }
-
-
     public void getContactNumberList(int position) {
         contactNumbersList.add(dataset.get(position).contactNum);
     }
 
-    public List<String> getTrustedContactNumberList(){
-    return contactNumbersList;
-    }
+
 
 }

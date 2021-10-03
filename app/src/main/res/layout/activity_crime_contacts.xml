@@ -312,51 +312,11 @@
         android:background="@drawable/layout_border2">
 
 
-        <LinearLayout
-            android:layout_width="196dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pulis Precinct"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Paraiso Dr, Talon Kuatro, Las Pinas"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/pcp_contact_pulis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+63288019122"
-                android:textSize="16sp" />
-        </LinearLayout>
-
         <View
             android:layout_width="30dp"
             android:layout_height="23dp"
             android:layout_gravity="center"
             android:layout_weight="1" />
-
-        <ImageButton
-            android:id="@+id/btn_pcp_pulis"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/shape_drawable"
-            android:src="@android:drawable/ic_menu_call"
-            android:text="Call" />
 
     </LinearLayout>
 </LinearLayout>

@@ -16,10 +16,10 @@ import com.example.emergencyapplication.R;
 
 public class InsertActivity extends AppCompatActivity {
 
-    EditText edt_idNum, edt_trustedContact_name, edt_trustedContact_no;
+    EditText  edt_trustedContact_name, edt_trustedContact_no;
     Button btn_submit;
     RadioButton rbtn_male, rbtn_female;
-    String s_idNum, s_trustedContact_name, s_trustedContact_no, s_gender = "Male";
+    String  s_trustedContact_name, s_trustedContact_no, s_gender = "Male";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +30,9 @@ public class InsertActivity extends AppCompatActivity {
 
 
         //=============== Variables To ID References======================
-        edt_idNum = (EditText) findViewById(R.id.edit_idNum);
         edt_trustedContact_name = (EditText) findViewById(R.id.edit_trustedContact_name);
         edt_trustedContact_no = (EditText) findViewById(R.id.edit_trustedContact_no);
-
-
         btn_submit = (Button) findViewById(R.id.btn_submit);
-
         rbtn_male = (RadioButton) findViewById(R.id.rbtn_male);
         rbtn_female= (RadioButton) findViewById(R.id.rbtn_female);
         //================================================================
@@ -46,13 +42,13 @@ public class InsertActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(edt_idNum.getText().toString().isEmpty()
-                        ||edt_trustedContact_name.getText().toString().isEmpty()
+                if(edt_trustedContact_name.getText().toString().isEmpty()
                         ||edt_trustedContact_no.getText().toString().isEmpty()){
 
                     Toast.makeText(getApplicationContext(),"Fill Detail", Toast.LENGTH_SHORT).show();
-                }else{
-                    s_idNum = edt_idNum.getText().toString().trim();
+                }else
+                    {
+                        //getting values from edit text
                     s_trustedContact_name = edt_trustedContact_name.getText().toString().trim();
                     s_trustedContact_no = edt_trustedContact_no.getText().toString().trim();
 
@@ -69,10 +65,9 @@ public class InsertActivity extends AppCompatActivity {
                     }
 
                     TrustedContactsRepository trustedContactsRepository = new TrustedContactsRepository(getApplicationContext());
-                    TrustedContacts trustedContacts = new TrustedContacts(Integer.parseInt(s_idNum),s_trustedContact_name,s_trustedContact_no, s_gender);
+                    TrustedContacts trustedContacts = new TrustedContacts(0,s_trustedContact_name,s_trustedContact_no, s_gender);
                     trustedContactsRepository.insertTask(trustedContacts);
 
-                    edt_idNum.setText("");
                     edt_trustedContact_name.setText("");
                     edt_trustedContact_no.setText("");
 

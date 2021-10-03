@@ -18,8 +18,8 @@ import android.widget.TextView;
 
 public class FireActivity extends AppCompatActivity {
 
-    TextView tv_fireCon1, tv_fireCon2, tv_fireCon3, tv_fireCon4, tv_fireCon5, tv_fireCon7;
-    ImageButton btn_fireCon1, btn_fireCon2,btn_fireCon3, btn_fireCon4, btn_fireCon5, btn_fireCon7;
+    TextView tv_fireCon1, tv_fireCon2, tv_fireCon3, tv_fireCon5, tv_fireCon7;
+    ImageButton btn_fireCon1, btn_fireCon2,btn_fireCon3, btn_fireCon5, btn_fireCon7;
     ImageView btn_back;
     private static final int REQUEST_CALL = 1;
     @Override
@@ -38,15 +38,17 @@ public class FireActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        tv_fireCon1 = findViewById(R.id.tv_fireCon1); tv_fireCon5 = findViewById(R.id.tv_fireCon5);
+        tv_fireCon1 = findViewById(R.id.tv_fireCon1);
+        tv_fireCon5 = findViewById(R.id.tv_fireCon5);
         tv_fireCon2 = findViewById(R.id.tv_fireCon2);
-        tv_fireCon3 = findViewById(R.id.tv_fireCon3); tv_fireCon7 = findViewById(R.id.tv_fireCon7);
-        tv_fireCon4 = findViewById(R.id.tv_fireCon4);
+        tv_fireCon3 = findViewById(R.id.tv_fireCon3);
+        tv_fireCon7 = findViewById(R.id.tv_fireCon7);
 
-        btn_fireCon1 = findViewById(R.id.btn_fireCon1); btn_fireCon5 = findViewById(R.id.btn_fireCon5);
+        btn_fireCon1 = findViewById(R.id.btn_fireCon1);
+        btn_fireCon5 = findViewById(R.id.btn_fireCon5);
         btn_fireCon2 = findViewById(R.id.btn_fireCon2);
-        btn_fireCon3 = findViewById(R.id.btn_fireCon3); btn_fireCon7 = findViewById(R.id.btn_fireCon7);
-        btn_fireCon4 = findViewById(R.id.btn_fireCon4);
+        btn_fireCon3 = findViewById(R.id.btn_fireCon3);
+        btn_fireCon7 = findViewById(R.id.btn_fireCon7);
 
 
         btn_fireCon1.setOnClickListener(new View.OnClickListener() {
@@ -70,14 +72,6 @@ public class FireActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 makePhoneCall(tv_fireCon3);
-            }
-        });
-
-        btn_fireCon4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                makePhoneCall(tv_fireCon4);
             }
         });
 

@@ -50,7 +50,8 @@
                         android:text="1"
                         android:textColor="@color/primaryDark"
                         android:textSize="25sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/tv_trustedContact_name"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,10 +15,11 @@ import android.widget.Toast;
 import com.example.emergencyapplication.EntityClass.TrustedContacts;
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
 import com.example.emergencyapplication.R;
+import com.example.emergencyapplication.SideDockContents.TrustedContactsSideDock;
 
 public class TrustedContactDetailActivity extends AppCompatActivity {
 
-    EditText edt_idNum, edt_trustedContact_name, edt_trustedContact_num;
+    EditText  edt_trustedContact_name, edt_trustedContact_num, edt_idNum;
 
     Button btn_update, btn_delete;
 
@@ -97,7 +99,7 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
                     }
 
                     TrustedContactsRepository trustedContactsRepository = new TrustedContactsRepository(getApplicationContext());
-                    TrustedContacts trustedContacts = new TrustedContacts(Integer.parseInt(sidNum_to_update),strustedContact_name_to_update, strustedContactNum_to_update, sgender_to_update);
+                    TrustedContacts trustedContacts = new TrustedContacts(sidNum,strustedContact_name_to_update, strustedContactNum_to_update, sgender_to_update);
                     trustedContactsRepository.UpdateTask(trustedContacts);
 
                     Toast.makeText(getApplicationContext(), "Values Updated", Toast.LENGTH_LONG).show();
@@ -130,6 +132,7 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
 
                 TrustedContacts trustedContacts_to_delete = new TrustedContacts(Integer.parseInt(sidNum_to_delete),strustedContact_name_to_delete,strustedContactNum_to_delete,sgender_to_delete);
                 generate_delete_dialog(trustedContacts_to_delete);
+
             }
         });
         //=============Button Delete Listener Ends=========================================================
