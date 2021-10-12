@@ -4,9 +4,11 @@ package com.example.emergencyapplication.SideDockContents;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.emergencyapplication.Adapter.CustomAdapter;
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
@@ -27,6 +29,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class TrustedContactsSideDock extends AppCompatActivity {
 
@@ -36,10 +39,12 @@ public class TrustedContactsSideDock extends AppCompatActivity {
     RecyclerView recyclerView, rv_trustedContacts;
     RecyclerView.LayoutManager layoutManager;
     FloatingActionButton fbtn_addTrustedContacts;
+    SwipeRefreshLayout swipeRefreshLayout;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trusted_contacts_side_dock);
+
 
         //Assign values to initialized variables
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -47,12 +52,25 @@ public class TrustedContactsSideDock extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MainAdapter( this, MainDashboardActivity.arrayList));
 
+
         rv_trustedContacts = findViewById(R.id.rv_trustedContacts);
         rv_trustedContacts.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager( this);
         rv_trustedContacts.setLayoutManager(layoutManager);
         rv_trustedContacts.setItemAnimator(new DefaultItemAnimator());
 
+        //refresh data
+        swipeRefreshLayout = findViewById(R.id.refresh_layout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new LoadData().execute();
+                swipeRefreshLayout.setRefreshing(false);
+                Toast.makeText(TrustedContactsSideDock.this, "Trusted contacts refreshed", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //load data
         new LoadData().execute();
 
         //Menu button
@@ -85,7 +103,9 @@ public class TrustedContactsSideDock extends AppCompatActivity {
         });
 
 
+
     }
+
 
     @Override
     protected void onPause() {

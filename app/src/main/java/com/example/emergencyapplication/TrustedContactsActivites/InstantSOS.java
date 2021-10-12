@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -27,7 +28,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class InstantSOS extends AppCompatActivity implements LocationListener {
-
+    static String userEmergencyMessage;
     private LocationManager locationManager;
 
     @Override
@@ -84,12 +85,12 @@ public class InstantSOS extends AppCompatActivity implements LocationListener {
     @Override
     public void onLocationChanged(Location location) {
         try {
+
             Geocoder geocoder = new Geocoder(InstantSOS.this, Locale.getDefault());
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
-
-            String message =( "HELP!!!! I'M AT "+addresses.get(0).getAddressLine(0));
-            String message_sent = "Message Sent";
-            Toast.makeText(InstantSOS.this, message_sent,Toast.LENGTH_LONG).show();
+            SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
+            userEmergencyMessage = sharedPreferences.getString("text", "");
+            String message =( userEmergencyMessage+" "+addresses.get(0).getAddressLine(0));
             Log.d("TrustedContactMessage: ", message);
 
             new InstantSOS.LoadDataTasks(message).execute();
@@ -140,15 +141,33 @@ public class InstantSOS extends AppCompatActivity implements LocationListener {
             trustedContactNumberList = trustedContactsRepository.getTrustedContactNumbers();
             trustedContactsNumberArrayList = new ArrayList<>();
 
+            if(trustedContactNumberList.isEmpty()){
 
-            for(int i = 0; i<trustedContactNumberList.size(); i++){
+                Log.d("Trusted_Contacts", "Empty");
 
-                String contactNumber = trustedContactNumberList.get(i);
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        Toast.makeText(InstantSOS.this, "Your trusted contacts is empty",Toast.LENGTH_LONG).show();
+                    }
+                });
 
-                SmsManager smsmanager = SmsManager.getDefault();
-                smsmanager.sendTextMessage(contactNumber,null,message,null,null);
 
-                Log.d("Trusted Contacts", contactNumber+" received "+message);
+            }else
+                {
+                for(int i = 0; i<trustedContactNumberList.size(); i++){
+
+                    String contactNumber = trustedContactNumberList.get(i);
+
+                    SmsManager smsmanager = SmsManager.getDefault();
+                    smsmanager.sendTextMessage(contactNumber,null,message,null,null);
+
+                    Log.d("Trusted Contacts", contactNumber+" received "+message);
+                }
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        Toast.makeText(InstantSOS.this, "Message sent",Toast.LENGTH_LONG).show();
+                    }
+                });
 
             }
             Intent intent = new Intent(InstantSOS.this, MainDashboardActivity.class);

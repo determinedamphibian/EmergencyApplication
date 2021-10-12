@@ -4,42 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9FEAAF"
+    android:background="#A9F40202"
     android:orientation="vertical"
     tools:context=".TrustedContactsActivites.TrustedContactsMessageActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#A9F40202"
+        android:layout_marginBottom="25dp">
+
+
 
         <ImageView
             android:id="@+id/bt_back"
-            android:layout_width="30dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_margin="10dp"
-            android:src="@drawable/abc_vector_test"/>
+            android:src="@drawable/abc_vector_test" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emergency Message"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/message" />
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="COMPOSE AN EMERGENCY MESSAGE"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="Maaring makalikha ng sariling mensahe na matanggap kasama ang iyong lokasyon nang sinumang nakapabilang sa Trusted Contacts sa tuwing mapipindot ang SOS, o sa alinmang social media."
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
 
     <EditText
         android:id="@+id/et_message"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginRight="8dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:background="@color/white"
         android:ems="10"
+        android:hint="Type here..."
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
         android:inputType="textPersonName"
         android:layout_gravity="center"
         android:layout_marginBottom="10dp"/>
@@ -47,6 +71,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <LinearLayout

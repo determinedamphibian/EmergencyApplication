@@ -39,6 +39,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
+import com.example.emergencyapplication.SideDockContents.TrustedContactsSideDock;
 import com.example.emergencyapplication.TrustedContactsActivites.InstantSOS;
 
 import java.util.ArrayList;
@@ -56,6 +57,9 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
     public static ArrayList<String> arrayList = new ArrayList<>();
     MainAdapter adapter;
     static String userEmergencyMessage;
+    TrustedContactsRepository trustedContactsRepository;
+    List <String> trustedContactsNumberArrayList;
+    List<String> trustedContactNumberList;
 
     private static final int PERMISSION_REQUEST_ENABLE_GPS = 9002;
 
@@ -85,7 +89,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
         adapter = new MainAdapter(this, arrayList);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainDashboardActivity.this));
 
         recyclerView.setAdapter(adapter);
 
@@ -128,6 +132,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
                 enableGPS();
                 getLocation();
+
             }
         });
 
@@ -170,13 +175,14 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
     }
 
+
+
     //asks the user to turn on their gps
     private void enableGPS() {
         final LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         if(!locationManager.isProviderEnabled(locationManager.GPS_PROVIDER)){
             userAlerGPSToEnable();
-
         }
     }
 
@@ -289,8 +295,6 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
             userEmergencyMessage = sharedPreferences.getString("text", "");
             String message =( userEmergencyMessage+" "+addresses.get(0).getAddressLine(0));
-            String message_sent = "Message Sent";
-            Toast.makeText(MainDashboardActivity.this, message_sent,Toast.LENGTH_LONG).show();
             Log.d("TrustedContactMessage: ", message);
 
             new MainDashboardActivity.LoadDataTasks(message).execute();
@@ -320,9 +324,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
     @SuppressLint("StaticFieldLeak")
     private class LoadDataTasks extends AsyncTask<Void, Void, Void> {
 
-        TrustedContactsRepository trustedContactsRepository;
-        List <String> trustedContactsNumberArrayList;
-        List<String> trustedContactNumberList;
+
         String message;
 
         public LoadDataTasks(String message) {
@@ -340,17 +342,37 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             trustedContactNumberList = trustedContactsRepository.getTrustedContactNumbers();
             trustedContactsNumberArrayList = new ArrayList<>();
 
+            if(trustedContactNumberList.isEmpty()){
 
-            for(int i = 0; i<trustedContactNumberList.size(); i++){
+                Log.d("Trusted_Contacts", "Empty");
 
-                String contactNumber = trustedContactNumberList.get(i);
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        Toast.makeText(MainDashboardActivity.this, "Your trusted contacts is empty",Toast.LENGTH_LONG).show();
+                    }
+                });
 
-                SmsManager smsmanager = SmsManager.getDefault();
-                smsmanager.sendTextMessage(contactNumber,null,message,null,null);
 
-                Log.d("Trusted Contacts", contactNumber+" received "+message);
+            }else{
+                for(int i = 0; i<trustedContactNumberList.size(); i++){
+
+                    String contactNumber = trustedContactNumberList.get(i);
+
+                    SmsManager smsmanager = SmsManager.getDefault();
+                    smsmanager.sendTextMessage(contactNumber,null,message,null,null);
+
+                    Log.d("Trusted Contacts", contactNumber+" received "+message);
+                }
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        Toast.makeText(MainDashboardActivity.this, "Message sent",Toast.LENGTH_LONG).show();
+                    }
+                });
 
             }
+
+
+
             return null;
         }
 
@@ -359,5 +381,6 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             super.onPostExecute(aVoid);
         }
     }
+
 
 }

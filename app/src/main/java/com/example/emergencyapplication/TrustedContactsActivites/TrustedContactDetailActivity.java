@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -22,6 +23,8 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
     EditText  edt_trustedContact_name, edt_trustedContact_num, edt_idNum;
 
     Button btn_update, btn_delete;
+
+    ImageView btn_back;
 
     int sidNum;
 
@@ -39,7 +42,7 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_trusted_contact_detail);
 
 
-        //==========find view id starts===============================================================
+
         edt_idNum = (EditText)findViewById(R.id.edit_idNum);
         edt_trustedContact_name = (EditText)findViewById(R.id.edit_trustedContact_name);
         edt_trustedContact_num = (EditText)findViewById(R.id.edit_trustedContact_no);
@@ -47,10 +50,15 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
         rbtn_female =  (RadioButton) findViewById(R.id.rbtn_female);
         btn_update = (Button)findViewById(R.id.btn_Update);
         btn_delete = (Button)findViewById(R.id.btn_Delete);
-        // ==========find view id ends================================================================
+        btn_back = findViewById(R.id.imgbtn_back);
 
-
-
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TrustedContactDetailActivity.this, TrustedContactsSideDock.class);
+                startActivity(intent);
+            }
+        });
         //===========get value from custom adapter starts=============================================
         Bundle data = getIntent().getExtras();
         if(data!=null){
@@ -102,7 +110,7 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
                     TrustedContacts trustedContacts = new TrustedContacts(sidNum,strustedContact_name_to_update, strustedContactNum_to_update, sgender_to_update);
                     trustedContactsRepository.UpdateTask(trustedContacts);
 
-                    Toast.makeText(getApplicationContext(), "Values Updated", Toast.LENGTH_LONG).show();
+                    Toast.makeText(TrustedContactDetailActivity.this, "Updated successfully", Toast.LENGTH_LONG).show();
                     finish();
                 }
             }
@@ -149,7 +157,7 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(TrustedContactDetailActivity.this); //do not write getApplicationContext
         builder.setTitle("Warning");
-        builder.setMessage("Are you sure you want to delete ?\n"+"ID Num ="+student_about_to_delete.idNum+"\n"+"Name="+student_about_to_delete.contactName);
+        builder.setMessage("Are you sure you want to delete ?");
         builder.setIcon(android.R.drawable.ic_delete);
 
         builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {

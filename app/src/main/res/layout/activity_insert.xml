@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".TrustedContactsActivites.InsertActivity">
 
     <LinearLayout
@@ -16,59 +17,79 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         >
+        <ImageView
 
-        <EditText
-            android:id="@+id/edit_trustedContact_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name"
-            android:textSize="20sp"
-            android:inputType="text"/>
-        <EditText
-            android:id="@+id/edit_trustedContact_no"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="contact no"
-            android:textSize="20sp"
-            android:inputType="number"/>
+            android:id="@+id/imgbtn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="3dp"/>
 
-        <TextView
-            android:id="@+id/edit_gender"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="gender"
-            android:textSize="20sp"
-            android:inputType="text"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
-        <RadioGroup
-            android:id="@+id/rgrp_gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/rbtn_male"
+            <EditText
+                android:id="@+id/edit_trustedContact_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Male"
-                android:checked="true"
-                />
-            <RadioButton
-                android:id="@+id/rbtn_female"
+                android:hint="Name"
+                android:textSize="20sp"
+                android:inputType="text"/>
+            <EditText
+                android:id="@+id/edit_trustedContact_no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Female"
-                />
-        </RadioGroup>
+                android:hint="contact no"
+                android:textSize="20sp"
+                android:inputType="number"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SUBMIT"
-            android:textColor="#FFFF"
-            android:background="#399E3D"
-            android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/edit_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="gender"
+                android:textSize="20sp"
+                android:inputType="text"/>
+
+            <RadioGroup
+                android:id="@+id/rgrp_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbtn_male"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:checked="true"
+                    />
+                <RadioButton
+                    android:id="@+id/rbtn_female"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:textColor="#FFFF"
+                android:background="#399E3D"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

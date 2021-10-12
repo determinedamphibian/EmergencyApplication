@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/text_view"
     android:padding="12dp"
-    android:background="?selectableItemBackground">
+    android:background="?selectableItemBackground"
+    android:textColor="@color/white">
 
 </TextView>
