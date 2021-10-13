@@ -37,7 +37,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/emergency_hotlines_icon" />
+            android:src="@drawable/emergency_hotlines_icon"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -69,7 +70,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/sos_icon" />
+            android:src="@drawable/sos_icon"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -104,7 +106,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/covid_watcher_icon" />
+            android:src="@drawable/covid_watcher_icon"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -138,7 +141,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/emergency_disaster_guideline_icon" />
+            android:src="@drawable/emergency_disaster_guideline_icon"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"

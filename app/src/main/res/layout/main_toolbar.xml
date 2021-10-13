@@ -16,23 +16,24 @@
             android:layout_height="wrap_content">
 
             <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bt_back"
-            android:padding="10dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_baseline_menu_24"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_back"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_menu_24"
+                android:background="@drawable/ripple_effect_toolbar"/>
 
         </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="Archer Emergency App"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_centerInParent="true" />
         

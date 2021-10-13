@@ -35,7 +35,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:src="@drawable/abc_vector_test" />
+                    android:src="@drawable/abc_vector_test"
+                    android:background="@drawable/ripple_effect_emergency_hotlines"/>
 
             </LinearLayout>
 
@@ -74,7 +75,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/hospital_contacts_icon" />
+            android:src="@drawable/hospital_contacts_icon"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -106,7 +108,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/police_contacts_icon" />
+            android:src="@drawable/police_contacts_icon"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -139,7 +142,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/fire_contacts_icon" />
+            android:src="@drawable/fire_contacts_icon"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -170,7 +174,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/mental_health_icon" />
+            android:src="@drawable/mental_health_icon"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"

@@ -6,6 +6,7 @@
     android:id="@+id/text_view"
     android:padding="12dp"
     android:background="?selectableItemBackground"
-    android:textColor="@color/white">
+    android:textColor="@color/white"
+    android:clickable="true">
 
 </TextView>

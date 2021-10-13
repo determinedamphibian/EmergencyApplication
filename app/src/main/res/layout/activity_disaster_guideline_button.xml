@@ -34,7 +34,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:src="@drawable/abc_vector_test" />
+                    android:src="@drawable/abc_vector_test"
+                    android:background="@drawable/ripple_effect_emergency_disaster"/>
 
             </LinearLayout>
 
@@ -75,7 +76,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/first_aid_logo" />
+            android:src="@drawable/first_aid_logo"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -105,7 +107,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/disaster_logo" />
+            android:src="@drawable/disaster_logo"
+            android:background="@drawable/ripple_effect"/>
 
         <TextView
             android:layout_width="match_parent"

@@ -27,7 +27,8 @@
                 android:layout_height="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/abc_vector_test"/>
+                android:src="@drawable/abc_vector_test"
+                android:background="@drawable/ripple_effect_crime"/>
 
             <TextView
                 android:layout_width="wrap_content"
