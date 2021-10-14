@@ -35,7 +35,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="10dp"
-            android:background="@android:drawable/sym_action_email"
+            android:src="@android:drawable/sym_action_email"
+            android:background="@drawable/ripple_effect_toolbar"
             android:foregroundGravity="top"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

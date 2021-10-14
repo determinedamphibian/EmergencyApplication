@@ -21,6 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_margin="10dp"
+            android:background="@drawable/ripple_effect_emergency_message"
             android:src="@drawable/abc_vector_test" />
 
         <TextView
@@ -86,7 +87,8 @@
                 android:layout_gravity="center"
                 android:backgroundTint="#A9BF0707"
                 android:text="Save"
-                android:layout_marginRight="50dp"/>
+                android:layout_marginRight="50dp"
+                android:clickable="true"/>
 
             <Button
                 android:id="@+id/btn_sendMesage"
@@ -94,7 +96,8 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/btn_saveMessage"
                 android:backgroundTint="#1A4D98"
-                android:text="Send" />
+                android:text="Send"
+                android:clickable="true"/>
         </LinearLayout>
 
     </RelativeLayout>
