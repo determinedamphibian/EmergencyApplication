@@ -56,22 +56,21 @@
         android:id="@+id/linearLayout6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="204dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.239">
 
         <ImageView
             android:id="@+id/imgbtn_SOS"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:src="@drawable/sos_icon"
-            android:background="@drawable/ripple_effect"/>
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/sos_icon" />
 
         <TextView
             android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 package com.example.emergencyapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +18,8 @@ import com.example.emergencyapplication.FirstAids.SprainsActivity;
 
 public class FirstAidActivity extends AppCompatActivity {
 
-    ImageView btn_back, btn_animal_bites, btn_burns, btn_fractures, btn_sprains, btn_choking, btn_cpr, btn_bleeding;
+    ImageView btn_back;
+    CardView  cv_animal_bites, cv_burns, cv_fractures, cv_sprains, cv_choking, cv_cpr, cv_bleeding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +35,8 @@ public class FirstAidActivity extends AppCompatActivity {
             }
         });
 
-        btn_animal_bites = findViewById(R.id.bt_animal_bites);
-        btn_animal_bites.setOnClickListener(new View.OnClickListener() {
+        cv_animal_bites = findViewById(R.id.cv_animalBites);
+        cv_animal_bites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FirstAidActivity.this, AnimalBitesActivity.class);
@@ -42,8 +44,8 @@ public class FirstAidActivity extends AppCompatActivity {
             }
         });
 
-        btn_burns = findViewById(R.id.bt_burns);
-        btn_burns.setOnClickListener(new View.OnClickListener() {
+        cv_burns = findViewById(R.id.cv_burns);
+        cv_burns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent  intent = new Intent(FirstAidActivity.this, BurnsActivity.class);
@@ -51,8 +53,8 @@ public class FirstAidActivity extends AppCompatActivity {
             }
         });
 
-        btn_fractures = findViewById(R.id.bt_fractures);
-        btn_fractures.setOnClickListener(new View.OnClickListener() {
+        cv_fractures = findViewById(R.id.cv_fractures);
+        cv_fractures.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent  intent = new Intent(FirstAidActivity.this, FractureActivity.class);
@@ -60,8 +62,8 @@ public class FirstAidActivity extends AppCompatActivity {
             }
         });
 
-        btn_cpr = findViewById(R.id.bt_cpr);
-        btn_cpr.setOnClickListener(new View.OnClickListener() {
+        cv_cpr = findViewById(R.id.cv_cpr);
+        cv_cpr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent  intent = new Intent(FirstAidActivity.this, CPRActivity.class);
@@ -69,8 +71,8 @@ public class FirstAidActivity extends AppCompatActivity {
             }
         });
 
-        btn_sprains = findViewById(R.id.bt_sprains);
-        btn_sprains.setOnClickListener(new View.OnClickListener() {
+        cv_sprains = findViewById(R.id.cv_sprains);
+        cv_sprains.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent  intent = new Intent(FirstAidActivity.this, SprainsActivity.class);
@@ -78,8 +80,8 @@ public class FirstAidActivity extends AppCompatActivity {
             }
         });
 
-        btn_choking = findViewById(R.id.bt_choking);
-        btn_choking.setOnClickListener(new View.OnClickListener() {
+        cv_choking = findViewById(R.id.cv_choking);
+        cv_choking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent  intent = new Intent(FirstAidActivity.this, ChokingActivity.class);
@@ -87,8 +89,8 @@ public class FirstAidActivity extends AppCompatActivity {
             }
         });
 
-        btn_bleeding = findViewById(R.id.bt_bleeding);
-        btn_bleeding.setOnClickListener(new View.OnClickListener() {
+        cv_bleeding = findViewById(R.id.cv_bleeding);
+        cv_bleeding.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent  intent = new Intent(FirstAidActivity.this, BleedingActivity.class);

@@ -63,6 +63,7 @@
         android:background="@color/white"
         android:ems="10"
         android:hint="Type here..."
+        android:textColor="@color/black"
         android:paddingLeft="10dp"
         android:paddingRight="5dp"
         android:inputType="textPersonName"
@@ -86,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#A9BF0707"
+                android:textColor="@color/white"
                 android:text="Save"
                 android:layout_marginRight="50dp"
                 android:clickable="true"/>
@@ -96,6 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/btn_saveMessage"
                 android:backgroundTint="#1A4D98"
+                android:textColor="@color/white"
                 android:text="Send"
                 android:clickable="true"/>
         </LinearLayout>

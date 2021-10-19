@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/primaryDark">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="45dp"
-        android:background="@color/primaryDark"
         android:orientation="vertical">
 
         <LinearLayout
@@ -294,31 +294,6 @@
             android:background="@drawable/shape_drawable"
             android:src="@android:drawable/ic_menu_call"
             android:text="Call" />
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/pulis" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/layout_border2">
-
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="23dp"
-            android:layout_gravity="center"
-            android:layout_weight="1" />
-
     </LinearLayout>
 </LinearLayout>
 </ScrollView>

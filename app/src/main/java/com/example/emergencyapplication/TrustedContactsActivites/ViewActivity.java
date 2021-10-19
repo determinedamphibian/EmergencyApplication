@@ -82,4 +82,5 @@ public class ViewActivity extends AppCompatActivity {
         super.onRestart();
         new LoadDataTask().execute();
     }
+
 }

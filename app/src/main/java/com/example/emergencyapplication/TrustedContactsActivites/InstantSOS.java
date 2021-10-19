@@ -5,6 +5,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -15,8 +17,11 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.telephony.SmsManager;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
@@ -30,6 +35,8 @@ import java.util.Locale;
 public class InstantSOS extends AppCompatActivity implements LocationListener {
     static String userEmergencyMessage;
     private LocationManager locationManager;
+    Button btn_later, btn_ok;
+    private static final int PERMISSION_REQUEST_ENABLE_GPS = 9002;
 
     @Override
     protected void onNewIntent(Intent intent) {
@@ -62,14 +69,51 @@ public class InstantSOS extends AppCompatActivity implements LocationListener {
                     {Manifest.permission.SEND_SMS, Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
         }
         //=====================checks SMS permission ends==================================
-//
+        enableGPS();
         getLocation();
+
+    }
+    private void enableGPS(){
+        final LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        if(!locationManager.isProviderEnabled(locationManager.GPS_PROVIDER)){
+            userAlertGPSToEnable();
+        }
+
+    }
+
+    private void userAlertGPSToEnable() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = InstantSOS.this.getLayoutInflater().inflate(R.layout.activity_alert_dialog_customed, null);
+        builder.setView(view);
+        final AlertDialog alert = builder.create();
+        alert.show();
+
+        btn_later = (Button) view.findViewById(R.id.btn_cancel_action);
+        btn_later.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alert.dismiss();
+            }
+        });
+
+        btn_ok = (Button) view.findViewById(R.id.btn_ok_action);
+        btn_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivityForResult(intent, PERMISSION_REQUEST_ENABLE_GPS);
+                alert.dismiss();
+            }
+        });
 
     }
 
     private void getLocation(){
         locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -90,7 +134,7 @@ public class InstantSOS extends AppCompatActivity implements LocationListener {
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
             SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
             userEmergencyMessage = sharedPreferences.getString("text", "");
-            String message =( userEmergencyMessage+" "+addresses.get(0).getAddressLine(0));
+            String message = userEmergencyMessage+" "+ "Please locate me here with this link https://www.google.com/maps/search/?api=1&query="+location.getLatitude()+","+location.getLongitude();
             Log.d("TrustedContactMessage: ", message);
 
             new InstantSOS.LoadDataTasks(message).execute();

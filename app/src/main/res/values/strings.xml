@@ -32,4 +32,7 @@
     <string name="cpr_redcross_rule_1">Push hard, push fast. Place your hands, one on top of the other, in the middle of the chest. Use your body weight to help you administer compressions that are at least 2 inches deep and delivered at a rate of at least 100 compressions per minute.</string>
     <string name="cpr_redcross_rule_2">Deliver rescue breaths. With the person\'s head tilted back slightly and the chin lifted, pinch the nose shut and place your mouth over the person\'s mouth to make a complete seal. Blow into the person\'s mouth to make the chest rise. Deliver two rescue breaths, then continue compressions. Note: If the chest does not rise with the initial rescue breath, re-tilt the head before delivering the second breath. If the chest doesn\'t rise with the second breath, the person may be choking. After each subsequent set of 30 chest compressions, and before attempting breaths, look for an object and, if seen, remove it.</string>
     <string name="cpr_redcross_rule_3">Continue CPR steps. Keep performing cycles of chest compressions and breathing until the person exhibits signs of life, such as breathing, an AED becomes available, or EMS or a trained medical responder arrives on scene. Note: End the cycles if the scene becomes unsafe or you cannot continue performing CPR due to exhaustion.</string>
+    <string name="name_hint">
+        Name
+    </string>
 </resources>

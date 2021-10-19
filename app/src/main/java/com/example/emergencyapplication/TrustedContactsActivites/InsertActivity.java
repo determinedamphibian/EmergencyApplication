@@ -79,9 +79,7 @@ public class InsertActivity extends AppCompatActivity {
 
                     edt_trustedContact_name.setText("");
                     edt_trustedContact_no.setText("");
-
                 }
-
 
             }
         });

@@ -47,15 +47,19 @@
             <EditText
                 android:id="@+id/edit_trustedContact_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:hint="Name"
+                android:background="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:inputType="text"/>
             <EditText
                 android:id="@+id/edit_trustedContact_no"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Contact No"
+                android:layout_height="50dp"
+                android:hint="Contact No."
+                android:background="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:inputType="number"/>
 
@@ -78,11 +82,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Male"
+                    android:textColor="@color/black"
                     android:checked="true" />
                 <RadioButton
                     android:id="@+id/rbtn_female"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Female" />
             </RadioGroup>
 

@@ -182,16 +182,18 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         final LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         if(!locationManager.isProviderEnabled(locationManager.GPS_PROVIDER)){
-            userAlerGPSToEnable();
+            userAlertGPSToEnable();
         }
     }
 
     //prompt alertDialog that let the user turn on their gps
-    private void userAlerGPSToEnable() {
+    private void userAlertGPSToEnable() {
+
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View view = MainDashboardActivity.this.getLayoutInflater().inflate(R.layout.activity_alert_dialog_customed, null);
         builder.setView(view);
         final AlertDialog alert = builder.create();
+        alert.show();
 
         btn_later = (Button) view.findViewById(R.id.btn_cancel_action);
         btn_later.setOnClickListener(new View.OnClickListener() {
@@ -207,10 +209,10 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             public void onClick(View v) {
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 startActivityForResult(intent, PERMISSION_REQUEST_ENABLE_GPS);
-
+                alert.dismiss();
             }
         });
-        alert.show();
+
     }
     //notification bar method
     private void startNotification() {
@@ -294,8 +296,10 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
             SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
             userEmergencyMessage = sharedPreferences.getString("text", "");
-            String message =( userEmergencyMessage+" "+addresses.get(0).getAddressLine(0));
+            String message = userEmergencyMessage+" "+ "Please locate me here with this link https://www.google.com/maps/search/?api=1&query="+location.getLatitude()+","+location.getLongitude();
             Log.d("TrustedContactMessage: ", message);
+
+
 
             new MainDashboardActivity.LoadDataTasks(message).execute();
 

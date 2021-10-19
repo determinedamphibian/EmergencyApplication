@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Disasters.GoBagActivity"
+    android:backgroundTint="@color/white"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView

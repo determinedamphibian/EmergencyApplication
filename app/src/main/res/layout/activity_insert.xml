@@ -35,20 +35,27 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
 
+
             <EditText
                 android:id="@+id/edit_trustedContact_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name"
+                android:layout_height="50dp"
+                android:hint="@string/name_hint"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
                 android:textSize="20sp"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:background="@color/white"/>
+
             <EditText
                 android:id="@+id/edit_trustedContact_no"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="contact no"
+                android:layout_height="50dp"
+                android:hint="Contact no."
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/edit_gender"
@@ -69,6 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Male"
+                    android:textColor="@color/black"
                     android:checked="true"
                     android:background="@drawable/ripple_effect"/>
                 <RadioButton
@@ -76,6 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Female"
+                    android:textColor="@color/black"
                     android:background="@drawable/ripple_effect"/>
             </RadioGroup>
 

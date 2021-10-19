@@ -1,5 +1,6 @@
 package com.example.emergencyapplication.Database;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
@@ -17,14 +18,16 @@ public class TrustedContactsRepository {
     private TrustedContactDatabase trustedContactDatabase;
     Context context;
 
+    //database creation
     public TrustedContactsRepository(Context context){
         this.context = context;
         trustedContactDatabase = Room.databaseBuilder(context, TrustedContactDatabase.class, DB_NAME).build();
 
-        //Toast.makeText(context, "Database created...", Toast.LENGTH_SHORT).show();
     }
 
+
     //============== insert task starts ====================
+    @SuppressLint("StaticFieldLeak")
     public void insertTask(TrustedContacts trustedContacts){
 
         new AsyncTask<Void, Void, Void>(){
@@ -42,6 +45,8 @@ public class TrustedContactsRepository {
             }
         }.execute();
 
+        trustedContactDatabase.close();
+
     }
     //============== insert task ends ======================
 
@@ -52,6 +57,7 @@ public class TrustedContactsRepository {
     public List<TrustedContacts> getTrustedContacts(){
 
         List<TrustedContacts> trustedContactsList = trustedContactDatabase.trustedContactDAO().getAll();
+
         return trustedContactsList;
     }
     //========================= get data task ends ============================================================
@@ -71,6 +77,7 @@ public class TrustedContactsRepository {
 
 
     //======update task starts ================
+    @SuppressLint("StaticFieldLeak")
     public void UpdateTask(final TrustedContacts trustedContacts){
 
         new AsyncTask<Void, Void, Void>(){
@@ -87,6 +94,7 @@ public class TrustedContactsRepository {
 
 
     //======delete task starts ================
+    @SuppressLint("StaticFieldLeak")
     public void DeleteTask(final TrustedContacts trustedContacts){
 
         new AsyncTask<Void, Void, Void>(){

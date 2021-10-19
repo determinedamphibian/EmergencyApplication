@@ -111,7 +111,8 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
                     trustedContactsRepository.UpdateTask(trustedContacts);
 
                     Toast.makeText(TrustedContactDetailActivity.this, "Updated successfully", Toast.LENGTH_LONG).show();
-                    finish();
+                    TrustedContactDetailActivity.super.onBackPressed();
+
                 }
             }
         });
@@ -137,10 +138,8 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
                     sgender_to_delete = "Female";
 
                 }
-
                 TrustedContacts trustedContacts_to_delete = new TrustedContacts(Integer.parseInt(sidNum_to_delete),strustedContact_name_to_delete,strustedContactNum_to_delete,sgender_to_delete);
                 generate_delete_dialog(trustedContacts_to_delete);
-
             }
         });
         //=============Button Delete Listener Ends=========================================================
@@ -159,7 +158,6 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
         builder.setTitle("Warning");
         builder.setMessage("Are you sure you want to delete ?");
         builder.setIcon(android.R.drawable.ic_delete);
-
         builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -167,6 +165,7 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
                 TrustedContactsRepository trustedContactRepository = new TrustedContactsRepository(getApplicationContext());
                 trustedContactRepository.DeleteTask(student_about_to_delete);
                 Toast.makeText(TrustedContactDetailActivity.this,"Contact deleted", Toast.LENGTH_LONG).show();
+                finish();
             }
         });
 
@@ -179,7 +178,9 @@ public class TrustedContactDetailActivity extends AppCompatActivity {
 
         AlertDialog deleteDialog = builder.create();
         deleteDialog.show();
+
     }
+
     //================= generate alert dialog delete end=====================
 
 }
