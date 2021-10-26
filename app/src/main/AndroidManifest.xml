@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmergencyApplication">
-        <activity android:name=".FirstAids.BleedingActivity"></activity>
+        <activity android:name=".CovidWatcherActivity"></activity>
+        <activity android:name=".FirstAids.BleedingActivity" />
         <activity android:name=".FirstAids.ChokingActivity" />
         <activity android:name=".FirstAids.SprainsActivity" />
         <activity android:name=".FirstAids.FractureActivity" />
@@ -73,11 +74,9 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-
     <uses-permission android:name="android.permission.CAMERA" />
-
-
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 </manifest>

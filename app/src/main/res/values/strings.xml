@@ -35,4 +35,11 @@
     <string name="name_hint">
         Name
     </string>
+    <string name="didn_t_get_the_otp_resend">Didn\'t get the OTP? <b>Resend</b></string>
+    <string name="new_user">New user?</string>
+    <string name="sign_up"><b>Create an account</b></string>
+    <string name="forgot_pass"> <b>Forgot password?</b></string>
+    <string name="create_account"> <b>Create an account</b></string>
+    <string name="facebook_app_id">250328910265572</string>
+    <string name="fb_login_protocol_scheme">fb250328910265572</string>
 </resources>

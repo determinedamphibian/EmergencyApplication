@@ -87,6 +87,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         arrayList.add("Siren & Flicker Light");
         arrayList.add("About Us");
 
+        //setting arrayList in an adapter
         adapter = new MainAdapter(this, arrayList);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(MainDashboardActivity.this));
@@ -156,7 +157,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         imageButton_watcher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                openCovidWatcher();
             }
         });
 
@@ -175,6 +176,11 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
     }
 
+    private void openCovidWatcher() {
+
+        Intent intent = new Intent(MainDashboardActivity.this, CovidWatcherActivity.class);
+        startActivity(intent);
+    }
 
 
     //asks the user to turn on their gps
