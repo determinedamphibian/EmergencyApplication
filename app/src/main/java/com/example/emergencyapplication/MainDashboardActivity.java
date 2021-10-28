@@ -18,7 +18,6 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -38,8 +37,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.emergencyapplication.CovidWatcher.CovidWatcherActivity;
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
-import com.example.emergencyapplication.SideDockContents.TrustedContactsSideDock;
 import com.example.emergencyapplication.TrustedContactsActivites.InstantSOS;
 
 import java.util.ArrayList;

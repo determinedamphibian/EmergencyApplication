@@ -4,17 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CovidWatcherActivity"
+    tools:context=".CovidWatcher.CovidWatcherActivity"
     android:orientation="vertical"
-    android:paddingRight="20dp"
-    android:paddingLeft="20dp"
-    android:paddingBottom="20dp"
-    android:paddingTop="80dp"
-    android:background="@color/white">
+    android:background="@drawable/login_background"
+    android:focusableInTouchMode="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/parentRelative"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/ll_btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/bt_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/abc_vector_test"
+                    android:background="@drawable/ripple_effect_covid"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watcher"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/ll_btnBack"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -36,8 +85,8 @@
                 android:layout_centerVertical="true"
                 android:fontFamily="sans-serif-condensed"
                 android:text="COVID \n19 \nWATCHER"
-                android:textColor="@color/green"
-                android:textSize="30sp"
+                android:textColor="@color/dark_green"
+                android:textSize="35sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -47,7 +96,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
 
         <com.google.android.material.textfield.TextInputLayout
 
@@ -55,12 +106,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
-            android:textColorHint="@color/dark_green"
-            app:hintTextColor="@color/dark_green"
-            android:background="@color/white">
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                style="@style/LoginTextInputLayoutStyle"
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,7 +121,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
 
         <com.google.android.material.textfield.TextInputLayout
 
@@ -80,12 +131,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:textColorHint="@color/dark_green"
-            app:hintTextColor="@color/dark_green"
-            android:background="@color/white">
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                style="@style/LoginTextInputLayoutStyle"
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,24 +148,28 @@
     <TextView
         android:id="@+id/forgot_password"
         android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/forgot_pass"
         android:layout_gravity="right"
         android:textSize="12sp"
-        android:textColor="@color/green"/>
+        android:textColor="@color/dark_green"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="LOGIN"
-            android:backgroundTint="@color/green"/>
+            android:backgroundTint="@color/green"
+            android:shadowColor="#393C3C"/>
     </LinearLayout>
 
     <LinearLayout
@@ -131,7 +184,7 @@
             android:layout_height="wrap_content"
             android:text="@string/new_user"
             android:textSize="15sp"
-            android:textColor="@color/dark_green"
+            android:textColor="@color/black"
             android:paddingRight="6dp"/>
 
         <TextView
@@ -149,7 +202,7 @@
         android:layout_height="wrap_content"
         android:text="OR"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/cardview_dark_background"/>
+        android:textColor="@color/black"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -161,7 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_facebook"
-            android:paddingRight="20dp"
+            android:layout_marginRight="20dp"
             android:layout_gravity="center">
 
         </ImageView>
@@ -170,7 +223,7 @@
             android:id="@+id/image_gmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
+            android:layout_marginRight="20dp"
             android:src="@drawable/ic_gmail">
         </ImageView>
 

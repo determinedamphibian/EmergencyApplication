@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmergencyApplication">
-        <activity android:name=".CovidWatcherActivity"></activity>
+        <activity android:name=".CovidWatcher.SignUpActivity"></activity>
+        <activity android:name=".CovidWatcher.CovidDashboard" />
+        <activity android:name=".CovidWatcher.CovidWatcherActivity" />
         <activity android:name=".FirstAids.BleedingActivity" />
         <activity android:name=".FirstAids.ChokingActivity" />
         <activity android:name=".FirstAids.SprainsActivity" />
