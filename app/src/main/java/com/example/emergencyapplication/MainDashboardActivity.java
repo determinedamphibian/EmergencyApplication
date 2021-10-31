@@ -63,9 +63,6 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
     private static final int PERMISSION_REQUEST_ENABLE_GPS = 9002;
 
 
-    //private Animation topAnim;
-    //private ConstraintLayout constraintLayout_header;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +74,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         recyclerView = findViewById(R.id.recycler_view);
 
         //Clear arrayList
-        arrayList.clear();
+            arrayList.clear();
 
         //Add menu item to arrayList
         arrayList.add("Home");

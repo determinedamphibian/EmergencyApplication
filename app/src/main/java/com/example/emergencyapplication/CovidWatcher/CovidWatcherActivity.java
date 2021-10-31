@@ -1,6 +1,8 @@
 package com.example.emergencyapplication.CovidWatcher;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;;
 import android.os.Bundle;
@@ -15,6 +17,8 @@ public class CovidWatcherActivity extends AppCompatActivity {
 
     Button btn_login;
     ImageView btn_back, btn_phone;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -24,7 +24,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     //Initialize variable activity and arrayList located in MainDashboardActivity
     Activity activity;
-    ArrayList<String > arrayList;
+    ArrayList<String> arrayList;
 
 
     //Constructor
