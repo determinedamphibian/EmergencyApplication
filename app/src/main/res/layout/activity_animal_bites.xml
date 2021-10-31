@@ -59,7 +59,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#66F69090">
+        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -123,7 +123,8 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:layout_gravity="center_horizontal"
-                        android:text="Headache\nand Fever" />
+                        android:text="Headache\nand Fever"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
@@ -151,7 +152,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Pain and numbness\nof bite site" />
+                        android:text="Pain and numbness\nof bite site"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -184,7 +186,8 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:layout_gravity="center_horizontal"
-                        android:text="Delirium\nand Paralysis" />
+                        android:text="Delirium\nand Paralysis"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
@@ -212,7 +215,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Muscle spasms" />
+                        android:text="Muscle spasms"
+                        android:textColor="@color/white"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -238,7 +242,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Aerophobia and hydrophobia" />
+                    android:text="Aerophobia and hydrophobia"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
             <TextView
@@ -275,6 +280,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:text="Be a responsible pet owner."
+                        android:textColor="@color/white"
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -298,8 +304,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_gravity="center"
                         android:textSize="14sp"
+                        android:textColor="@color/white"
                         android:text="Have your pet dog immunized by a veterinarian against rabies at months old and every year thereafter."/>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -321,6 +327,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_gravity="center"
                         android:textSize="14sp"
+                        android:textColor="@color/white"
                         android:text="Never allow your pet dog roam the streets."/>
 
                 </LinearLayout>
@@ -344,6 +351,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_gravity="center"
                         android:textSize="14sp"
+                        android:textColor="@color/white"
                         android:text="Take care of your pet dog (bathe, clean, feed and provide sleeping quarters)."/>
 
                 </LinearLayout>
@@ -367,6 +375,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
                         android:text="Get yourself pre-exposure anti-rabies vaccine especially if you have high-risl occupation."
                         android:textSize="14sp" />
 
@@ -407,6 +416,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
                         android:text="Wash the wound immediately with soap and running water."
                         android:textSize="14sp" />
 
@@ -430,6 +440,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
                         android:text="Seek immediate consultation with a doctor or go to the nearest Animal Bite."
                         android:textSize="14sp" />
 
@@ -452,6 +463,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
                         android:layout_gravity="center"
                         android:textSize="14sp"
                         android:text="Treatment Center while observing the dog."/>
@@ -477,6 +489,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_gravity="center"
                         android:textSize="14sp"
+                        android:textColor="@color/white"
                         android:text="Observe the dog for 14 days and consult your doctor if any of the following occurs:"/>
 
                 </LinearLayout>
@@ -499,6 +512,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
                         android:text="Dog becomes wild and runs aimlessly."
                         android:textSize="14sp" />
 
@@ -522,6 +536,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
                         android:text="Dog drools"
                         android:textSize="14sp" />
 
@@ -545,6 +560,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
                         android:text="Dog bites any moving or non-moving object."
                         android:textSize="14sp" />
 
@@ -568,7 +584,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
-                        android:text="Dog does not eat or drink"
+                        android:textColor="@color/white"
+                        android:text="Dog does not eat or drink."
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -591,6 +608,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
                         android:text="Dog dies within observation period."
                         android:textSize="14sp" />
 
