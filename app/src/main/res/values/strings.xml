@@ -42,4 +42,5 @@
     <string name="create_account"> <b>Create an account</b></string>
     <string name="facebook_app_id">250328910265572</string>
     <string name="fb_login_protocol_scheme">fb250328910265572</string>
+    <string name="Intro_covid">Ang COVID-19 o Corona virus ay mga pamilya ng mga virus na nagdudulot ng sakit mula sa karaniwang sipon hanggang sa mas malubhang sakit tulad ng Middle East Respiratory Syndrome (MERS) at Severe Acute Respiratory Syndrome (SARS).</string>
 </resources>
