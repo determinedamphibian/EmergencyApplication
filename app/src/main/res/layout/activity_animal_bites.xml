@@ -79,7 +79,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <WebView
-                android:id="@+id/wv_intro_animal_bites"
+                android:id="@+id/wv_intro_sprains"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>

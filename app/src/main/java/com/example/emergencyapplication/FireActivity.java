@@ -34,8 +34,7 @@ public class FireActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FireActivity.this, EmergencyHotlineButtonActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         tv_fireCon1 = findViewById(R.id.tv_fireCon1);

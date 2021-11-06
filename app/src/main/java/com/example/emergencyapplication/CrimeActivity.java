@@ -34,8 +34,7 @@ public class CrimeActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CrimeActivity.this, EmergencyHotlineButtonActivity.class);
-                startActivity(intent);
+               finish();
             }
         });
 

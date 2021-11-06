@@ -3,7 +3,6 @@ package com.example.emergencyapplication.FirstAids;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
 
-import com.example.emergencyapplication.FirstAidActivity;
 import com.example.emergencyapplication.R;
 
 public class AnimalBitesActivity extends AppCompatActivity {
@@ -28,8 +26,7 @@ public class AnimalBitesActivity extends AppCompatActivity {
         bt_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnimalBitesActivity.this, FirstAidActivity.class);
-                startActivity(intent);
+              finish();
             }
         });
 
@@ -39,7 +36,7 @@ public class AnimalBitesActivity extends AppCompatActivity {
                 "<![CDATA]<body style=\"text-align:justify\">"
                         +intro + "</body>"
         ));
-        webView = findViewById(R.id.wv_intro_animal_bites);
+        webView = findViewById(R.id.wv_intro_sprains);
         webView.setBackgroundColor(Color.TRANSPARENT);
         webView.loadData(webText,"text/html;charset=utf-8","UTF-8");
 
