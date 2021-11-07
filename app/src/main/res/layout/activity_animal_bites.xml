@@ -66,7 +66,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:paddingBottom="10dp">
 
 
             <TextView
@@ -79,7 +80,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <WebView
-                android:id="@+id/wv_intro_sprains"
+                android:id="@+id/wv_intro_animal_bites"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
@@ -89,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="SIGNS AND SYMPTOMS"
+                android:text="SINYALES AT SINTOMAS:"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -123,7 +124,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:layout_gravity="center_horizontal"
-                        android:text="Headache\nand Fever"
+                        android:text="Pananakit ng ulo\nat Lagnat"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
@@ -152,7 +153,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Pain and numbness\nof bite site"
+                        android:text="Pananakit at\npagkamanhid ng kagat"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
@@ -186,7 +187,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:layout_gravity="center_horizontal"
-                        android:text="Delirium\nand Paralysis"
+                        android:text="Pagdidiliryo\nat Pagkaparalisa"
                         android:textColor="@color/white"/>
 
                 </LinearLayout>
@@ -211,11 +212,11 @@
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/spasms"/>
                     <TextView
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Muscle spasms"
+                        android:text="Pamumulikat ng\nkalamanan"
                         android:textColor="@color/white"/>
                 </LinearLayout>
 
@@ -242,14 +243,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Aerophobia and hydrophobia"
+                    android:text="Pagkatakot sa tubig at hangin"
                     android:textColor="@color/white"/>
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PREVENTIONS"
+                android:text="PARAAN NG PAG-IWAS:"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="18sp"
@@ -279,7 +280,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
-                        android:text="Be a responsible pet owner."
+                        android:text="Maging responsable sa mga alagang hayop."
                         android:textColor="@color/white"
                         android:textSize="14sp" />
 
@@ -288,7 +289,7 @@
                 <LinearLayout
                     android:background="@color/greeneFirstAid"
                     android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="10dp">
@@ -305,7 +306,7 @@
                         android:layout_gravity="center"
                         android:textSize="14sp"
                         android:textColor="@color/white"
-                        android:text="Have your pet dog immunized by a veterinarian against rabies at months old and every year thereafter."/>
+                        android:text="Pabakunahan ang mga alaga simula ang taon-taon."/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -328,14 +329,14 @@
                         android:layout_gravity="center"
                         android:textSize="14sp"
                         android:textColor="@color/white"
-                        android:text="Never allow your pet dog roam the streets."/>
+                        android:text="Huwag hayaang pagala-gala ang mga alaga sa labas ng tahanan."/>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:background="@color/orangeFirstAid"
                     android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginBottom="10dp">
@@ -352,7 +353,7 @@
                         android:layout_gravity="center"
                         android:textSize="14sp"
                         android:textColor="@color/white"
-                        android:text="Take care of your pet dog (bathe, clean, feed and provide sleeping quarters)."/>
+                        android:text="Alagaan ang mga ito. Bigyan ng pagkain, matitirahan, at paliguan."/>
 
                 </LinearLayout>
 
@@ -376,7 +377,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/white"
-                        android:text="Get yourself pre-exposure anti-rabies vaccine especially if you have high-risl occupation."
+                        android:text="Magpabakuna ng anti-rabies lalo kung may potensyal na makagat ng hayop."
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -384,9 +385,9 @@
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TREATMENT"
+                android:text="MGA PANGUNAHING LUNAS:"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
@@ -417,7 +418,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/white"
-                        android:text="Wash the wound immediately with soap and running water."
+                        android:text="Hugasan ang sugat ng sabon at malinis na tubig."
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -441,7 +442,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/white"
-                        android:text="Seek immediate consultation with a doctor or go to the nearest Animal Bite."
+                        android:text="Agad na kumunsulta sa doktor o 'di naman kaya'y pumunta sa pinakamalapit na bite center."
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -466,7 +467,7 @@
                         android:textColor="@color/white"
                         android:layout_gravity="center"
                         android:textSize="14sp"
-                        android:text="Treatment Center while observing the dog."/>
+                        android:text="Dalhin ang alagang hayop sa isang treatment center upang maobserbahan."/>
 
                 </LinearLayout>
 
@@ -490,7 +491,7 @@
                         android:layout_gravity="center"
                         android:textSize="14sp"
                         android:textColor="@color/white"
-                        android:text="Observe the dog for 14 days and consult your doctor if any of the following occurs:"/>
+                        android:text="Obserbahan ang alaga sa loob ng 14 na araw at kumonsulta sa doktor kapag nakita ang mga sumusunod:"/>
 
                 </LinearLayout>
 
@@ -513,7 +514,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/white"
-                        android:text="Dog becomes wild and runs aimlessly."
+                        android:text="Ang alaga ay hindi mapakali at takbo nang takbo."
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -537,7 +538,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/white"
-                        android:text="Dog drools"
+                        android:text="Ang alaga ay nagsisimulang maglaway."
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -561,7 +562,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/white"
-                        android:text="Dog bites any moving or non-moving object."
+                        android:text="Agad na kinakagat ang alinmang bagay gumagalaw man ito o hindi."
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -585,7 +586,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/white"
-                        android:text="Dog does not eat or drink."
+                        android:text="Hindi pagkain at paginom ng alaga."
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -609,11 +610,18 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/white"
-                        android:text="Dog dies within observation period."
+                        android:text="Namatay ito sa loob ng 14 na araw na pagoobserba."
                         android:textSize="14sp" />
 
                 </LinearLayout>
 
+                <Button
+                    android:id="@+id/btn_hospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Hospital"
+                    android:backgroundTint="@color/red_error"
+                    android:layout_gravity="center"/>
             </LinearLayout>
 
         </LinearLayout>
