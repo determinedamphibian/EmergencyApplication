@@ -37,8 +37,7 @@ public class FloodActivity extends AppCompatActivity {
         bt_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FloodActivity.this, DisastersActivity.class);
-                startActivity(intent);
+          finish();
             }
         });
 

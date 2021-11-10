@@ -40,6 +40,7 @@ import android.widget.Toast;
 import com.example.emergencyapplication.CovidWatcher.CovidWatcherActivity;
 import com.example.emergencyapplication.Database.TrustedContactsRepository;
 import com.example.emergencyapplication.TrustedContactsActivites.InstantSOS;
+import com.example.emergencyapplication.TrustedContactsActivites.TrustedContactsMessageActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -127,8 +128,8 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
                             {Manifest.permission.SEND_SMS, Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
                 }
 
-                enableGPS();
-                getLocation();
+                enableGPSForSOS();
+//                getLocation();
 
             }
         });
@@ -167,10 +168,52 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         else{
             Toast.makeText(MainDashboardActivity.this, "Your phone is not compatible with this feature", Toast.LENGTH_SHORT);
         }
+
         //calls notification bar for SOS message every startup
         startNotification();
 
     }
+
+    private void enableGPSForSOS() {
+        final LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        if(!locationManager.isProviderEnabled(locationManager.GPS_PROVIDER)){
+            userAlertGPSToEnableSOS();
+        }else{
+            Intent intent = new Intent(MainDashboardActivity.this, TrustedContactsMessageActivity.class);
+            startActivity(intent);
+        }
+        
+    }
+
+    private void userAlertGPSToEnableSOS() {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = MainDashboardActivity.this.getLayoutInflater().inflate(R.layout.activity_alert_dialog_customed, null);
+        builder.setView(view);
+        final AlertDialog alert = builder.create();
+        alert.show();
+
+        btn_later = (Button) view.findViewById(R.id.btn_cancel_action);
+        btn_later.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alert.dismiss();
+            }
+        });
+
+        btn_ok = (Button) view.findViewById(R.id.btn_ok_action);
+        btn_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivityForResult(intent, PERMISSION_REQUEST_ENABLE_GPS);
+                alert.dismiss();
+            }
+        });
+    }
+
+
 
     private void openCovidWatcher() {
 
@@ -294,14 +337,16 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
     @Override
     public void onLocationChanged(Location location) {
         try {
-            Geocoder geocoder = new Geocoder(MainDashboardActivity.this, Locale.getDefault());
-            List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
+//            Geocoder geocoder = new Geocoder(MainDashboardActivity.this, Locale.getDefault());
+//            List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
+
+            //Getting the string value (message) from the editText of S.O.S message
             SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
             userEmergencyMessage = sharedPreferences.getString("text", "");
+
+            //Getting the latitude and longitude and mapping it with Google Map's link
             String message = userEmergencyMessage+" "+ "Please locate me here with this link https://www.google.com/maps/search/?api=1&query="+location.getLatitude()+","+location.getLongitude();
             Log.d("TrustedContactMessage: ", message);
-
-
 
             new MainDashboardActivity.LoadDataTasks(message).execute();
 

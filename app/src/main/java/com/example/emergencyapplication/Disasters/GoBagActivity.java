@@ -41,8 +41,7 @@ public class GoBagActivity extends AppCompatActivity {
         bt_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GoBagActivity.this, DisastersActivity.class);
-                startActivity(intent);
+             finish();
             }
         });
 

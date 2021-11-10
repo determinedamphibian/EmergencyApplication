@@ -38,8 +38,7 @@ public class TsunamiActivity extends AppCompatActivity {
         bt_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TsunamiActivity.this, DisastersActivity.class);
-                startActivity(intent);
+               finish();
             }
         });
 

@@ -92,18 +92,6 @@ public class TrustedContactsSideDock extends AppCompatActivity {
             }
         });
 
-        //Image button for message composition
-        imgBtn_message = findViewById(R.id.imgBtn_message);
-        imgBtn_message.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(TrustedContactsSideDock.this, TrustedContactsMessageActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-
     }
 
 

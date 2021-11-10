@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.ImageView;
 
 import com.example.emergencyapplication.Disasters.EarthquakeFragments.AfterEarthquakeFragments;
 import com.example.emergencyapplication.Disasters.EarthquakeFragments.BeforeEarthquakeFragments;
@@ -34,12 +35,11 @@ public class EarthquakeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_earthquake);
 
-        View bt_back = findViewById(R.id.bt_back);
+        ImageView bt_back = findViewById(R.id.bt_back);
         bt_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EarthquakeActivity.this, DisastersActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
 

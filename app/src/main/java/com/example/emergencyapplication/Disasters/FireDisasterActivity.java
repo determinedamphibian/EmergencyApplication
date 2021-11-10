@@ -36,8 +36,7 @@ public class FireDisasterActivity extends AppCompatActivity {
         bt_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FireDisasterActivity.this, DisastersActivity.class);
-                startActivity(intent);
+              finish();
             }
         });
 

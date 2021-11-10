@@ -35,7 +35,7 @@ import java.util.Locale;
 public class TrustedContactsMessageActivity extends AppCompatActivity implements LocationListener {
 
     EditText et_message;
-    Button btn_saveMessage, btn_sendMessage;
+    Button btn_saveMessage, btn_sendMessage, btn_sendMessageTrustedContacts;
     ImageView btn_back;
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "text";
@@ -51,8 +51,7 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TrustedContactsMessageActivity.this, TrustedContactsSideDock.class);
-                startActivity(intent);
+                finish();
             }
         });
 
@@ -78,11 +77,33 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
 
-                userAlerGPSToEnable();
+                enableGPS();
                 getLocation();
 
             }
         });
+
+        btn_sendMessageTrustedContacts = findViewById(R.id.btn_sendMessageTrustedContacts);
+        btn_sendMessageTrustedContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                enableGPS();
+                Intent intent = new Intent(TrustedContactsMessageActivity.this, InstantSOS.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
+
+    private void enableGPS() {
+
+        final LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        if(!locationManager.isProviderEnabled(locationManager.GPS_PROVIDER)){
+            userAlerGPSToEnable();
+        }
     }
 
     private void saveData() {
@@ -130,8 +151,10 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
 
             Geocoder geocoder = new Geocoder(TrustedContactsMessageActivity.this, Locale.getDefault());
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
-            String messageEmergency =( userMessage+" "+addresses.get(0).getAddressLine(0));
 
+            String messageEmergency = userMessage+" "+ "Please locate me here with this link https://www.google.com/maps/search/?api=1&query="+location.getLatitude()+","+location.getLongitude();
+
+            //SOS message can be send to any share intent
             shareIntent.putExtra(Intent.EXTRA_TEXT, messageEmergency);
             shareIntent.setType("text/plain");
             startActivity(shareIntent);

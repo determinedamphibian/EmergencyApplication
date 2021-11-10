@@ -74,11 +74,11 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="SEND\nS.O.S MESSAGE"
+            android:text="S.O.S"
             android:textColor="@color/black"
             android:textStyle="bold" />
 

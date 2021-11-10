@@ -42,10 +42,7 @@ public class InsertActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 finish();
-                Intent intent = new Intent(InsertActivity.this, TrustedContactsSideDock.class);
-                startActivity(intent);
             }
         });
 

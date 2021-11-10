@@ -7,6 +7,68 @@
     android:background="@color/white"
     tools:context=".DisasterAndEmergencyGuidelineButtonActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_parent"
+        app:layout_constraintVertical_bias="0.139">
+
+        <ImageView
+            android:id="@+id/bt_first_aid_kit"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/first_aid_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="FIRST AID GUIDE"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_parent"
+        app:layout_constraintVertical_bias="0.139">
+
+        <ImageView
+            android:id="@+id/bt_disaster"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/disaster_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="DISASTER GUIDE"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_parent"
         android:layout_width="match_parent"
@@ -33,92 +95,34 @@
                     android:id="@+id/bt_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_effect_emergency_disaster"
                     android:padding="10dp"
-                    android:src="@drawable/abc_vector_test"
-                    android:background="@drawable/ripple_effect_emergency_disaster"/>
+                    android:src="@drawable/abc_vector_test" />
 
             </LinearLayout>
-
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Emergency and Disaster Guide"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/ll_btnBack"
+                android:text="Emergency and Disaster Guide"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_toRightOf="@id/ll_btnBack"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view_parent"
-        app:layout_constraintVertical_bias="0.139">
-
-        <ImageView
-            android:id="@+id/bt_first_aid_kit"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/first_aid_logo"
-            android:background="@drawable/ripple_effect"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="FIRST AID GUIDE"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="0.439"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_view_parent"
-        app:layout_constraintVertical_bias="0.139">
-
-        <ImageView
-            android:id="@+id/bt_disaster"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/disaster_logo"
-            android:background="@drawable/ripple_effect"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="DISASTER GUIDE"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+        app:layout_constraintGuide_percent=".5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

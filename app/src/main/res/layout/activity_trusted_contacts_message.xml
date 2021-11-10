@@ -11,10 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#A9F40202"
-        android:layout_marginBottom="25dp">
-
-
+        android:background="#A9F40202">
 
         <ImageView
             android:id="@+id/bt_back"
@@ -37,72 +34,112 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:paddingBottom="10dp"
-        android:layout_gravity="center"
-        android:src="@drawable/message" />
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:text="Maaring makalikha ng sariling mensahe na matanggap kasama ang iyong lokasyon nang sinumang nakapabilang sa Trusted Contacts sa tuwing mapipindot ang SOS, o sa alinmang social media."
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/et_message"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Type here..."
-        android:textColor="@color/black"
-        android:paddingLeft="10dp"
-        android:paddingRight="5dp"
-        android:inputType="textPersonName"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_saveMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="70dp"
+            android:backgroundTint="#A9BF0707"
+            android:clickable="true"
+            android:text="Save"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/et_message"
+            tools:layout_editor_absoluteX="161dp" />
 
-        <LinearLayout
+
+        <Button
+            android:id="@+id/btn_sendMesage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_centerInParent="true">
-            <Button
-                android:id="@+id/btn_saveMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="#A9BF0707"
-                android:textColor="@color/white"
-                android:text="Save"
-                android:layout_marginRight="50dp"
-                android:clickable="true"/>
+            android:layout_marginTop="28dp"
+            android:layout_toRightOf="@id/btn_saveMessage"
+            android:backgroundTint="#1A4D98"
+            android:clickable="true"
+            android:text="Send to Others"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guideline19"
+            app:layout_constraintHorizontal_bias="0.83"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_saveMessage" />
 
-            <Button
-                android:id="@+id/btn_sendMesage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/btn_saveMessage"
-                android:backgroundTint="#1A4D98"
-                android:textColor="@color/white"
-                android:text="Send"
-                android:clickable="true"/>
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_sendMessageTrustedContacts"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.228"
+            app:layout_constraintStart_toStartOf="@+id/guideline19"
+            app:layout_constraintTop_toBottomOf="@+id/btn_saveMessage" />
 
-    </RelativeLayout>
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Type here..."
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView125" />
+
+        <ImageView
+            android:id="@+id/imageView49"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView125"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="Maaring makalikha ng sariling mensahe na matanggap kasama ang iyong lokasyon nang sinumang nakapabilang sa Trusted Contacts sa tuwing mapipindot ang SOS, o sa alinmang social media."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView49" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
 
 </LinearLayout>

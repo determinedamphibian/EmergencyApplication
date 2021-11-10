@@ -71,6 +71,7 @@ public class InstantSOS extends AppCompatActivity implements LocationListener {
         //=====================checks SMS permission ends==================================
         enableGPS();
         getLocation();
+        finish();
 
     }
     private void enableGPS(){

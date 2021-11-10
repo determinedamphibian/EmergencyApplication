@@ -30,17 +30,6 @@
         </FrameLayout>
 
 
-        <ImageButton
-            android:id="@+id/imgBtn_message"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:src="@android:drawable/sym_action_email"
-            android:background="@drawable/ripple_effect_toolbar"
-            android:foregroundGravity="top"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fbtn_addTrustedContacts"
             android:layout_width="wrap_content"
