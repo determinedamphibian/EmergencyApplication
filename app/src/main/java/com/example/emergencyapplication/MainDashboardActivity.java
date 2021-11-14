@@ -1,5 +1,6 @@
 package com.example.emergencyapplication;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
@@ -31,6 +32,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.telephony.SmsManager;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -48,7 +51,7 @@ import java.util.Locale;
 
 public class MainDashboardActivity extends AppCompatActivity implements LocationListener {
 
-    private ImageView imageButton_emergencyHotlines, imageButton_watcher,imageButton_sos, imageButton_guidelines;
+    private ImageView imageButton_emergencyHotlines, imageButton_watcher, imageButton_sos, imageButton_guidelines;
     private LocationManager locationManager;
     DrawerLayout drawerLayout;
     ImageView btMenu;
@@ -58,12 +61,13 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
     MainAdapter adapter;
     static String userEmergencyMessage;
     TrustedContactsRepository trustedContactsRepository;
-    List <String> trustedContactsNumberArrayList;
+    List<String> trustedContactsNumberArrayList;
     List<String> trustedContactNumberList;
 
     private static final int PERMISSION_REQUEST_ENABLE_GPS = 9002;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +79,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         recyclerView = findViewById(R.id.recycler_view);
 
         //Clear arrayList
-            arrayList.clear();
+        arrayList.clear();
 
         //Add menu item to arrayList
         arrayList.add("Home");
@@ -106,6 +110,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         //sos button when clicked!
         imageButton_sos = findViewById(R.id.imgbtn_SOS);
         imageButton_sos.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
             @Override
             public void onClick(View v) {
 
@@ -130,6 +135,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
 
                 enableGPSForSOS();
 //                getLocation();
+
 
             }
         });

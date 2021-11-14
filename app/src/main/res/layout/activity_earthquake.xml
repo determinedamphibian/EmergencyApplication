@@ -76,7 +76,6 @@
             android:paddingTop="10dp"
             android:paddingBottom="30dp">
 
-
             <ImageView
                 android:id="@+id/imageView50"
                 android:layout_width="103dp"
@@ -87,341 +86,428 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView155" />
 
-            <TableLayout
-                android:id="@+id/tableLayout"
+
+            <TextView
+                android:id="@+id/textView159"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="12dp"
+                android:text="Lakas(Intensity)"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView157">
+                app:layout_constraintTop_toBottomOf="@+id/textView157" />
 
-                <TableRow android:dividerPadding="5dp">
+            <TextView
+                android:id="@+id/textView170"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Halos di maramdaman"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.34"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView159" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Intensity Scale"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView167"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mararamdaman lang ng tao kapag\nnasa sensitibong kalagayan.\nBahagyang matitinag ang mga\nbagay na nakabalanse. Makakalog\nng mahina ang tubig sa lagayan."
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView170" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Pag-alog"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView160"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="I"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView159" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Paglalarawan"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView149"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="20dp"
+                android:background="#BEEDE2"
+                android:gravity="center"
+                android:text="II"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView160" />
 
-                </TableRow>
+            <TextView
+                android:id="@+id/textView168"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mararamdaman ng iilang nakatigil\nlamang sa loob ng bahay o gusali.\nBahagyang uugoy ang mga\nnakabiting bagay. Kapansin-pansin \nna ang pagkalog ng tubig sa lalagyan."
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView171" />
 
-                <TableRow
-                    android:layout_marginBottom="15dp"
-                    android:dividerPadding="5dp">
+            <TextView
+                android:id="@+id/textView171"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Bahagyang nararamdaman"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView167" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="I"
-                        android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/textView173"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mararamdaman na ng maraming tao\nsa loob ng bahay lalo na ng mga\nnasa taas ng gusali. Mararamdaman\nang pagyanig na tila may dumaang\nmaliit na trak. Makararamdam ng\npagkahilo ang ilang tao."
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView172" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Halos di maramdaman"
-                        android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/textView172"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Mahina"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.462"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView168" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="-Mararamdaman lang ng\ntao kapag nasa\nsensitibong kalagayan.\n-Bahagyang matitinag\nang mga bagay na\n nakabalanse.\n-Makakalog ng mahina\nang tubig sa lagayan."
-                        android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/textView175"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mararamdaman na ng mga tao sa\nloob ng bahay o gusali at ng mga\nnasa lansangan. Magigising ang\nmga mababaw matulog.\nMararamdaman ang pagyanig na\ntila may dumaang malaking trak.\nMay kalakasan na ang\npag-ugoy ng mga nakabiting\nbagay. Makikita na ang pagyanig\nng mga pinggan, baso, bintana,\nat pinto.Lalangitngit ang\ndingding at sahig ng mga\nimprastrakturang gawa sa kahoy.\nMaaaring yumanig nang\nbahagya ang mga nakahintong\nsasakyan."
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView174" />
 
-                </TableRow>
+            <TextView
+                android:id="@+id/textView177"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Mararamdaman na ng mga tao sa\nloob ng bahay o gusali at ng mga\nnasa lansangan. Maraming\nnatutulog ang magigising.\nMay ilang natatakot, may ilang\ntumatakbo papunta sa kalsada.\nMararamdaman sa gusali ang.\nmalakas na pagyanig at pagduyan.\nMarahas na ang pag-ugoy ng mga\nnakabiting bagay.\nMagkakalansingan ang mga plato\nat mababasag ang ilan. Maaring\nmahulog o mabuwal ang ilang\nmaliliit at magagaang kagamitan.\nTatapon ang tubig o inuming\nnasa mga bukas na lalagyan. Kita\n na ang pagyanig ng mga\nnakahintong sasakyan pati mga\ndahon at sanga ng puno.."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView176" />
 
+            <TextView
+                android:id="@+id/textView179"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Maraming tao ang matatakot at\ntatakbo papuntang kalsada.\nMay ilang mawawalan ng\nbalanse sa pagkilos.\nPakiramdam ng mga motorista\nna nagmamaneho silang impis\nang gulong. Mauusog sa kina-\nlalagyan ang mga mabibigat na\nkagamitan. Maaaring kumililing\nang maliliit na batingaw sa\nsimbahan. Maaaring mabitak\nang tapal sa dingding. Bahagyang\nmapipinsala ang mga lumang\nimprastraktura subalit hindi ang\nmga mas matibay ang\npagkakagawa. May mangilan-\nngilan pagguho ng lupa sa mga\nmabundok at mabanging lugar.\nHalata na ang pagyanig ng mga\npuno."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView178" />
 
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
+            <TextView
+                android:id="@+id/textView174"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Katamtaman ang Lakas"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.357"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView173" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="II"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView176"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Malakas"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.305"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView175" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Bahagyang\nnararaamdaman"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView178"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sobrang Lakas"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.305"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView177" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman ng\niilang nakatigil\nlamang sa loob\nng bahay o gusali.\n-Bahagyang uugoy\nang mga nakabiting\nbagay.\n-Kapansin-pansin na\nang pagkalog ng\ntubig sa lalagyan."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView181"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Matatakot ang halos lahat ng tao\nat tatakbo papuntang kalsada.\nMahihirapang tumayo ang mga\nnasa itaas na palapag ng gusali.\nMabubuwal ang mga mabibigat\nna kagamitan. Maaaring\nkumalembang ang malalaking\nbatingaw ng simbahan. Maaring\n.magbitak-bitak ang mga dike,\nkalsada, o sementong pader.\nMay mangilan-ngilang paglambot\nng lupa. Makikita na ang pagbuka\nat pagguho ng lupa. Mayayanig\nmga mas matibay ang\npagkakagawa. May mangilan-\nngilan pagguho ng lupa sa mga\nmabundok at mabanging lugar.\nnang malakas ang mga puno."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.093"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView180" />
 
-                </TableRow>
+            <TextView
+                android:id="@+id/textView183"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Magkakagulo ang mga tao.\nMahihirapan silang tumayo\nkahit sa kalsada.Maraming\nmatitibay na gusali ang \nmakikitaan na ng pinsala.\nMabubuwag ang mga\nkongkretong dike at\npundasyon ng tulay.\nMasisira o mababaluktot\nang mga riles ng tren.\nMaaaring mausog o\nmabuwal ang mga puntod.\nMaaaring tumumba ang mga\nposte, tore, at monumento.\nMaaaring mabaluktot o masira\nang mga tubo ng tubig at\nimburnal. Babagsak, tatagilid,\no lulubog ang mga\nimprastraktura dahil sa\npaglambot o pagbuka ng lupa.\nMay malalakas na pagguho ng\nlupa sa mga bunduking lugar.\nIitsa palayo ang malalaking\nbato na malapit sa epicenter.\nMagtitilamsikan o sasaboy\n ang tubig-ilog hanggang sa\nmga dike o tabing-ilog."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.129"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView182" />
 
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
+            <TextView
+                android:id="@+id/textView185"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Mabubuwal nang walang\nkalaban-laban ang mga tao.\nMaraming umiiyak at\nnangangatog sa takot.\nKaramihan sa mga gusali\nang tuluyan nang nasira.\nNawasak na rin ang mga\ntulay at nakaangat na \nimprastraktura. Maraming\nposte, tore, at monumento\nang nabuwal, natagilid, o\nnasira. Nabaluktot o nasira\nna rin ang mga tubo ng tubig\nat imburnal. Talamak na ang\npaglambot, pagbuka, at\npagbibiyak ng lupa. Marahas\nang pagyanig sa mga puno\nna ikasisira nila. Umiitsa ang\nmga malalaking bato.\nMarahas na titilamsik at\nsasaboy ang tubig-ilog sa\nmga dike at tabing-ilog."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.125"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView184" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="III"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView187"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Tuluyan nang nawasak lahat\nng imprastrakturang gawa ng\ntao. Mararanasan ang\nmalawakang pagguho,\npaglambot,pag-urong,\npag-angat at pagbibiyak ng\nlupa. Nag-iba na ang daloy\nng tubig sa mga ilog at aalog\nnang matindi ang tubig sa\nmga lawa. Maraming mga\npuno ang matutumba at\nmabubuwal."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.125"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView186" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Mahina"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView180"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Mapaminsala"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.256"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView179" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman na\nng maraming tao\nsa loob ng bahay\nlalo na ng mga nasa.\ntaas ng gusali.\n-Mararamdaman ang\npagyanig na tila\nmay dumaang maliit \nna trak.\n-Makararamdam ng\npagkahilo ang ilang\ntao.."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView182"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sobrang Mapinsala"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.257"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView181" />
 
-                </TableRow>
+            <TextView
+                android:id="@+id/textView184"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Mapangwasak"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.259"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView183" />
 
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
+            <TextView
+                android:id="@+id/textView186"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Mapanggunaw"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.27"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toBottomOf="@+id/textView185" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="IV"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView152"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="#8CE0EF"
+                android:gravity="center"
+                android:text="III"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView149" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Katamtaman ang\nlakas"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView158"
+                android:layout_width="100dp"
+                android:layout_height="290dp"
+                android:layout_marginTop="20dp"
+                android:background="#4DD5ED"
+                android:gravity="center"
+                android:text="IV"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView152" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman na\nng maraming tao\nsa loob ng bahay\nat ng mga nasa.\nlansangan.\n-Magigising ang mga\nmababaw matulog\n-Mararamdaman ang\npagyanig na tila\n-Makararamdam ng\nmay dumadaang trak.\n-May kalakasan na\nang ugoy ng mga\nnakabiting bagay.\nMakikita na ang\npagyanig ng mga\npinggan, baso,\nbintana,at pinto."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView161"
+                android:layout_width="100dp"
+                android:layout_height="335dp"
+                android:background="#67F48F"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="V"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView158" />
 
-                </TableRow>
+            <TextView
+                android:id="@+id/textView162"
+                android:layout_width="100dp"
+                android:layout_height="345dp"
+                android:background="#F3E824"
+                android:gravity="center"
+                android:text="VI"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView161" />
 
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
+            <TextView
+                android:id="@+id/textView163"
+                android:layout_width="100dp"
+                android:layout_height="325dp"
+                android:background="#EDAD07"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="VII"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView162" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="V"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView164"
+                android:layout_width="100dp"
+                android:layout_height="465dp"
+                android:background="#F45B08"
+                android:gravity="center"
+                android:text="VIII"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView163" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Malakas"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView165"
+                android:layout_width="100dp"
+                android:layout_height="410dp"
+                android:background="#F40A0A"
+                android:gravity="center"
+                android:text="IX"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView164" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman na\nng maraming tao\nsa loob ng bahay\nat ng mga nasa.\nlansangan.\n-Magigising ang mga\nmababaw matulog\n-Mararamdaman ang\npagyanig na tila\n-Makararamdam ng\nmay dumadaang trak.\n-May kalakasan na\nang ugoy ng mga\nnakabiting bagay.\nMakikita na ang\npagyanig ng mga\npinggan, baso,\nbintana,at pinto."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
+            <TextView
+                android:id="@+id/textView166"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:background="#B11313"
+                android:gravity="center"
+                android:text="X"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView165" />
 
-                </TableRow>
-
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="VI"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Sobrang lakas"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman na\nng maraming tao\nsa loob ng bahay\nat ng mga nasa.\nlansangan.\n-Magigising ang mga\nmababaw matulog\n-Mararamdaman ang\npagyanig na tila\n-Makararamdam ng\nmay dumadaang trak.\n-May kalakasan na\nang ugoy ng mga\nnakabiting bagay.\nMakikita na ang\npagyanig ng mga\npinggan, baso,\nbintana,at pinto."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                </TableRow>
-
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="VII"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Mapaminsala"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman na\nng maraming tao\nsa loob ng bahay\nat ng mga nasa.\nlansangan.\n-Magigising ang mga\nmababaw matulog\n-Mararamdaman ang\npagyanig na tila\n-Makararamdam ng\nmay dumadaang trak.\n-May kalakasan na\nang ugoy ng mga\nnakabiting bagay.\nMakikita na ang\npagyanig ng mga\npinggan, baso,\nbintana,at pinto."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                </TableRow>
-
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="VIII"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Sobrang\nMapaminsala"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman na\nng maraming tao\nsa loob ng bahay\nat ng mga nasa.\nlansangan.\n-Magigising ang mga\nmababaw matulog\n-Mararamdaman ang\npagyanig na tila\n-Makararamdam ng\nmay dumadaang trak.\n-May kalakasan na\nang ugoy ng mga\nnakabiting bagay.\nMakikita na ang\npagyanig ng mga\npinggan, baso,\nbintana,at pinto."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                </TableRow>
-
-
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="IX"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Mapangwasak"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman na\nng maraming tao\nsa loob ng bahay\nat ng mga nasa.\nlansangan.\n-Magigising ang mga\nmababaw matulog\n-Mararamdaman ang\npagyanig na tila\n-Makararamdam ng\nmay dumadaang trak.\n-May kalakasan na\nang ugoy ng mga\nnakabiting bagay.\nMakikita na ang\npagyanig ng mga\npinggan, baso,\nbintana,at pinto."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                </TableRow>
-
-
-                <TableRow android:dividerPadding="5dp"
-                    android:layout_marginBottom="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="X"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="Mapanggunaw"
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-Mararamdaman na\nng maraming tao\nsa loob ng bahay\nat ng mga nasa.\nlansangan.\n-Magigising ang mga\nmababaw matulog\n-Mararamdaman ang\npagyanig na tila\n-Makararamdam ng\nmay dumadaang trak.\n-May kalakasan na\nang ugoy ng mga\nnakabiting bagay.\nMakikita na ang\npagyanig ng mga\npinggan, baso,\nbintana,at pinto."
-                        android:textColor="@color/black"
-                        android:layout_weight="1"
-                        android:gravity="center"/>
-
-                </TableRow>
-
-            </TableLayout>
 
             <TextView
                 android:id="@+id/textView124"
@@ -825,14 +911,14 @@
                 android:id="@+id/textView126"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
                 android:text="MGA DAPAT GAWIN:"
+                android:layout_marginTop="40dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.06"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/textView187" />
 
             <WebView
                 android:id="@+id/wv_intro_earthquake"
@@ -849,15 +935,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.15" />
+                app:layout_constraintGuide_percent="0.29" />
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/view_pager"
                 android:layout_width="371dp"
                 android:layout_height="873dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.592"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView126">
 
