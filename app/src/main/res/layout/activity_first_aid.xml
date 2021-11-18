@@ -58,50 +58,52 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/card_view_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/card_view_parent">
 
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="3"
             android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false">
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="3">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_cpr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:elevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center"
-                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:background="@drawable/ripple_effect">
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/bt_cpr"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/cpr"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cpr" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:text="CPR"
-                        android:textSize="12sp"
                         android:textColor="@color/black"
-                        android:layout_marginTop="12dp"/>
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -111,34 +113,35 @@
                 android:id="@+id/cv_bleeding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:elevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center"
-                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:background="@drawable/ripple_effect">
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/bt_bleeding"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:background="@drawable/ripple_effect"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/bleeding"
-                        android:background="@drawable/ripple_effect"/>
+                        android:src="@drawable/bleeding" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:text="Bleeding"
-                        android:textSize="12sp"
                         android:textColor="@color/black"
-                        android:layout_marginTop="12dp"/>
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -148,33 +151,34 @@
                 android:id="@+id/cv_fractures"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:elevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center"
-                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:background="@drawable/ripple_effect">
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/bt_fractures"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/fracture"
-                        android:background="@drawable/ripple_effect"/>
+                        android:background="@drawable/ripple_effect"
+                        android:src="@drawable/fracture" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:text="Fractures"
-                        android:textSize="12sp"
                         android:textColor="@color/black"
-                        android:layout_marginTop="12dp"/>
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -184,26 +188,26 @@
                 android:id="@+id/cv_sprains"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:elevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center"
-                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:background="@drawable/ripple_effect">
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/bt_sprains"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/sprains"
-                        android:background="@drawable/ripple_effect"/>
+                        android:background="@drawable/ripple_effect"
+                        android:src="@drawable/sprains" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -221,33 +225,34 @@
                 android:id="@+id/cv_burns"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:elevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center"
-                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:background="@drawable/ripple_effect">
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/bt_burns"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/burn"
-                        android:background="@drawable/ripple_effect"/>
+                        android:background="@drawable/ripple_effect"
+                        android:src="@drawable/burn" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:text="Burns"
-                        android:textSize="12sp"
                         android:textColor="@color/black"
-                        android:layout_marginTop="12dp"/>
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -257,34 +262,35 @@
                 android:id="@+id/cv_animalBites"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:elevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center"
-                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:background="@drawable/ripple_effect">
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/bt_animal_bites"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:background="@drawable/ripple_effect"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/animal_bites"
-                        android:background="@drawable/ripple_effect"/>
+                        android:src="@drawable/animal_bites" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:text="Animal Bites"
-                        android:textSize="12sp"
                         android:textColor="@color/black"
-                        android:layout_marginTop="12dp"/>
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -294,26 +300,26 @@
                 android:id="@+id/cv_choking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
                 android:elevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/ripple_effect"
                     android:gravity="center"
-                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:background="@drawable/ripple_effect">
+                    android:padding="16dp">
 
                     <ImageView
                         android:id="@+id/bt_choking"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/choking"
-                        android:background="@drawable/ripple_effect"/>
+                        android:background="@drawable/ripple_effect"
+                        android:src="@drawable/choking" />
 
                     <TextView
                         android:layout_width="wrap_content"

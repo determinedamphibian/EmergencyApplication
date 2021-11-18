@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.TsunamiFragments.BeforeTsunamiFragment">
+    tools:context=".Disasters.TsunamiFragments.BeforeTsunamiFragment"
+    android:background="@color/white">
 
 
     <LinearLayout
@@ -29,6 +30,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Alamin kung may panganib ng tsunami ang inyong lugar."/>
 
         </LinearLayout>
@@ -51,6 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Alamin ang lugar na paglilikasan at ang pinakamabilis at ligtas na daan patungo rito."/>
 
         </LinearLayout>
@@ -73,6 +76,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Makilahok sa mga pagsasanay at paghahanda ng komunidad sa baha."/>
 
         </LinearLayout>
@@ -95,6 +99,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Ihanda ang GO BAG na naglalaman ng mga pangangailangan ng pamilya."/>
 
         </LinearLayout>
@@ -116,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Magtanim ng mga bakawan at puno sa tabing dagat."
                 android:textSize="14sp" />
 

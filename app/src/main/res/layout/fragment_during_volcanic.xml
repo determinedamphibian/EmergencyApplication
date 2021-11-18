@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.VolcanicFragments.DuringVolcanicFragment">
+    tools:context=".Disasters.VolcanicFragments.DuringVolcanicFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Kapag nakatanggap ng abiso, agad na lumisan patungo sa ligtas na lugar."/>
 
         </LinearLayout>
@@ -51,6 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Tulungan sa paglikas ang mga bata, buntis, may kapansanan at mga matatanda."/>
 
         </LinearLayout>
@@ -74,6 +77,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Takpan ang mga bibig at ilong ng basang panyo o tela at magsuot ng proteksyon sa mata."/>
 
         </LinearLayout>
@@ -97,6 +101,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Umiwas sa ilog at sapa na puwedeng daluyan ng lahar."/>
 
         </LinearLayout>
@@ -119,6 +124,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:text="Ilikas ang mga alagang hayop sa ligtas na lugar para maiwasan ang paglanghap ng abo."
                 android:textSize="14sp" />
 

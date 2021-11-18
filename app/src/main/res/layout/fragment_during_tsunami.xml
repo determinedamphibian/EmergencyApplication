@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.TsunamiFragments.DuringTsunamiFragment">
+    tools:context=".Disasters.TsunamiFragments.DuringTsunamiFragment"
+    android:background="@color/white">
 
 
     <LinearLayout
@@ -17,6 +18,7 @@
             android:layout_height="wrap_content"
             android:text="ALAMIN ANG MGA SINYALES NA MAY PARATING NA TSUNAMI"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             android:textAlignment="center"/>
 
@@ -39,6 +41,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Lindol na may sapat na lakas para maramdaman."/>
 
         </LinearLayout>
@@ -60,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Biglaang pagbaba o pagtaas ng tubig dagat."/>
 
@@ -85,6 +89,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Dagundong ng papalapit na tsunami."/>
 
         </LinearLayout>
@@ -108,6 +113,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Huwag manatili sa tabing dagat matapos ang malakas na lindol. Agad na pumunta sa mataas na lugar."/>
 
         </LinearLayout>
@@ -129,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Huwag pumunta sa tabing dagat upang panoorin o kuhaan ng larawan ang tsunami."
                 android:textSize="14sp" />
 

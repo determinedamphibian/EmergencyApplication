@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Disasters.EarthquakeFragments.BeforeEarthquakeFragments">
+    tools:context=".Disasters.EarthquakeFragments.BeforeEarthquakeFragments"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text=" Alamin ang mga sumusunod:\n  -Mga pampaapula ng apoy tulad ng Fire extinguishers.\n  -Mga gamit pang-medikal\n   -Ligtas na daanan palabas ng gusali\n   -Plano sa paglikas ng tao."
                 android:textSize="14sp" />
 
@@ -51,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Ayusin ang pag-iimbak ng mga nakakalasong kemikal at mga bagay na maaring maging sanhi ng sunog."/>
 
@@ -71,7 +74,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
@@ -96,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Ihanda ang GO BAG na naglalaman ng mga pangangailangan ng pamilya."/>
 
@@ -120,6 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Siguraduhing ligtas ang pagkakalagay ng mga mabibigat at mga nakabiting bagay."
                 android:textSize="14sp" />
 
@@ -141,6 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:text="Makilahok sa mga pagsasanay ukol sa lindol."
                 android:textSize="14sp" />

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.TsunamiFragments.AfterTsunamiFragment">
+    tools:context=".Disasters.TsunamiFragments.AfterTsunamiFragment"
+    android:background="@color/white">
 
 
     <LinearLayout
@@ -29,6 +30,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Lisanin lamang ang evacuation area kapag ligtas na ayon sa kinauukulan."/>
 
         </LinearLayout>
@@ -51,6 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Lumayo sa dagat hangga't walang abiso ang mga kinauukulan na ligtas na."/>
 
         </LinearLayout>
@@ -74,6 +77,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Alamin kung may nawawalang kaanak o kakilala at ireport agad ito sa kinauukalan."/>
 
         </LinearLayout>
@@ -96,6 +100,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Dalhin sa pinakamalapit na ospital ang mga nasugatan at may karamdaman."/>
 
         </LinearLayout>
@@ -117,6 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Siguraduhing walang basa o nakababad na outlet o kagamitan bago buksan ang linya ng kuryente."
                 android:textSize="14sp" />
 
@@ -139,6 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Suriin ang baha at kumpunihin ang mga mahina o sirang bahagi nito."
                 android:textSize="14sp" />
 

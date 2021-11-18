@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.GoBagFragments.ContentsFragment">
+    tools:context=".Disasters.GoBagFragments.ContentsFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Mahahalagang dokumento sa selyadong lalagyan."/>
 
         </LinearLayout>
@@ -37,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:textColor="@color/black"
             android:layout_marginBottom="10dp">
 
             <ImageView
@@ -50,6 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Flashlight, kandila, posporo at silbato."/>
 
         </LinearLayout>
@@ -72,6 +76,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Radyo na may bago at ekstrang baterya."/>
 
         </LinearLayout>
@@ -94,6 +99,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="First aid kit, kasama ang panlunas sa lagnat, LBM, sugat, at iba pa at mga gamot na regular na naiinom ng kapamilya."/>
 
         </LinearLayout>
@@ -115,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Pera at barya."
                 android:textSize="14sp" />
 
@@ -137,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Mga gamit para sa pangangailangan ng mga sanggol, bata, matatanda, at may kapansanan."
                 android:textSize="14sp" />
 
@@ -160,6 +168,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Pagkain na madaling ihanda, di na kailangang lutuin, at sapat para sa tatlong araw."/>
 
         </LinearLayout>
@@ -182,6 +191,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Inuming tubig sa saradong lalagyan at sapat para sa tatlong araw."/>
 
         </LinearLayout>
@@ -204,6 +214,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Telepono, powerbank at charger."/>
 
         </LinearLayout>
@@ -226,6 +237,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Damit, kapote, botas, at mga sanitary supplies"/>
 
         </LinearLayout>
@@ -248,6 +260,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Sleeping bag o banig, at mga kumot."/>
 
         </LinearLayout>
@@ -270,6 +283,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Lubid, lamang dyaryo at matitibay na lalagyan."/>
 
         </LinearLayout>

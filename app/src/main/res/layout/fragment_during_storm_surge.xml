@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Disasters.StormSurgeFragments.DuringStormSurgeFragment">
+    tools:context=".Disasters.StormSurgeFragments.DuringStormSurgeFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +30,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Manatili sa loob ng bahay at patuloy na makinig sa ulat ng panahon."/>
 
         </LinearLayout>
@@ -51,6 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Huwag kumapit sa baybaying dagat."/>
 
         </LinearLayout>
@@ -73,6 +76,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Huwag hawakan ang mga kagamitang de-kuryente kung ikaw ay basa o nakatayo sa tubig baha."/>
 
         </LinearLayout>

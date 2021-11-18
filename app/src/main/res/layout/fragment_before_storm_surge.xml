@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.StormSurgeFragments.BeforeStormSurgeFragment">
+    tools:context=".Disasters.StormSurgeFragments.BeforeStormSurgeFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,6 +28,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Alamin kung may panganib ng daluyong ng dagat ang inyong lugar."/>
 
         </LinearLayout>
@@ -49,6 +51,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Makinig sa ulat ng panahon at maging alerto sa mga babala."/>
 
         </LinearLayout>
@@ -71,6 +74,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Alamin ang lugar na paglilikasan at ang pinakamabilis at ligtas na daan patungo dito."/>
 
         </LinearLayout>
@@ -93,6 +97,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Siguraduhing ligtas ang inyong tahanan. Iakyat ang mga mahahalagang kagamitan sa mas mataas na lugar."/>
 
         </LinearLayout>
@@ -114,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Ihanda ang GO BAG na naglalaman ng mga pangangailangan ng pamilya."
                 android:textSize="14sp" />
 
@@ -136,6 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Bago lumikas, isara ang mga main switches ng kuryente, tubig at tangke ng LPG."
                 android:textSize="14sp" />
 
@@ -159,6 +166,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Kapag inabisuhan ng kinauukulan, mabilis na lumikas sa mataas at ligtas na lugar."/>
 
         </LinearLayout>

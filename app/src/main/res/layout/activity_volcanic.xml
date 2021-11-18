@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Disasters.VolcanicActivity"
     android:orientation="vertical"
-    android:backgroundTint="@color/white">
+    android:background="@color/white">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_parent"
@@ -89,7 +89,10 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="@color/dark_green"
+            app:tabTextColor="@color/black"
+            android:background="@color/white">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -112,9 +115,7 @@
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-
-
+        
     </LinearLayout>
 
 </LinearLayout>

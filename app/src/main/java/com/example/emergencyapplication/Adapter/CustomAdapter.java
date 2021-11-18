@@ -1,7 +1,10 @@
 package com.example.emergencyapplication.Adapter;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.emergencyapplication.EntityClass.TrustedContacts;
 import com.example.emergencyapplication.R;
+import com.example.emergencyapplication.SideDockContents.GovernmentAgenciesSideDock;
 import com.example.emergencyapplication.TrustedContactsActivites.TrustedContactDetailActivity;
 
 import java.util.ArrayList;
@@ -22,6 +26,7 @@ import java.util.List;
 import java.util.Random;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder>{
@@ -29,6 +34,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private ArrayList<TrustedContacts> dataset;
     Context context;
     List<String> contactNumbersList = new ArrayList<>();
+    private static final int REQUEST_CALL = 1;
 
 
 
@@ -122,8 +128,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: "+dataset.get(position).contactNum));
-                context.startActivity(intent);
+
+                if(ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED)
+                {
+                    ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+                }else{
+
+                    Intent intent = new Intent(Intent.ACTION_CALL);
+                    intent.setData(Uri.parse("tel:"+dataset.get(position).contactNum));
+                    context.startActivity(intent);
+                }
+
             }
         });
 

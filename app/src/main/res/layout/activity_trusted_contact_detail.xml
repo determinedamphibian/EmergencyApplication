@@ -49,6 +49,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Name"
+                android:textColorHint="@color/green"
+                android:paddingLeft="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -57,6 +59,8 @@
                 android:id="@+id/edit_trustedContact_no"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:textColorHint="@color/green"
+                android:paddingLeft="10dp"
                 android:hint="Contact No."
                 android:background="@color/white"
                 android:textColor="@color/black"
@@ -67,7 +71,9 @@
                 android:id="@+id/edit_student_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="gender"
+                android:text="Gender"
+                android:textColor="@color/green"
+                android:paddingLeft="10dp"
                 android:textSize="20sp"
                 android:inputType="text"/>
 
@@ -81,11 +87,13 @@
                     android:id="@+id/rbtn_male"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:text="Male"
                     android:textColor="@color/black"
                     android:checked="true" />
                 <RadioButton
                     android:id="@+id/rbtn_female"
+                    android:layout_marginLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"

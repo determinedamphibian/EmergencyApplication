@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.VolcanicFragments.BeforeVolcanicFragment">
+    tools:context=".Disasters.VolcanicFragments.BeforeVolcanicFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Mas madalas na paglindol o pagyanig ng lupa na may kasamang pagdagundong."/>
 
         </LinearLayout>
@@ -51,6 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Pagbabago ng kulay ng usok at nagiging kulay abo."/>
 
         </LinearLayout>
@@ -73,6 +76,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:text="Pagkatuyo ng mga halaman, sapa, at balon sa paligid ng bulkan."
                 android:textSize="14sp" />
 
@@ -96,6 +100,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:text="Pagkakaroon ng mga bagong bentilasyon sa paligid ng bulkan."
                 android:textSize="14sp" />
 
@@ -119,6 +124,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:text="Makinig sa ulat ukol sa bulkan at maging alerto sa mga babala."
                 android:textSize="14sp" />
 
@@ -143,6 +149,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Ihanda ang GO BAG na naglalaman ng mga pangangailangan ng pamilya."/>
 
         </LinearLayout>
@@ -165,6 +172,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:text="Alamin ang lugar na paglilikasan at ang pinakamabilis at ligtas na daan patungo dito."
                 android:textSize="14sp" />
 

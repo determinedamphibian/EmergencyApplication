@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrustedContactsActivites.InstantSOS">
+    tools:context=".TrustedContactsActivites.InstantSOS"
+    android:background="@color/white">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please wait your message is being processed"
+        android:gravity="center"
+        android:text="Searching for GPS. Please wait."
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

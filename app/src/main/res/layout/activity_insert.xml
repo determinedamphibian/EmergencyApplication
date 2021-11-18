@@ -40,18 +40,22 @@
                 android:id="@+id/edit_trustedContact_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/green"
                 android:hint="@string/name_hint"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="20sp"
                 android:inputType="text"
-                android:background="@color/white"/>
+                android:background="@color/white" />
 
             <EditText
                 android:id="@+id/edit_trustedContact_no"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:paddingLeft="10dp"
                 android:hint="Contact no."
+                android:textColorHint="@color/green"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:inputType="number"
@@ -61,7 +65,8 @@
                 android:id="@+id/edit_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="gender"
+                android:paddingLeft="10dp"
+                android:text="Gender"
                 android:textSize="20sp"
                 android:inputType="text"/>
 
@@ -75,6 +80,7 @@
                     android:id="@+id/rbtn_male"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:text="Male"
                     android:textColor="@color/black"
                     android:checked="true"
@@ -83,6 +89,7 @@
                     android:id="@+id/rbtn_female"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:text="Female"
                     android:textColor="@color/black"
                     android:background="@drawable/ripple_effect"/>

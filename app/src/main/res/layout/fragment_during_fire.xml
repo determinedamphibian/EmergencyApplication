@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.FireDisasterFragment.DuringFireFragment">
+    tools:context=".Disasters.FireDisasterFragment.DuringFireFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Manatiling mahinahon at agad lumikas."/>
 
@@ -50,6 +52,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Patunugin ang fire alarm at tumawag sa 911 o kalapit na bumbero para sa kagyat na tulong."/>
 
         </LinearLayout>
@@ -71,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Kung nasa loob ng isang gusali, gumamit ng hagdan sa paglikas, Huwag gumamit ng elevator."/>
 
@@ -94,6 +98,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center_horizontal"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Bago buksan ang anumang pinto, pakiramdaman muna kung ito ay maiinit. Huwag buksan kung ito ay mainit dahil maaaring may sunog na sa loob nito."/>
 
         </LinearLayout>
@@ -115,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Kapag may makapal na usok, gumapang papuntang ligtas na lugar. Takpan ang bibig at ilong ng basang tela o damit."
                 android:textSize="14sp" />
 
@@ -137,6 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Kapag umaapoy ang damit na suot, tumigil sa pagtakbo, dumapa at magpagulong-gulong hanggang maapula ang apoy."
                 android:textSize="14sp" />
 
@@ -159,6 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Kapag hindi makalabas, manatili sa loob at humingi ng tulong gamit ang tela na may matingkad na kulay o gumawa ng ingay para marinig ng mga rescuers."
                 android:textSize="14sp" />
 
@@ -182,6 +190,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Pagkatapos ng sunog, huwag bumalik sa loob ng bahay o gusali hangga't wala pang abiso ang kinauukalan."/>
 
         </LinearLayout>
@@ -203,6 +212,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Ipasuri ang sarili kung nasugatan o nasaktan."/>
 

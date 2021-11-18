@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.VolcanicFragments.AfterVolcanicFragment">
+    tools:context=".Disasters.VolcanicFragments.AfterVolcanicFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +30,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Lisanin lamang ang evacuation area kapag ligtas na ayon sa kinauukulan."/>
 
         </LinearLayout>
@@ -52,6 +54,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Gumamit ng dust mask o basang panyo kapag naglilinis."/>
 
         </LinearLayout>
@@ -75,6 +78,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Linisin ang mga naipong abo upang maiwasan ang pagguho ng bubong ng bahay."/>
 
         </LinearLayout>
@@ -98,6 +102,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Ipagpag ang mga abo mula sa halaman bago ito diligan."/>
 
         </LinearLayout>

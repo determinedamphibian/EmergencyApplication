@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.GoBagFragments.RemindersFragment">
+    tools:context=".Disasters.GoBagFragments.RemindersFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,6 +33,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Suriin ang laman ng GO BAG items kada tatlong buwan at palitan ang mga nilalaman nito na malapit nang masira."/>
 
         </LinearLayout>
@@ -55,7 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
@@ -85,6 +87,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Makipag-ugnayan sa mga lider para sa plano sa paglikas ng komunidad. Pag-usapan don sa pamilya kung saan tutungo sa oras ng kailangan lumikas"/>
 
         </LinearLayout>

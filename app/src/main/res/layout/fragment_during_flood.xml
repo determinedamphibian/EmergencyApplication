@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.FloodFragments.DuringFloodFragment">
+    tools:context=".Disasters.FloodFragments.DuringFloodFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="14sp"
                 android:text="Manatili sa loob ng bahay at patuloy na makinig sa ulat ng panahon."/>
@@ -48,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="14sp"
                 android:text="Huwag hawakan ang mga kagamitang de kuryente kung ikaw ay basa o nakatayo sa tubig baha."/>
@@ -71,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Huwag lumangoy o mamangka sa umaapaw na ilog."
                 android:textSize="14sp" />
 
@@ -95,6 +99,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Huwag tumawid ng sapa o ilog kung lagpas tuhod na ang tubig."/>
 
         </LinearLayout>
@@ -116,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="10dp"
                 android:text="Huwag maglakad o magmaneho sa lugar na baha."
                 android:textSize="14sp" />

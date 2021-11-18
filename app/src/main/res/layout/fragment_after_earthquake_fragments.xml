@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.EarthquakeFragments.AfterEarthquakeFragments">
+    tools:context=".Disasters.EarthquakeFragments.AfterEarthquakeFragments"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Suriin ang iyong sarili at mga kasama kung may tinamong pinsala. Magbigay ng paunang lunas kung kailangan."/>
 
@@ -46,7 +48,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
@@ -70,6 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="14sp"
                 android:text="Kapag na sa tabing dagat at may banta ng tsunami, agad na lumikas papunta sa ligtas at mataas na lugar."/>
@@ -92,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:layout_gravity="center"
                 android:textSize="14sp"
                 android:text="Suriin kung may natapong nakalalasong kemikal at mga bagay na maaring pagmulan ng sunog."/>
@@ -115,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Huwag bumalik sa loob ng gusali hanggang walang abiso na ligtas na ito."
                 android:textSize="14sp" />
 
@@ -137,6 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Suriin ang mga linya ng tubig at kuryente para sa maaring pinsala. Suriin rin ang tangke ng gas o LPG."
                 android:textSize="14sp" />
 

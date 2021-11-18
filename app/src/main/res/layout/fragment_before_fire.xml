@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Disasters.FireDisasterFragment.BeforeFireFragment">
+    tools:context=".Disasters.FireDisasterFragment.BeforeFireFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Makipagkaibigan sa bumbero."/>
 
         </LinearLayout>
@@ -49,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Siguraduhing gumagana ang mga fire alarms at sprinklers."/>
 
@@ -71,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:text="Sanayin ang sarili at mga kasamahan sa evacuation plan at sumali sa mga fire drills."/>
 
@@ -93,6 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Isara ang LPG kapag hindi ginagamit."
                 android:textSize="14sp" />
 
@@ -115,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Ipasuri sa electrician ang koneksyon ng mga kuryente taon-taon."
                 android:textSize="14sp" />
 
@@ -137,6 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Tanggalin sa pagkakasaksak ang mga gamit maatapos itong gamitin."
                 android:textSize="14sp" />
 
@@ -159,6 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Huwag pabayaan ang mga nakasinding kandila o sigarilyo."
                 android:textSize="14sp" />
 
@@ -182,6 +190,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:text="Turuan ang mga kabataan ukol sa pag-iwas sa sunog."
                 android:textSize="14sp" />
 
@@ -204,6 +213,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
                 android:text="Alamin ang paggamit ng fire extinguisher: hilahin ang 'pin', itapat ang hose sa pinagmumulan ng apoy, diinan ang pindutan, at galawin ang hose na parang winawalis ang apoy."
                 android:textSize="14sp"
                 />

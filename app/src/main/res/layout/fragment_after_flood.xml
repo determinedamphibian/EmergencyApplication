@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Disasters.FloodFragments.AfterFloodFragment">
+    tools:context=".Disasters.FloodFragments.AfterFloodFragment"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +30,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Lisanin lamang ang evacuation area kapag ligtas na ayon sa kinauukulan."/>
 
         </LinearLayout>
@@ -51,6 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Ipagbigay-alam sa kinauukulan ang mga natumbang puno at poste ng kuryente, o mga linya ng tubig at telepono."/>
 
         </LinearLayout>
@@ -73,6 +76,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Suriin ang bahay at kumpunihin ang mga mahina o sirang bahagi nito."/>
 
         </LinearLayout>
@@ -95,6 +99,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Siguraduhing malinis ang pagkain at inuming tubig."/>
 
         </LinearLayout>
@@ -117,6 +122,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/black"
                 android:text="Itapon ang naiipong tubig sa mga lata, paso at gulong upang hindi pamahayan ng lamok."
                 android:textSize="14sp" />
 

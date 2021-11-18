@@ -38,13 +38,7 @@ public class InstantSOS extends AppCompatActivity implements LocationListener {
     Button btn_later, btn_ok;
     private static final int PERMISSION_REQUEST_ENABLE_GPS = 9002;
 
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
 
-        MainDashboardActivity mainDashboardActivity = new MainDashboardActivity();
-        mainDashboardActivity.getLocation();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

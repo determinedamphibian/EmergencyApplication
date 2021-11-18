@@ -15,12 +15,28 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <include
             android:id="@+id/include2"
             layout="@layout/main_toolbar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView169"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:text="Ang siren button at flicker light ay maaring gamitin sa oras ng sakuna o panahon ng hindi inaasahang pagkakataon. Maari itong gamitin upang mapukaw ang atensyon ng mga tao sa oras ng pangangalingan."
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -29,7 +45,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_flickerLight"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include2">
+            app:layout_constraintTop_toBottomOf="@+id/textView169">
 
             <ImageView
 
@@ -42,8 +58,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SIREN BUTTON"
                 android:layout_gravity="center"
+                android:text="SIREN BUTTON"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -73,7 +89,7 @@
             android:background="@drawable/btn_flicker_light_on_and_off"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include2"
+            app:layout_constraintTop_toBottomOf="@+id/textView169"
             app:layout_constraintVertical_bias="0.494" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

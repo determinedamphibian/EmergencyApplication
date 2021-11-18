@@ -35,7 +35,6 @@ public class TrustedContactsSideDock extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView btMenu;
-    ImageButton imgBtn_message;
     RecyclerView recyclerView, rv_trustedContacts;
     RecyclerView.LayoutManager layoutManager;
     FloatingActionButton fbtn_addTrustedContacts;

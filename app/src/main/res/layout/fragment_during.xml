@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Disasters.StormFragments.DuringFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
         <LinearLayout
             android:layout_margin="10dp"
@@ -24,6 +25,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Manatiling mahinahon. Manatili sa loob ng bahay o evacuation center at makinig sa pinakabagong  balita at taya ng panahon."/>
 
         </LinearLayout>
@@ -46,6 +48,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Patayin ang main switch ng kuryente at valve ng tubig."/>
 
         </LinearLayout>
@@ -68,6 +71,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Gumamit ng flashlight o emergency lamp. Maging maingat sa paggamit ng kandila o gasera."/>
 
         </LinearLayout>
@@ -90,6 +94,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:text="Umiwas sa mga salaming bintana."/>
 
         </LinearLayout>
