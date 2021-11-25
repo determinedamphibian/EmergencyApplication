@@ -51,6 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="First name"
+
                     android:padding="10dp"
                     android:textStyle="bold"
                     android:inputType="text" />
@@ -69,6 +70,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Last Name"
+                    android:textStyle="bold"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/LoginTextInputLayoutStyle"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="E-mail"
                     android:textStyle="bold"
                     android:inputType="text"/>
 
@@ -101,7 +120,7 @@
                 app:counterMaxLength="9"
                 app:hintTextColor="@color/black">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -179,8 +198,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/dark_green"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
                 android:layout_marginTop="20dp"
                 android:text="SAVE" />
 

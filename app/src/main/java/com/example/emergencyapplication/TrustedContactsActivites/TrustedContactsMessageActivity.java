@@ -207,4 +207,5 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
     public void onProviderDisabled(String provider) {
 
     }
+
 }

@@ -166,7 +166,7 @@
                 android:backgroundTint="@color/dark_green"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:text="SAVE" />
+                android:text="REGISTER" />
 
         </LinearLayout>
 

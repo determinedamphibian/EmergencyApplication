@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "721890907525",
+    "firebase_url": "https://emergency-application-afead-default-rtdb.firebaseio.com",
+    "project_id": "emergency-application-afead",
+    "storage_bucket": "emergency-application-afead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721890907525:android:3e5c839b63a06fe1da60ec",
+        "android_client_info": {
+          "package_name": "com.example.emergencyapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721890907525-t61jctpk2vf6kjr24ri7iendoiv2fvra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCarwVEPErWKFg9izf8zmUX93J2-bYLvP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721890907525-t61jctpk2vf6kjr24ri7iendoiv2fvra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -67,6 +67,11 @@ public class InstantSOS extends AppCompatActivity implements LocationListener {
         getLocation();
 
     }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
     private void enableGPS(){
         final LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
@@ -163,6 +168,8 @@ public class InstantSOS extends AppCompatActivity implements LocationListener {
             this.message = message;
 
         }
+
+
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
