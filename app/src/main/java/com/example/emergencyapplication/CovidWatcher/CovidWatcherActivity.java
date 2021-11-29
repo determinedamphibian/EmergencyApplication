@@ -19,14 +19,16 @@ import com.example.emergencyapplication.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class CovidWatcherActivity extends AppCompatActivity {
 
     Button btn_login;
     ImageView btn_back, btn_phone;
-    TextView tv_sign_up;
+    TextView tv_sign_up, tv_forgot_password;
     ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
@@ -79,6 +81,15 @@ public class CovidWatcherActivity extends AppCompatActivity {
             }
         });
 
+        tv_forgot_password = findViewById(R.id.forgot_password);
+        tv_forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CovidWatcherActivity.this, ForgotPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void userLogin() {
@@ -112,12 +123,23 @@ public class CovidWatcherActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(CovidWatcherActivity.this, CovidDashboard.class);
-                    startActivity(intent);
-                }else
-                {
+
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    if(user.isEmailVerified()){
+                        Intent intent = new Intent(CovidWatcherActivity.this, CovidDashboard.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else{
+                        user.sendEmailVerification();
+                        Toast.makeText(CovidWatcherActivity.this, "Check your email to verify account", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+                else {
                     Toast.makeText(CovidWatcherActivity.this, "Login failed", Toast.LENGTH_LONG).show();
                 }
+                progressBar.setVisibility(View.GONE);
             }
         });
     }

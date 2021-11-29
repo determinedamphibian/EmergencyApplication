@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,198 +12,227 @@
     android:paddingBottom="50dp"
     tools:context=".CovidWatcher.SignUpActivity">
 
-
-    <TextView
-        android:id="@+id/new_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text= "Register Account"
-        android:layout_gravity="center"
-        android:textColor="@color/dark_green"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif"
-        android:textSize="25sp"
-        android:layout_marginBottom="10dp"/>
-
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="10dp">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/new_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Register Account"
+            android:textColor="@color/dark_green"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/card_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.659" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:orientation="vertical">
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="10dp"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/LoginTextInputLayoutStyle"
-                app:hintTextColor="@color/black">
+                android:padding="20dp"
+                android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     style="@style/LoginTextInputLayoutStyle"
-                    android:id="@+id/et_f_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="First name"
+                    app:hintTextColor="@color/black">
 
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:inputType="text" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_f_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="First name"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:inputType="text" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/LoginTextInputLayoutStyle"
-                app:hintTextColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_l_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Last Name"
-                    android:textStyle="bold"
-                    android:inputType="text"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/LoginTextInputLayoutStyle"
-                app:hintTextColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="E-mail"
-                    android:textStyle="bold"
-                    android:inputType="text"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/LoginTextInputLayoutStyle"
-                app:hintTextColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_username"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Username"
-                    android:textStyle="bold"
-                    android:inputType="text"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tl_prefix_num"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/LoginTextInputLayoutStyle"
-                app:prefixText="+639"
-                app:counterMaxLength="9"
-                app:hintTextColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLength="9"
-                    android:inputType="phone"
-                    android:hint="Number"
-                    android:textStyle="bold"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/LoginTextInputLayoutStyle"
-                app:hintTextColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_address"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Address"
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:inputType="text"/>
+                    style="@style/LoginTextInputLayoutStyle"
+                    app:hintTextColor="@color/black">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_l_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Last Name"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:inputType="text"/>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/LoginTextInputLayoutStyle"
-                app:hintTextColor="@color/black">
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_password"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password"
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:inputType="textPassword"/>
+                    style="@style/LoginTextInputLayoutStyle"
+                    app:hintTextColor="@color/black">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="E-mail"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:inputType="text"/>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/LoginTextInputLayoutStyle"
+                </com.google.android.material.textfield.TextInputLayout>
 
-                app:hintTextColor="@color/black">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_re_password"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Re:Password"
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:inputType="textPassword"/>
+                    style="@style/LoginTextInputLayoutStyle"
+                    app:hintTextColor="@color/black">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:inputType="text"/>
 
-            <Button
-                android:id="@+id/btn_register_sign_up"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/dark_green"
-                android:layout_marginTop="20dp"
-                android:text="SAVE" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tl_prefix_num"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/LoginTextInputLayoutStyle"
+                    app:prefixText="+639"
+                    app:counterMaxLength="9"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="9"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:hint="Number"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-        </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/LoginTextInputLayoutStyle"
+                    app:hintTextColor="@color/black">
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/LoginTextInputLayoutStyle"
+                    app:hintTextColor="@color/black">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:padding="10dp"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:inputType="textPassword"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/LoginTextInputLayoutStyle"
+
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_re_password"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Re:Password"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:inputType="textPassword"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_register_sign_up"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/dark_green"
+                    android:layout_marginTop="20dp"
+                    android:text="SAVE" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -84,6 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="First Name"
+            android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintHorizontal_bias="0.182"
@@ -96,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="Last Name"
+            android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintHorizontal_bias="0.172"
@@ -103,13 +105,12 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_update_profile" />
 
         <TextView
-            android:id="@+id/tv_firstName_profile"
+            android:id="@+id/tv_re_firstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Jelo"
+            android:text="N/A"
             android:textColor="@color/black"
-            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintHorizontal_bias="0.287"
@@ -117,14 +118,13 @@
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <TextView
-            android:id="@+id/tv_last_name_profile"
+            android:id="@+id/tv_re_last_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Bautista"
+            android:text="N/A"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="24sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintHorizontal_bias="0.371"
             app:layout_constraintStart_toStartOf="@+id/guideline6"
@@ -136,32 +136,33 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Username"
+            android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintHorizontal_bias="0.175"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/tv_firstName_profile" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_re_firstName" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/textView188"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Password"
+            android:text="Address"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toStartOf="@+id/guideline8"
-            app:layout_constraintHorizontal_bias="0.163"
-            app:layout_constraintStart_toStartOf="@+id/guideline6"
-            app:layout_constraintTop_toBottomOf="@+id/tv_last_name_profile" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_re_username" />
 
         <TextView
-            android:id="@+id/tv_username_profile"
+            android:id="@+id/tv_re_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="jkjxb"
+            android:layout_marginTop="12dp"
+            android:text="N/A"
             android:textColor="@color/black"
-            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintHorizontal_bias="0.303"
@@ -169,34 +170,44 @@
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView
-            android:id="@+id/tv_profileNum"
+            android:id="@+id/tv_re_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="jkjxb"
+            android:layout_marginTop="12dp"
+            android:text="N/A"
             android:textColor="@color/black"
-            android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline8"
-            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintHorizontal_bias="0.3"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/textView18"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/textView188" />
 
         <TextView
-            android:id="@+id/tv_password"
+            android:id="@+id/tv_re_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="7899***"
-            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:text="N/A"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
-            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintHorizontal_bias="0.266"
             app:layout_constraintStart_toStartOf="@+id/guideline6"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/tv_re_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="N/A"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toBottomOf="@+id/textView191"
+            app:layout_constraintVertical_bias="0.047" />
 
         <TextView
             android:id="@+id/textView18"
@@ -204,11 +215,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Number"
+            android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
-            app:layout_constraintHorizontal_bias="0.46"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/tv_username_profile" />
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_re_last_name" />
+
+        <TextView
+            android:id="@+id/textView191"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.159"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_re_number" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_parent"

@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -23,6 +25,7 @@ public class CovidDashboard extends AppCompatActivity {
     DrawerLayout drawerLayout;
     RecyclerView recyclerView;
     Button btn_logout;
+
     public static ArrayList<String> arrayList = new ArrayList<>();
 
     @Override
@@ -59,7 +62,11 @@ public class CovidDashboard extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(CovidDashboard.this, CovidWatcherActivity.class);
+                startActivity(intent);
                 Toast.makeText(CovidDashboard.this, "Logout successfully", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
 

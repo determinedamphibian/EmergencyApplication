@@ -7,12 +7,24 @@
     android:background="@drawable/login_background"
     tools:context=".CovidWatcher.ReProfileActivity">
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Update Profile"
-        android:textColor="@color/black"
+        android:textColor="@color/dark_green"
+        android:fontFamily="sans-serif"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/card_view"
@@ -48,13 +60,11 @@
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_f_name"
-                    style="@style/LoginTextInputLayoutStyle"
+                    android:id="@+id/et_re_f_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="First name"
                     android:inputType="text"
-                    android:padding="10dp"
                     android:textStyle="bold" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -67,15 +77,35 @@
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_l_name"
+                    android:id="@+id/et_re_l_name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="41dp"
                     android:hint="Last Name"
                     android:inputType="text"
                     android:textStyle="bold" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/LoginTextInputLayoutStyle"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_re_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="E-mail"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/LoginTextInputLayoutStyle"
                 android:layout_width="match_parent"
@@ -84,7 +114,7 @@
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_username"
+                    android:id="@+id/et_re_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Username"
@@ -103,8 +133,8 @@
                 app:hintTextColor="@color/black"
                 app:prefixText="+639">
 
-                <EditText
-                    android:id="@+id/et_number"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_re_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Number"
@@ -114,51 +144,28 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/LoginTextInputLayoutStyle"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:hintTextColor="@color/black">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:padding="10dp"
-                    android:textStyle="bold" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
                 style="@style/LoginTextInputLayoutStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-
                 app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_re_password"
+                    android:id="@+id/et_re_address"
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:hint="Re:Password"
-                    android:inputType="textPassword"
+                    android:hint="Address"
                     android:padding="10dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
-
 
 
             <Button
-                android:id="@+id/btn_register_sign_up"
+                android:id="@+id/btn_re_profile"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -166,7 +173,7 @@
                 android:backgroundTint="@color/dark_green"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:text="REGISTER" />
+                android:text="UPDATE" />
 
         </LinearLayout>
 
