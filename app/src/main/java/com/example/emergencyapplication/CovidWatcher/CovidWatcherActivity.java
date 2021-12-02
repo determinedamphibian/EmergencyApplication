@@ -118,15 +118,17 @@ public class CovidWatcherActivity extends AppCompatActivity {
         }
 
         progressBar.setVisibility(View.VISIBLE);
+        //login via email and password
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
 
+                    //getting current used email
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if(user.isEmailVerified()){
-                        Intent intent = new Intent(CovidWatcherActivity.this, CovidDashboard.class);
+                        Intent intent = new Intent(CovidWatcherActivity.this, StatusCheckboxActivity.class);
                         startActivity(intent);
                         finish();
                     }

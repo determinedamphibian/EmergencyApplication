@@ -67,6 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dry Cough"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/green"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/checkbox_fatigue"
@@ -78,6 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fatigue"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/green"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/checkbox_aches"
@@ -91,6 +93,7 @@
                     android:text="Aches and Pains"
                     android:textColor="@color/green"
                     android:textSize="18sp"
+                    android:layout_marginTop="10dp"
                     app:layout_constraintBottom_toTopOf="@+id/checkbox_runny_nose"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/checkbox_fatigue" />
@@ -100,6 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Runny Nose"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/green"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/checkbox_sore_throat"
@@ -111,6 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sore Throat"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/green"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/checkbox_shortness"
@@ -124,6 +129,7 @@
                     android:text="Shorthness of Breath"
                     android:textColor="@color/green"
                     android:textSize="18sp"
+                    android:layout_marginTop="10dp"
                     app:layout_constraintBottom_toTopOf="@+id/checkbox_diarrhea"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/checkbox_sore_throat" />
@@ -135,6 +141,7 @@
                     android:text="Diarrhea"
                     android:textColor="@color/green"
                     android:textSize="18sp"
+                    android:layout_marginTop="10dp"
                     app:layout_constraintBottom_toTopOf="@+id/checkbox_headache"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/checkbox_shortness" />
@@ -146,6 +153,7 @@
                     android:text="Headache"
                     android:textColor="@color/green"
                     android:textSize="18sp"
+                    android:layout_marginTop="10dp"
                     app:layout_constraintBottom_toTopOf="@+id/checkbox_smellAndTaste"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/checkbox_diarrhea" />
@@ -157,6 +165,7 @@
                     android:text="Loss of Smell and Taste"
                     android:textColor="@color/green"
                     android:textSize="18sp"
+                    android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/checkbox_headache"
                     app:layout_constraintBottom_toBottomOf="parent"/>
@@ -171,7 +180,7 @@
 
     <Button
         android:id="@+id/btn_confirm"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"

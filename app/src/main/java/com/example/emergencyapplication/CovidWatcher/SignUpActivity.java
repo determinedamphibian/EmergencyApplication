@@ -120,14 +120,20 @@ public class SignUpActivity extends AppCompatActivity {
             txt_re_password.requestFocus();
             return;
         }
+
+        //sign-in with email and password
         mAuth = FirebaseAuth.getInstance();
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+
+                            //passing the user object through the database
                             User user = new User(firstName, lastName, email, username, address, number);
-                            Log.d("Database", ""+FirebaseDatabase.getInstance().getReference("Users") .child(FirebaseAuth.getInstance().getCurrentUser().getUid()));
+                            Log.d("Database", ""+FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()));
+
+                            //assigning and creation of database
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             database.getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -137,14 +143,14 @@ public class SignUpActivity extends AppCompatActivity {
                                     if(task.isSuccessful()){
                                         Toast.makeText(SignUpActivity.this, "User has been registered", Toast.LENGTH_LONG).show();
                                         finish();
-                                    }else
-                                        {
+                                    }
+                                    else {
                                             Toast.makeText(SignUpActivity.this, "Registration failed!", Toast.LENGTH_LONG).show();
-                                        }
+                                    }
                                 }
                             });
-                        }else
-                        {
+                        }
+                        else {
                             Toast.makeText(SignUpActivity.this, "Registration failed!", Toast.LENGTH_LONG).show();
                         }
                     }
