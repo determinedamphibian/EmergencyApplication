@@ -110,7 +110,7 @@ public class MainDashboardActivity extends AppCompatActivity implements Location
         //sos button when clicked!
         imageButton_sos = findViewById(R.id.imgbtn_SOS);
         imageButton_sos.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
+
             @Override
             public void onClick(View v) {
 

@@ -1,7 +1,7 @@
 package com.example.emergencyapplication.CovidWatcher;
 
 public class User {
-    public  String f_name, l_name, email, username, address, number, status;
+    public  String f_name, l_name, email, username, address, number,    status;
     public  String hasFever, haCough, hasFatigue, hasAches, hasRunnyNose,
             hasSoreThroat, hasShortnessOfBreath, hasDiarrhea, hasHeadAche, hasNoSmellandTaste;
 
@@ -21,8 +21,9 @@ public class User {
     }
 
     //User Status
-    public User(String f_name, String  number, String status){
+    public User(String f_name, String l_name, String  number, String status){
         this.f_name = f_name;
+        this.l_name = l_name;
         this.number = number;
         this.status = status;
     }
@@ -41,4 +42,5 @@ public class User {
         this.hasHeadAche = hasHeadAche;
         this.hasNoSmellandTaste = hasNoSmellandTaste;
     }
+
 }

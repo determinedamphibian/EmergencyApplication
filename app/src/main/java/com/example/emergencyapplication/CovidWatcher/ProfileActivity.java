@@ -30,9 +30,10 @@ public class ProfileActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView btn_menu;
     RecyclerView recyclerView;
+    private TextView tv_statusProfile;
     private Button btn_logout, btn_update, btn_update_stats;
     private FirebaseUser user;
-    private DatabaseReference reference;
+    private DatabaseReference reference, referenceStatus;
     private String userID;
 
     @Override
@@ -68,6 +69,7 @@ public class ProfileActivity extends AppCompatActivity {
         tv_number = findViewById(R.id.tv_re_number);
         tv_username = findViewById(R.id.tv_re_username);
 
+        //for retrieving from Users database
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -104,6 +106,24 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+        referenceStatus = FirebaseDatabase.getInstance().getReference("UserStatus");
+        referenceStatus.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                User userStatus = snapshot.getValue(User.class);
+                String profileStatus = userStatus.status;
+                tv_statusProfile = findViewById(R.id.tv_statusProfile);
+                tv_statusProfile.setText(profileStatus);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+                Toast.makeText(ProfileActivity.this, "Error", Toast.LENGTH_LONG).show();
+            }
+        });
+
 
         btn_update = findViewById(R.id.btn_update_profile);
         btn_update.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +139,7 @@ public class ProfileActivity extends AppCompatActivity {
         btn_update_stats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProfileActivity.this, StatusCheckboxActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, ReStatusCheckboxActivity.class);
                 startActivity(intent);
             }
         });

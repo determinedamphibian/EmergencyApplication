@@ -140,7 +140,7 @@ public class TrustedContactsMessageActivity extends AppCompatActivity implements
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5, TrustedContactsMessageActivity.this);
     }
-    //LocationListener predefined methods
+        //LocationListener predefined methods
     @Override
     public void onLocationChanged(Location location) {
         try {

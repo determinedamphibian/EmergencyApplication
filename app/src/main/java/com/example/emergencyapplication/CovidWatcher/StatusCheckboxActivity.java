@@ -44,6 +44,7 @@ public class StatusCheckboxActivity extends AppCompatActivity {
         cb_headache = findViewById(R.id.checkbox_headache);
         cb_smellAndTaste = findViewById(R.id.checkbox_smellAndTaste);
         btn_confirm = findViewById(R.id.btn_confirm);
+
         btn_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +60,8 @@ public class StatusCheckboxActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
         String userID = user.getUid();
+
+        //for retrieving name and number from Users database
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -67,6 +70,7 @@ public class StatusCheckboxActivity extends AppCompatActivity {
 
                 String status;
                 String firstName = userProfile.f_name;
+                String lastName = userProfile.l_name;
                 String number = userProfile.number;
 
                 //condition for checkboxes of symptoms
@@ -74,9 +78,9 @@ public class StatusCheckboxActivity extends AppCompatActivity {
                         ||cb_fatigue.isChecked()||cb_aches.isChecked()||cb_runnyNose.isChecked() ||cb_soreThroat.isChecked()
                         ||cb_shortnessBreath.isChecked()||cb_diarrhea.isChecked() ||cb_smellAndTaste.isChecked())
                 {
-                    status = "active";
+                    status = "active case";
 
-                    User userStatus = new User(firstName, number, status);
+                    User userStatus = new User(firstName, lastName, number, status);
 
                     //database for UserStatus
                     database.getReference("UserStatus").child(userID).setValue(userStatus)
@@ -94,9 +98,9 @@ public class StatusCheckboxActivity extends AppCompatActivity {
                             });
                 }
                 else {
-                    status = "none";
+                    status = "clear";
                     Log.d("CHECKBOX: ", status);
-                    User userStatus = new User(firstName, number, status);
+                    User userStatus = new User(firstName, lastName, number, status);
 
                     database.getReference("UserStatus").child(userID).setValue(userStatus)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
