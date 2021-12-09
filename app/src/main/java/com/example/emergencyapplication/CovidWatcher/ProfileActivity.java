@@ -1,6 +1,7 @@
 package com.example.emergencyapplication.CovidWatcher;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -19,11 +20,18 @@ import android.widget.Toast;
 import com.example.emergencyapplication.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -33,7 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView tv_statusProfile;
     private Button btn_logout, btn_update, btn_update_stats;
     private FirebaseUser user;
-    private DatabaseReference reference, referenceStatus;
+    private DatabaseReference reference, referenceStatus, referenceSample;
     private String userID;
 
     @Override
@@ -77,6 +85,7 @@ public class ProfileActivity extends AppCompatActivity {
                 User userProfile = snapshot.getValue(User.class);
 
 //                if (userProfile != null){
+                String request;
                     String firstName = userProfile.f_name;
                     String lastName = userProfile.l_name;
                     String userName = userProfile.username;
@@ -91,7 +100,83 @@ public class ProfileActivity extends AppCompatActivity {
                     tv_address.setText(address);
                     tv_number.setText(number);
 
+                    //retrieving specific field
+                    referenceSample = FirebaseDatabase.getInstance().getReference().child("Users");
+                    referenceSample.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                            List <String> usernameList = new ArrayList<>();
+
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                                String username = dataSnapshot.child("username").getValue().toString();
+
+                                usernameList.add(username);
+                                Log.d("USERNAMES", username+" size: "+usernameList.size());
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+
+                    //retrieving all data based to a given field value
+//                Query query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("username");
+//
+//                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                            if(snapshot.exists()){
+//                                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+//
+//                                    GenericTypeIndicator<Map<String, String>> genericTypeIndicator = new GenericTypeIndicator<Map<String, String>>() {
+//                                    };
+//
+//                                    Map<String, String>  username = dataSnapshot.getValue(genericTypeIndicator);
+//                                    Log.d("Usernames",""+username);
+//                                }
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError error) {
+//
+//                        }
+//                    });
+
+//                        reference.addChildEventListener(new ChildEventListener() {
+//                        @Override
+//                        public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+//
+//                            for (DataSnapshot postSnapshot : snapshot.getChildren()){
+//
+//                                String request = postSnapshot.getValue(String.class);
+//                                Log.d("UIDs:", request);
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError error) {
+//
+//                        }
+//                    });
 //                }
 //                else{
 //                    Toast.makeText(ProfileActivity.this, "Your profile is empty",Toast.LENGTH_LONG).show();

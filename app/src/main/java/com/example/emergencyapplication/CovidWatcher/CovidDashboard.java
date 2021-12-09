@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,11 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.R;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -69,6 +75,24 @@ public class CovidDashboard extends AppCompatActivity {
                 finish();
             }
         });
+
+        PieChart pieChart = findViewById(R.id.pieChart);
+        ArrayList <PieEntry> cases = new ArrayList<>();
+        cases.add(new PieEntry(10, "Active Case"));
+        cases.add(new PieEntry(10, "Recovery Case"));
+        cases.add(new PieEntry(10, "Death Case"));
+
+        PieDataSet pieDataSet = new PieDataSet(cases, "Covid Cases");
+        pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        pieDataSet.setValueTextColor(Color.BLACK);
+        pieDataSet.setValueTextSize(16f);
+
+        PieData pieData =  new PieData(pieDataSet);
+
+        pieChart.setData(pieData);
+        pieChart.getDescription().setEnabled(false);
+        pieChart.setCenterText("COVID Cases");
+        pieChart.animate();
 
     }
 }
