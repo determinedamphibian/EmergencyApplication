@@ -89,16 +89,16 @@ public class StatusCheckboxActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
 
                                     if(task.isSuccessful()){
-                                        Toast.makeText(StatusCheckboxActivity.this, "User has been registered", Toast.LENGTH_LONG).show();
+                                        Log.d("User Status Input", "Successful");
                                     }
                                     else{
-                                        Toast.makeText(StatusCheckboxActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
+                                        Log.d("User Status Input", "Error");
                                     }
                                 }
                             });
                 }
                 else {
-                    status = "clear";
+                    status = "clear case";
                     Log.d("CHECKBOX: ", status);
                     User userStatus = new User(firstName, lastName, number, status);
 
@@ -108,10 +108,10 @@ public class StatusCheckboxActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
 
                                     if(task.isSuccessful()){
-                                        Toast.makeText(StatusCheckboxActivity.this, "User has been registered", Toast.LENGTH_LONG).show();
+                                        Log.d("User Status Input", "Successful");
                                     }
                                     else{
-                                        Toast.makeText(StatusCheckboxActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
+                                        Log.d("User Status Input", "Error");
                                     }
                                 }
                             });

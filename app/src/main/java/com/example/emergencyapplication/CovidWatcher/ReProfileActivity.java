@@ -25,7 +25,7 @@ public class ReProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-    private TextInputEditText re_f_name, re_l_name, re_username, re_email, re_number, re_address;
+    private TextInputEditText re_f_name, re_l_name, re_email, re_username, re_number, re_address;
     private Button btn_update_re_profile;
     private ProgressBar progressBar;
 
@@ -33,8 +33,6 @@ public class ReProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_re_profile);
-
-
 
         btn_update_re_profile = findViewById(R.id.btn_re_profile);
         btn_update_re_profile.setOnClickListener(new View.OnClickListener() {
@@ -55,8 +53,8 @@ public class ReProfileActivity extends AppCompatActivity {
         re_f_name = findViewById(R.id.et_re_f_name);
         re_l_name = findViewById(R.id.et_re_l_name);
         re_username = findViewById(R.id.et_re_username);
-        re_email = findViewById(R.id.et_re_email);
         re_number = findViewById(R.id.et_re_number);
+        re_email = findViewById(R.id.et_re_email);
         re_address = findViewById(R.id.et_re_address);
 
         String firstName = re_f_name.getText().toString().trim();

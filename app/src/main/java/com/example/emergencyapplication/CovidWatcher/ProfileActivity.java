@@ -122,7 +122,7 @@ public class ProfileActivity extends AppCompatActivity {
                         }
                     });
 
-                    //retrieving all data based to a given field value
+                    //retrieving all data based to a given field value example SELECT * WITH USERNAME = "abc"
 //                Query query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("username");
 //
 //                    query.addListenerForSingleValueEvent(new ValueEventListener() {

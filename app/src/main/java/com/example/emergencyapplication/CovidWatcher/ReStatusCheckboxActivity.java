@@ -176,7 +176,7 @@ public class ReStatusCheckboxActivity extends AppCompatActivity {
                        ||cbFatigue.isChecked()||cbAches.isChecked()||cbRunnyNose.isChecked() ||cbSoreThroat.isChecked()
                        ||cbShortness.isChecked()||cbDiarrhea.isChecked() ||cbNoSmellAndTaste.isChecked()){
 
-                   status = "active Case";
+                   status = "active case";
 
                    User userStatus = new User(firstName, lastName, number, status);
 
@@ -195,7 +195,7 @@ public class ReStatusCheckboxActivity extends AppCompatActivity {
                    });
                }
                else {
-                   status = "recovered";
+                   status = "clear case";
                    User userStatus = new User(firstName, lastName, number, status);
 
                    //sending the new values again to the UserStatus database

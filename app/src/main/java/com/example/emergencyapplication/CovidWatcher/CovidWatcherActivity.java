@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -30,16 +31,18 @@ public class CovidWatcherActivity extends AppCompatActivity {
     ImageView btn_back, btn_phone;
     TextView tv_sign_up, tv_forgot_password;
     ProgressBar progressBar;
-
+    FirebaseApp firebaseApp;
     private FirebaseAuth mAuth;
-
     TextInputEditText et_username, et_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_covid_watcher);
 
+
+
+        setContentView(R.layout.activity_covid_watcher);
+        firebaseApp.initializeApp(CovidWatcherActivity.this);
         et_username = findViewById(R.id.et_email_login);
         et_password = findViewById(R.id.et_password_login);
         progressBar = findViewById(R.id.progress_bar);
@@ -145,4 +148,6 @@ public class CovidWatcherActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
