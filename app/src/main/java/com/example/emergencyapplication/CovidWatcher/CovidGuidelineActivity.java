@@ -6,14 +6,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.emergencyapplication.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -23,6 +27,7 @@ public class CovidGuidelineActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private WebView webView;
     private ImageView btn_menu;
+    private Button btn_logout;
     public static ArrayList<String> arrayList = new ArrayList<>();
 
     @Override
@@ -61,5 +66,18 @@ public class CovidGuidelineActivity extends AppCompatActivity {
         webView = findViewById(R.id.wv_intro_covid);
         webView.setBackgroundColor(Color.TRANSPARENT);
         webView.loadData(webText,"text/html;charset=utf-8","UTF-8");
+
+
+        btn_logout = findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent( CovidGuidelineActivity.this, CovidWatcherActivity.class);
+                startActivity(intent);
+                Toast.makeText(CovidGuidelineActivity.this, "Logout successfully", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
     }
 }

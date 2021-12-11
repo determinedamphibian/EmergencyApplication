@@ -3,7 +3,9 @@ package com.example.emergencyapplication.CovidWatcher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -39,9 +41,8 @@ public class CovidWatcherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
         setContentView(R.layout.activity_covid_watcher);
+
         firebaseApp.initializeApp(CovidWatcherActivity.this);
         et_username = findViewById(R.id.et_email_login);
         et_password = findViewById(R.id.et_password_login);
@@ -98,6 +99,13 @@ public class CovidWatcherActivity extends AppCompatActivity {
     private void userLogin() {
         String email = et_username.getText().toString().trim();
         String password = et_password.getText().toString().trim();
+
+        //storing password for user's session
+        SharedPreferences sharedPreferences =  getSharedPreferences("MySharedPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("email", email);
+        editor.putString("password", password);
+        editor.commit();
 
         if(email.isEmpty()){
             et_username.setError("This is required!");

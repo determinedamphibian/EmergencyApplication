@@ -18,6 +18,16 @@
         app:layout_constraintTop_toTopOf="parent"
         android:visibility="gone"/>
 
+    <ImageView
+        android:id="@+id/bt_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="14dp"/>
+
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"

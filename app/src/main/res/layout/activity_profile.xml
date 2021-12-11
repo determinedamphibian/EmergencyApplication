@@ -78,11 +78,12 @@
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="First Name"
             android:textStyle="bold"
+            android:gravity="center"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintHorizontal_bias="0.182"
@@ -91,10 +92,11 @@
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="Last Name"
+            android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -136,10 +138,11 @@
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Username"
+            android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
@@ -149,10 +152,11 @@
 
         <TextView
             android:id="@+id/textView188"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Address"
+            android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
@@ -227,10 +231,11 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Number"
+            android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
@@ -240,10 +245,11 @@
 
         <TextView
             android:id="@+id/textView191"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Email"
+            android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
