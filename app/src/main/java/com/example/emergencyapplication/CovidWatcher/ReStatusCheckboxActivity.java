@@ -171,6 +171,7 @@ public class ReStatusCheckboxActivity extends AppCompatActivity {
                String firstName = userStatusDB.f_name;
                String lastName = userStatusDB.l_name;
                String number = userStatusDB.number;
+               String user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                if(cbFever.isChecked()||cbHeadache.isChecked()||cbCough.isChecked()
                        ||cbFatigue.isChecked()||cbAches.isChecked()||cbRunnyNose.isChecked() ||cbSoreThroat.isChecked()
@@ -178,7 +179,7 @@ public class ReStatusCheckboxActivity extends AppCompatActivity {
 
                    status = "active case";
 
-                   User userStatus = new User(firstName, lastName, number, status);
+                   User userStatus = new User(firstName, lastName, number, status, user_id);
 
                    //sending the new values again to the UserStatus database
                    referenceStatus.child(userID).setValue(userStatus).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -196,7 +197,7 @@ public class ReStatusCheckboxActivity extends AppCompatActivity {
                }
                else {
                    status = "clear case";
-                   User userStatus = new User(firstName, lastName, number, status);
+                   User userStatus = new User(firstName, lastName, number, status, user_id);
 
                    //sending the new values again to the UserStatus database
                    referenceStatus.child(userID).setValue(userStatus).addOnCompleteListener(new OnCompleteListener<Void>() {

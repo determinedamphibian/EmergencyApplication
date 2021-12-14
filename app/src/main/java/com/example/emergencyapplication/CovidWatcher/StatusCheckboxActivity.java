@@ -72,6 +72,7 @@ public class StatusCheckboxActivity extends AppCompatActivity {
                 String firstName = userProfile.f_name;
                 String lastName = userProfile.l_name;
                 String number = userProfile.number;
+                String user_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                 //condition for checkboxes of symptoms
                 if(cb_fever.isChecked()||cb_headache.isChecked()||cb_dryCough.isChecked()
@@ -79,8 +80,7 @@ public class StatusCheckboxActivity extends AppCompatActivity {
                         ||cb_shortnessBreath.isChecked()||cb_diarrhea.isChecked() ||cb_smellAndTaste.isChecked())
                 {
                     status = "active case";
-
-                    User userStatus = new User(firstName, lastName, number, status);
+                    User userStatus = new User(firstName, lastName, number, status, user_id);
 
                     //database for UserStatus
                     database.getReference("UserStatus").child(userID).setValue(userStatus)
@@ -100,7 +100,7 @@ public class StatusCheckboxActivity extends AppCompatActivity {
                 else {
                     status = "clear case";
                     Log.d("CHECKBOX: ", status);
-                    User userStatus = new User(firstName, lastName, number, status);
+                    User userStatus = new User(firstName, lastName, number, status, user_id);
 
                     database.getReference("UserStatus").child(userID).setValue(userStatus)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {

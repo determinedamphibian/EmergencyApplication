@@ -128,13 +128,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginRight="20dp"
-                android:src="@drawable/ic_facebook" />
+                android:src="@drawable/ic_facebook"
+                android:visibility="gone"/>
 
             <ImageView
                 android:id="@+id/image_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_smartphone" />
+                android:src="@drawable/ic_smartphone"
+                android:visibility="gone"/>
         </LinearLayout>
 
 
@@ -200,7 +202,8 @@
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+            android:visibility="gone"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline20"

@@ -43,7 +43,7 @@ public class CovidDashboard extends AppCompatActivity {
     ImageView bt_menu;
     DrawerLayout drawerLayout;
     RecyclerView recyclerView;
-    Button btn_logout;
+    Button btn_logout, btn_view;
     private DatabaseReference reference;
     public static ArrayList<String> arrayList = new ArrayList<>();
 
@@ -68,11 +68,27 @@ public class CovidDashboard extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(CovidDashboard.this));
         recyclerView.setAdapter(covidAdapter);
 
+        btn_view = findViewById(R.id.btn_view);
+
+        Log.d("UID", FirebaseAuth.getInstance().getUid());
+        if(FirebaseAuth.getInstance().getCurrentUser().getUid().equals("9UPor0R3Enfh413X7dmew0d8tFB3")){
+            btn_view.setVisibility(View.VISIBLE);
+            btn_view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(CovidDashboard.this, ViewUserDataActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
+        else{
+            btn_view.setVisibility(View.GONE);
+        }
+
         //getting the value of user status from firebase
         List<String> userStatusList = new ArrayList<>();
         reference = FirebaseDatabase.getInstance().getReference().child("UserStatus");
-
-
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

@@ -100,30 +100,32 @@ public class ProfileActivity extends AppCompatActivity {
                     tv_address.setText(address);
                     tv_number.setText(number);
 
-                    //retrieving specific field
-                    referenceSample = FirebaseDatabase.getInstance().getReference().child("Users");
-                    referenceSample.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                    //retrieving specific field
+//                    referenceSample = FirebaseDatabase.getInstance().getReference().child("Users");
+//                    referenceSample.addValueEventListener(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                            List <String> usernameList = new ArrayList<>();
+//
+//                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+//                                String username = dataSnapshot.child("username").getValue().toString();
+//
+//                                usernameList.add(username);
+//                                Log.d("USERNAMES", username+" size: "+usernameList.size());
+//                                //output:  jkjxb size: 1
+//                                //output:  retrt size: 2
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError error) {
+//
+//                        }
+//                    });
 
-                            List <String> usernameList = new ArrayList<>();
-
-                            for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                                String username = dataSnapshot.child("username").getValue().toString();
-
-                                usernameList.add(username);
-                                Log.d("USERNAMES", username+" size: "+usernameList.size());
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-                    //retrieving all data based to a given field value example SELECT * WITH USERNAME = "abc"
-//                Query query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("username");
+////                    retrieving all data based to a given field value example SELECT * WITH USERNAME = "abc"
+//                Query query = FirebaseDatabase.getInstance().getReference("Users");
 //
 //                    query.addListenerForSingleValueEvent(new ValueEventListener() {
 //                        @Override
@@ -131,15 +133,15 @@ public class ProfileActivity extends AppCompatActivity {
 //                            if(snapshot.exists()){
 //                                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
 //
-//                                    GenericTypeIndicator<Map<String, String>> genericTypeIndicator = new GenericTypeIndicator<Map<String, String>>() {
-//                                    };
+////                                    GenericTypeIndicator<Map<String, String>> genericTypeIndicator = new GenericTypeIndicator<Map<String, String>>() {};
 //
-//                                    Map<String, String>  username = dataSnapshot.getValue(genericTypeIndicator);
+//                                    Map<String, String>  username = (Map)dataSnapshot.getValue();
 //                                    Log.d("Usernames",""+username);
+//                                    //output = Usernames: {number=+639153884366, address=Mapayapa Village, PulangLupa Uno, l_name = reyes, f_name=billy, email = sibllireyes@gmail.com, username= billy}
 //                                }
 //                            }
 //                        }
-//
+////
 //                        @Override
 //                        public void onCancelled(@NonNull DatabaseError error) {
 //

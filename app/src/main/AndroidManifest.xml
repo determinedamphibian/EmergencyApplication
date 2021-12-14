@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmergencyApplication">
-        <activity android:name=".CovidWatcher.ReStatusCheckboxActivity"></activity>
+        <activity android:name=".CovidWatcher.InfoDialogActivity"></activity>
+        <activity android:name=".CovidWatcher.ViewUserDataActivity" />
+        <activity android:name=".CovidWatcher.ReStatusCheckboxActivity" />
         <activity android:name=".CovidWatcher.ForgotPasswordActivity" />
         <activity android:name=".CovidWatcher.StatusCheckboxActivity" />
         <activity android:name=".CovidWatcher.ReProfileActivity" />
