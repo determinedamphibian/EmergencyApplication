@@ -115,7 +115,7 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="420dp" />
+            android:layout_height="880dp" />
 
         <TextView
             android:layout_width="match_parent"
