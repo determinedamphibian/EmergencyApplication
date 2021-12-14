@@ -8,8 +8,6 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_parent"
         android:layout_width="match_parent"
@@ -58,12 +56,19 @@
 
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -110,10 +115,26 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="420dp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Maaaring Labasan sa Oras ng Sakuna"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
 
+        <ImageView
+            android:id="@+id/img_exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fire_evacuation"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

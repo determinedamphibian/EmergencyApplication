@@ -1,5 +1,6 @@
 package com.example.emergencyapplication.Disasters;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -17,7 +18,9 @@ import com.example.emergencyapplication.Disasters.FireDisasterFragment.DuringFir
 import com.example.emergencyapplication.Disasters.FireDisasterFragment.FireDisasterAdapter;
 import com.example.emergencyapplication.DisastersActivity;
 import com.example.emergencyapplication.R;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class FireDisasterActivity extends AppCompatActivity {
 
@@ -25,7 +28,7 @@ public class FireDisasterActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    ImageView bt_back;
+    ImageView bt_back, img_exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,19 @@ public class FireDisasterActivity extends AppCompatActivity {
             }
         });
 
+        img_exit = findViewById(R.id.img_exit);
+        img_exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(FireDisasterActivity.this);
+                View view = getLayoutInflater().inflate(R.layout.dialog_custom_image_layout, null);
+                PhotoView photoView = view.findViewById(R.id.imageView);
+                photoView.setImageResource(R.drawable.fire_evacuation);
+                builder.setView(view);
+                AlertDialog mDialog = builder.create();
+                mDialog.show();
+            }
+        });
         String intro = getResources().getString(R.string.Intro_fire_disaster);
 
         String webText = String.valueOf(Html.fromHtml(
