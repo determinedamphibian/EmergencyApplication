@@ -177,7 +177,7 @@ public class ReStatusCheckboxActivity extends AppCompatActivity {
                        ||cbFatigue.isChecked()||cbAches.isChecked()||cbRunnyNose.isChecked() ||cbSoreThroat.isChecked()
                        ||cbShortness.isChecked()||cbDiarrhea.isChecked() ||cbNoSmellAndTaste.isChecked()){
 
-                   status = "active case";
+                   status = "potential active case";
 
                    User userStatus = new User(firstName, lastName, number, status, user_id);
 

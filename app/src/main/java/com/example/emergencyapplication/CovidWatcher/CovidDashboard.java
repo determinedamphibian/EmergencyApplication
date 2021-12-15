@@ -107,8 +107,8 @@ public class CovidDashboard extends AppCompatActivity {
                 int deathCounter = 0;
                 for(int i = 0; i < userStatusList.size(); i++){
 
-                    Log.d("TEST", String.valueOf(userStatusList.get(i).contains("active case")));
-                  if(userStatusList.get(i).contains("active case")){
+                    Log.d("TEST", String.valueOf(userStatusList.get(i).contains("potential active case")));
+                  if(userStatusList.get(i).contains("potential active case")){
                       activeCounter++;
                   }
                   else if(userStatusList.get(i).contains("clear case")){
@@ -169,7 +169,7 @@ public class CovidDashboard extends AppCompatActivity {
 
         if(activeCounter > 0){
             Log.d("ACTIVE_COUNTER", String.valueOf(activeCounter));
-            cases.add(new PieEntry(activeCounter, "Active Case"));
+            cases.add(new PieEntry(activeCounter, "Potential Active Case"));
         }
         else{
 
@@ -200,14 +200,14 @@ public class CovidDashboard extends AppCompatActivity {
         data.setDrawValues(true);
         data.setValueFormatter(new PercentFormatter(pieChart));
         data.setValueTextColor(Color.WHITE);
-        data.setValueTextSize(16f);
+        data.setValueTextSize(18f);
 
         pieChart.setData(data);
         pieChart.invalidate();
         pieChart.setCenterText("Green Archers Compound");
         pieChart.setDrawHoleEnabled(true);
         pieChart.setUsePercentValues(true);
-        pieChart.setEntryLabelTextSize(14);
+        pieChart.setEntryLabelTextSize(10);
         pieChart.setCenterTextSize(18);
         pieChart.getDescription().setEnabled(false);
 

@@ -55,7 +55,7 @@ public class InfoDialogActivity extends AppCompatActivity {
         tv_number = findViewById(R.id.tv_number);
         tv_number.setText(number);
 
-        if(status.equals("active case")){
+        if(status.equals("potential active case")){
             RadioButton rbtn_active = findViewById(R.id.rbtn_active);
             rbtn_active.setChecked(true);
         }
@@ -107,7 +107,7 @@ public class InfoDialogActivity extends AppCompatActivity {
         String user_id = userBundle.getString("uid");
 
         if(rbtn_active.isChecked()){
-            newStatus = "active case";
+            newStatus = "potential active case";
         }
         else if(rbtn_clear.isChecked()){
             newStatus = "clear case";

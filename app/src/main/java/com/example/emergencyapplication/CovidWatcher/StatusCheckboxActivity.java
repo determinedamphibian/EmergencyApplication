@@ -79,7 +79,7 @@ public class StatusCheckboxActivity extends AppCompatActivity {
                         ||cb_fatigue.isChecked()||cb_aches.isChecked()||cb_runnyNose.isChecked() ||cb_soreThroat.isChecked()
                         ||cb_shortnessBreath.isChecked()||cb_diarrhea.isChecked() ||cb_smellAndTaste.isChecked())
                 {
-                    status = "active case";
+                    status = "potential active case";
                     User userStatus = new User(firstName, lastName, number, status, user_id);
 
                     //database for UserStatus

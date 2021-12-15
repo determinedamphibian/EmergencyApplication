@@ -61,9 +61,10 @@
             android:id="@+id/rbtn_active"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="active case"
+            android:text="potential\nactive case"
             android:textColor="@color/black"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:layout_gravity="center"/>
 
         <RadioButton
             android:id="@+id/rbtn_clear"
