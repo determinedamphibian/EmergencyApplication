@@ -129,14 +129,13 @@
                 android:layout_gravity="center"
                 android:layout_marginRight="20dp"
                 android:src="@drawable/ic_facebook"
-                android:visibility="gone"/>
+                android:visibility="visible"/>
 
             <ImageView
                 android:id="@+id/image_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_smartphone"
-                android:visibility="gone"/>
+                android:src="@drawable/ic_smartphone" />
         </LinearLayout>
 
 

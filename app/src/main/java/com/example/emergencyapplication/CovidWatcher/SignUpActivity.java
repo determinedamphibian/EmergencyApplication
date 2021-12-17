@@ -14,9 +14,12 @@ import com.example.emergencyapplication.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Pattern;
@@ -26,6 +29,9 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     TextInputEditText txt_first_name, txt_last_name, txt_username, txt_email, txt_number, txt_address, txt_password, txt_re_password;
     Button btn_register;
+    Bundle bundle;
+    PhoneAuthProvider.OnVerificationStateChangedCallbacks callback;
+    private String verificationCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +53,115 @@ public class SignUpActivity extends AppCompatActivity {
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registerUser();
+                String validation = bundle.getString("validation");
+
+                if(validation.equals("phone")){
+                    registerPhone();
+                }else
+                    {
+                        registerUserEmail();
+                    }
             }
         });
 
     }
 
-    private void registerUser() {
+    private void registerPhone() {
+        String firstName = txt_first_name.getText().toString().trim();
+        String lastName = txt_last_name.getText().toString().trim();
+        String email = txt_email.getText().toString().trim();
+        String username = txt_username.getText().toString().trim();
+        String number = "+639"+txt_number.getText().toString().trim();
+        String address = txt_address.getText().toString().trim();
+        String password = txt_password.getText().toString().trim();
+        String re_password = txt_re_password.getText().toString().trim();
+
+        if(firstName.isEmpty()){
+            txt_first_name.setError("This is required!");
+            txt_first_name.requestFocus();
+            return;
+        }
+        if(lastName.isEmpty()){
+            txt_last_name.setError("This is required!");
+            txt_last_name.requestFocus();
+            return;
+        }
+        if(email.isEmpty()){
+            txt_email.setError("This is required!");
+            txt_email.requestFocus();
+            return;
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            txt_email.setError("Please provide a valid email");
+            txt_email.requestFocus();
+            return;
+        }
+        if(username.isEmpty()){
+            txt_username.setError("This is required!");
+            txt_username.requestFocus();
+            return;
+        }
+        if(number.isEmpty()){
+            txt_number.setError("This is required!");
+            txt_number.requestFocus();
+            return;
+        }
+        if(address.isEmpty()){
+            txt_address.setError("This is required!");
+            txt_address.requestFocus();
+            return;
+        }
+        if(password.isEmpty()){
+            txt_password.setError("This is required!");
+            txt_password.requestFocus();
+            return;
+        }
+        if(password.length() < 9){
+            txt_password.setError("At least 9 characters are required");
+            txt_password.requestFocus();
+            return;
+        }
+        if(re_password.isEmpty()){
+            txt_re_password.setError("This is required!");
+            txt_re_password.requestFocus();
+            return;
+        }
+        if(!password.equals(re_password)){
+            txt_password.setError("Password does not match!");
+            txt_re_password.setError("Password does not match!");
+            txt_password.requestFocus();
+            txt_re_password.requestFocus();
+            return;
+        }
+
+        startFirebaseLogin();
+    }
+
+    private void startFirebaseLogin() {
+
+        mAuth = FirebaseAuth.getInstance();
+        callback = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+            @Override
+            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                Toast.makeText(SignUpActivity.this,"Verification completed",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onVerificationFailed(@NonNull FirebaseException e) {
+                Toast.makeText(SignUpActivity.this,"Verification failed",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                super.onCodeSent(s, forceResendingToken);
+                verificationCode = s;
+                Toast.makeText(SignUpActivity.this,"Code sent",Toast.LENGTH_SHORT).show();
+            }
+        };
+
+    }
+
+    private void registerUserEmail() {
         String firstName = txt_first_name.getText().toString().trim();
         String lastName = txt_last_name.getText().toString().trim();
         String email = txt_email.getText().toString().trim();

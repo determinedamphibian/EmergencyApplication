@@ -16,24 +16,24 @@
             android:id="@+id/btn_update_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/orangeFirstAid"
             android:text="Update Status"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
-            android:backgroundTint="@color/orangeFirstAid"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_statusProfile" />
 
         <Button
             android:id="@+id/btn_update_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:backgroundTint="@color/design_default_color_error"
             android:text="Update Profile"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="@+id/guideline6"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_statusProfile" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_profile"
@@ -50,30 +50,30 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Status:"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/img_profile"
-            app:layout_constraintVertical_bias="0.026" />
+            app:layout_constraintTop_toBottomOf="@+id/img_profile" />
 
         <TextView
             android:id="@+id/tv_statusProfile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:paddingLeft="5dp"
+            android:gravity="center"
             android:textColor="#302E2E"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline6"
-            app:layout_constraintTop_toBottomOf="@+id/img_profile" />
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
         <TextView
