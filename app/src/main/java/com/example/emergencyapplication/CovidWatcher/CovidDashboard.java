@@ -8,9 +8,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.R;
+import com.facebook.login.LoginManager;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -71,7 +74,7 @@ public class CovidDashboard extends AppCompatActivity {
         btn_view = findViewById(R.id.btn_view);
 
         Log.d("UID", FirebaseAuth.getInstance().getUid());
-        if(FirebaseAuth.getInstance().getCurrentUser().getUid().equals("9UPor0R3Enfh413X7dmew0d8tFB3")){
+        if(FirebaseAuth.getInstance().getCurrentUser().getUid().equals("FaPsyUNreLgV7G8TcttU4ddL4dg1")){
             btn_view.setVisibility(View.VISIBLE);
             btn_view.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -81,9 +84,11 @@ public class CovidDashboard extends AppCompatActivity {
                     finish();
                 }
             });
+            Toast.makeText(CovidDashboard.this, "Logged in as Admin", Toast.LENGTH_LONG);
         }
         else{
             btn_view.setVisibility(View.GONE);
+            Toast.makeText(CovidDashboard.this, "Logged in as User", Toast.LENGTH_LONG);
         }
 
         //getting the value of user status from firebase
@@ -144,11 +149,23 @@ public class CovidDashboard extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(CovidDashboard.this, CovidWatcherActivity.class);
-                startActivity(intent);
-                Toast.makeText(CovidDashboard.this, "Logout successfully", Toast.LENGTH_SHORT).show();
-                finish();
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(CovidDashboard.this);
+                String authentication = sharedPreferences.getString("authentication", "");
+
+                if(authentication.equals("facebook")){
+                    FirebaseAuth.getInstance().signOut();
+                    LoginManager.getInstance().logOut();
+                    Toast.makeText(CovidDashboard.this, "Logout successfully", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+                else {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent intent = new Intent(CovidDashboard.this, CovidWatcherActivity.class);
+                        startActivity(intent);
+                        Toast.makeText(CovidDashboard.this, "Logout successfully", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+
             }
         });
 
@@ -169,6 +186,7 @@ public class CovidDashboard extends AppCompatActivity {
 
         if(activeCounter > 0){
             Log.d("ACTIVE_COUNTER", String.valueOf(activeCounter));
+
             cases.add(new PieEntry(activeCounter, "Potential Active Case"));
         }
         else{

@@ -24,6 +24,8 @@ import com.google.firebase.auth.EmailAuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthOptions;
+import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -63,7 +65,18 @@ public class ReProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                updateProfile();
+//                SharedPreferences sharedPreferences =  getApplicationContext().getSharedPreferences("MySharedPrefs", Context.MODE_PRIVATE);
+//                String usedAuthentication = sharedPreferences.getString("authentication",  "");
+
+//                if(usedAuthentication.equals("email")){
+                    updateProfile();
+//                }
+//                else if(usedAuthentication.equals("phone")){
+//                    updateProfilePhone();
+//                }
+//                else{
+//                    Toast.makeText(ReProfileActivity.this, "Error!", Toast.LENGTH_LONG).show();
+//                }
             }
         });
 
@@ -76,7 +89,9 @@ public class ReProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
+
 
     private void setValueToEditText() {
 
@@ -108,6 +123,21 @@ public class ReProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+//    private void updateProfilePhone() {
+//        String firstName = re_f_name.getText().toString().trim();
+//        String lastName = re_l_name.getText().toString().trim();
+//        String userName = re_username.getText().toString().trim();
+//        String email = re_email.getText().toString().trim();
+//        String number = "+639"+re_number.getText().toString().trim();
+//        String address = re_address.getText().toString().trim();
+//
+//        progressBar = findViewById(R.id.progress_bar);
+//        progressBar.setVisibility(View.VISIBLE);
+//        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("MySharedPrefs", Context.MODE_PRIVATE);
+//        String currentNumber = sharedPreferences.getString("number", "");
+//
+//    }
 
     private void updateProfile() {
 

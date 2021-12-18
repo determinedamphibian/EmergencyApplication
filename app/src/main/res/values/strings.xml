@@ -33,8 +33,7 @@
     <string name="sign_up"><b>Create an account</b></string>
     <string name="forgot_pass"> <b>Forgot password?</b></string>
     <string name="create_account"> <b>Create an account</b></string>
-    <string name="facebook_app_id">250328910265572</string>
-    <string name="fb_login_protocol_scheme">fb250328910265572</string>
+
     <string name="Intro_covid">Ang COVID-19 o Corona virus ay mga pamilya ng mga virus na nagdudulot ng sakit mula sa karaniwang sipon hanggang sa mas malubhang sakit tulad ng Middle East Respiratory Syndrome (MERS) at Severe Acute Respiratory Syndrome (SARS).</string>
     <string name="Intro_sprains">Ang strains at sprains ay ang biglaang pagkilos na maaring magdulot ng sakit mula sa apektadong parte ng katawan. Makikita sa biktima ang pamamaga, pamamasa, at pananakit ng mga kasukasuan at kalamnan. Dahil rito ang bawat pagkilos ay nagududlot ng matinding sakit.</string>
     <string name="Intro_animal_burns">Ito ay ang pagkapaso, lapnos, sunog ng balat at laman na kadalasan ay sanhi ito ng init na nagmumula sa radiation, radioactivity, kuryente, at kemikal.</string>
@@ -49,4 +48,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="facebook_app_id">666051101101064</string>
+    <string name="fb_login_protocol_scheme">fb666051101101064</string>
+
 </resources>

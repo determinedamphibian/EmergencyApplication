@@ -7,8 +7,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Html;
 import android.view.View;
 import android.webkit.WebView;
@@ -17,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.emergencyapplication.R;
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -72,11 +75,23 @@ public class CovidGuidelineActivity extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent( CovidGuidelineActivity.this, CovidWatcherActivity.class);
-                startActivity(intent);
-                Toast.makeText(CovidGuidelineActivity.this, "Logout successfully", Toast.LENGTH_SHORT).show();
-                finish();
+
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(CovidGuidelineActivity.this);
+                String authentication = sharedPreferences.getString("authentication", "");
+
+                if(authentication.equals("facebook")){
+                    FirebaseAuth.getInstance().signOut();
+                    LoginManager.getInstance().logOut();
+                    Toast.makeText(CovidGuidelineActivity.this, "Logout successfully", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+                else {
+                    FirebaseAuth.getInstance().signOut();
+                    Intent intent = new Intent(CovidGuidelineActivity.this, CovidWatcherActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(CovidGuidelineActivity.this, "Logout successfully", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
             }
         });
     }

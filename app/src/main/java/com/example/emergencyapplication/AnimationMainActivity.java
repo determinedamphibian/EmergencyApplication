@@ -1,4 +1,4 @@
-    package com.example.emergencyapplication;
+package com.example.emergencyapplication;
 
 
 import androidx.appcompat.app.AppCompatActivity;
