@@ -127,25 +127,50 @@ public class GoBagActivity extends AppCompatActivity {
 //        calendar.set(Calendar.DAY_OF_MONTH, maxDay);
 //        long sixthMonths = calendar.getTimeInMillis();
 
-        Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+        Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         int month = calendar.get(Calendar.MONTH);
+        int year = calendar.get(Calendar.YEAR);
+        int hour = calendar.get(Calendar.HOUR);
+        int minute = calendar.get(Calendar.MINUTE);
 
-        calendar.set(Calendar.MONTH, month+5);
-        calendar.set(Calendar.DATE, day);
+        int addMonth = 4 ;
 
-        Log.d("TEST5", ""+month);
+        Log.d("TEST4", "Month: "+month);
 
-        if(calendar.MONTH > Calendar.DECEMBER){
-            calendar.set(Calendar.MONTH, Calendar.JANUARY);
-            calendar.set(Calendar.YEAR, calendar.get(Calendar.YEAR)+1);
+        for (int i = 0; i < addMonth; i++){
+
+            month++;
+
+            if(month >= 11){
+                int remainingMonths = month - 11;
+                calendar.set(Calendar.MONTH, remainingMonths);
+                Log.d("TEST6", "Month Before Alert: "+remainingMonths);
+            }
+            else{
+                calendar.set(Calendar.MONTH, month);
+                Log.d("TEST5", "Month Before Alert: "+month);
+            }
+
         }
+
+         if (month >= 11){
+             year++;
+             calendar.set(Calendar.YEAR, year);
+         }
+        Log.d("TEST7", "Month Before Alert: "+calendar.get(Calendar.MONTH)+" Year: "+year);
+
+//        calendar.set(Calendar.MONTH, 0);
+//        calendar.set(Calendar.YEAR, 2022);
+        calendar.set(Calendar.DAY_OF_MONTH, day);
+        calendar.set(Calendar.HOUR, hour);
+        calendar.set(Calendar.MINUTE, minute);
+
+        Log.d("TEST7", "Month Before Alert: "+calendar.get(Calendar.MONTH)+" Year: "+calendar.get(Calendar.YEAR));
 
         Long calendarLong = calendar.getTimeInMillis();
 
-
-
-      alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
         Intent intent = new Intent(GoBagActivity.this, AlertReceiverGoBag.class);
 
@@ -166,7 +191,7 @@ public class GoBagActivity extends AppCompatActivity {
 
 
         Log.d("Month", ""+calendarLong);
-        Toast.makeText(GoBagActivity.this, "You will be notified in six months", Toast.LENGTH_LONG).show();
+        Toast.makeText(GoBagActivity.this, "You will be notified in month before the expiration of contents", Toast.LENGTH_LONG).show();
     }
 
     private void createNotificationChannel() {

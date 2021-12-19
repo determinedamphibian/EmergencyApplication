@@ -24,7 +24,7 @@ public class AlertReceiverGoBag extends BroadcastReceiver {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "gobagnotif")
                 .setSmallIcon(R.drawable.greenarcher3)
                 .setContentTitle("Green Archers Emergency Application")
-                .setContentText("Your GO BAG is almost out to date!")
+                .setContentText("Some of your Go Bag's content may expire next month!")
                 .setAutoCancel(true)
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
